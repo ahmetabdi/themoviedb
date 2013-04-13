@@ -171,39 +171,74 @@ Get the changes for a specific movie id.
 Tmdb::Movie.changes(22855)
 ```
 
-h3. Company
-#company = Tmdb::Company.detail(1)
-#puts company.id
-#puts company.description
-#puts company.homepage
-#puts company.logo_path
-#puts company.name
-#puts company.parent_company
-#puts Tmdb::Company.movies(1)
+### Company
+```ruby
+company = Tmdb::Company.detail(1)
+company.id => 1
+company.description => nil
+company.homepage => "http://www.lucasfilm.com"
+company.logo_path => "/8rUnVMVZjlmQsJ45UGotDOUznxj.png"
+company.name => "Lucasfilm"
+company.parent_company => nil
+```
 
-h3. Collection
-#collection = Tmdb::Collection.detail(51845)
-#puts collection.id
-#puts collection.backdrop_path
-#puts collection.parts
-#puts collection.poster_path
-#puts collection.name
-#puts Tmdb::Collection.images(51845)
+Get the list of movies associated with a particular company.
+```ruby
+Tmdb::Company.movies(1)
+```
 
-h3. People
-#people = Tmdb::People.detail(1)
-#puts people.id
-#puts people.name
-#puts people.place_of_birth
-#puts people.also_known_as
-#puts people.adult
-#puts people.biography
-#puts people.birthday
-#puts people.deathday
-#puts people.homepage
-#puts people.profile_path
-#puts Tmdb::People.popular
-#puts Tmdb::People.latest
-#puts Tmdb::People.credits(1)
-#puts Tmdb::People.images(1)
-#puts Tmdb::People.changes(1)
+### Collection
+```ruby
+collection = Tmdb::Collection.detail(51845)
+collection.id => 51845
+collection.backdrop_path => "..."
+collection.parts => "..."
+collection.poster_path => "..."
+collection.name => "DC Universe Animated Original Movies"
+```
+
+Get all of the images for a particular collection by collection id.
+```ruby
+Tmdb::Collection.images(51845)
+```
+
+### People
+
+```ruby
+people = Tmdb::People.detail(287)
+people.id => 287
+people.name => "Brad Pitt"
+people.place_of_birth => "Shawnee, Oklahoma, United States"
+people.also_known_as => []
+people.adult => false
+people.biography => "From Wikipedia, the free"..
+people.birthday => "1963-12-18"
+people.deathday => ""
+people.homepage => "http://simplybrad.com/"
+people.profile_path => "w8zJQuN7tzlm6FY9mfGKihxp3Cb.jpg"
+```
+
+Get the list of popular people on The Movie Database. This list refreshes every day.
+```ruby
+Tmdb::People.popular
+```
+
+Get the latest person id.
+```ruby
+Tmdb::People.latest
+```
+
+Get the credits for a specific person id.
+```ruby
+Tmdb::People.credits(287)
+```
+
+Get the images for a specific person id.
+```ruby
+Tmdb::People.images(287)
+```
+
+Get the changes for a specific person id.
+```ruby
+Tmdb::People.changes(287)
+```
