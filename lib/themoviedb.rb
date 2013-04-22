@@ -10,5 +10,5 @@ end
 end
 
 module Tmdb
-  VERSION = "3"
+  VERSION = "0.0.2"
 end
