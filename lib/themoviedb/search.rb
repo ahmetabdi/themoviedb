@@ -46,7 +46,7 @@ module Tmdb
     #Send back whole response
     def fetch_response
       options = @params.merge(Api.config)
-      response = Api.get(@resource, :query => options)
+      response = Api.get(@resource, :query => options, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' })
       response.to_hash
     end
   end
