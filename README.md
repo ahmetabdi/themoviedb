@@ -14,6 +14,12 @@ Get your API key [here](https://www.themoviedb.org/account).
 gem install themoviedb
 ```
 
+Example usage of the 'themovedb' gem
+
+http://themoviedb.herokuapp.com/
+
+https://github.com/ahmetabdi/themoviedb-example
+
 ## Configuration
 
 ```ruby
@@ -36,7 +42,7 @@ Tmdb::Movie.find("batman")
 Tmdb::Collection.find("spiderman")
 Tmdb::People.find("samuel jackson")
 Tmdb::Company.find("lucas")
-Tmdb::Genre.find("Drama")
+Tmdb::Genre.find("drama")
 ```
 
 ## Search
