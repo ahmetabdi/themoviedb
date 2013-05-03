@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
                       "lib/themoviedb/collection.rb",
                       "lib/themoviedb/company.rb",
                       "lib/themoviedb/configuration.rb",
+                      "lib/themoviedb/genre.rb",
                       "lib/themoviedb/movie.rb",
                       "lib/themoviedb/people.rb",
                       "lib/themoviedb/resource.rb",

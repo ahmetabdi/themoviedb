@@ -5,10 +5,10 @@ require 'httparty'
   require File.join(File.dirname(__FILE__), "themoviedb", inc)
 end
 
-["movie", "collection", "people", "company"].each do |inc|
+["movie", "collection", "people", "company", "genre"].each do |inc|
   require File.join(File.dirname(__FILE__), "themoviedb", inc)
 end
 
 module Tmdb
-  VERSION = "0.0.5"
+  VERSION = "0.0.6"
 end

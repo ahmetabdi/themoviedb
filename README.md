@@ -27,6 +27,7 @@ Current available resources:
 * Movie
 * Collection
 * People
+* Genre
 
 ## Example
 
@@ -35,6 +36,7 @@ Tmdb::Movie.find("batman")
 Tmdb::Collection.find("spiderman")
 Tmdb::People.find("samuel jackson")
 Tmdb::Company.find("lucas")
+Tmdb::Genre.find("Drama")
 ```
 
 ## Search
@@ -242,3 +244,22 @@ Get the changes for a specific person id.
 ```ruby
 Tmdb::People.changes(287)
 ```
+
+### Genre
+
+```ruby
+genre = Tmdb::Genre.detail(18)
+genre.id => 18
+genre.name => "Drama"
+genre.page => 1
+genre.total_pages => 45
+genre.total_results => 883
+genre.results => [...]
+genre.get_page(page_number) => Returns next set of movies.
+```
+
+Get a list of all genres.
+```ruby
+Tmdb::Genre.list
+```
+
