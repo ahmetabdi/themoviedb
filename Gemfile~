@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+gem 'rspec'
+gem 'httpparty', :git => 'git://github.com/jnunemaker/httparty.git'
