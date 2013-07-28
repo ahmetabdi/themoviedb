@@ -136,7 +136,10 @@ Tmdb::Movie.alternative_titles(22855)
 
 Get the images (posters and backdrops) for a specific movie id.
 ```ruby
-Tmdb::Movie.images(22855)
+@movie = Tmdb::Movie.images(22855)
+
+@movie['backdrops']
+@movie['posters']
 ```
 
 Get the cast information for a specific movie id.
