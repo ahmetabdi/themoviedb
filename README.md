@@ -128,52 +128,61 @@ Get the list of top rated movies. By default, this list will only include movies
 ```ruby
 Tmdb::Movie.top_rated
 ```
-
+#### Movie - Alternative Titles
 Get the alternative titles for a specific movie id.
 ```ruby
 Tmdb::Movie.alternative_titles(22855)
 ```
-
+#### Movie - Images
 Get the images (posters and backdrops) for a specific movie id.
 ```ruby
-Tmdb::Movie.images(22855)
+@movie = Tmdb::Movie.images(22855)
+```
+Grab Backdrops
+```ruby
+@movie['backdrops']
+```
+Grab Posters
+```ruby
+@movie['posters']
 ```
 
+#### Movie - Casts
 Get the cast information for a specific movie id.
 ```ruby
 Tmdb::Movie.casts(22855)
 ```
-
+#### Movie - Keywords
 Get the plot keywords for a specific movie id.
 ```ruby
 Tmdb::Movie.keywords(22855)
 ```
-
+#### Movie - Releases
 Get the release date by country for a specific movie id.
 ```ruby
 Tmdb::Movie.releases(22855)
 ```
-
+#### Movie - Trailers
 Get the trailers for a specific movie id.
 ```ruby
 Tmdb::Movie.trailers(22855)
 ```
-
+#### Movie - Translations
 Get the translations for a specific movie id.
 ```ruby
 Tmdb::Movie.translations(22855)
 ```
-
+#### Movie - Similar Movies
 Get the similar movies for a specific movie id.
 ```ruby
 Tmdb::Movie.similar_movies(22855)
 ```
-
+#### Movie - Lists
 Get the lists that the movie belongs to.
 ```ruby
 Tmdb::Movie.lists(22855)
 ```
-
+#### Movie - Changes
 Get the changes for a specific movie id.
 ```ruby
 Tmdb::Movie.changes(22855)
