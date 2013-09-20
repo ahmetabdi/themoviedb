@@ -214,7 +214,7 @@ describe Tmdb::Movie do
     end
 
     it "should return backdrops" do
-      puts @movie['backdrops']
+      @movie['backdrops'].length == 4
     end
 
     it "should return posters" do
