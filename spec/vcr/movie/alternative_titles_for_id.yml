@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/alternative_titles?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:32:11 GMT
+      Etag:
+      - '"3ee64f0847d5f8114b5631786c89dea0"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '76174'
+      X-Memc-Expires:
+      - '10228'
+      X-Memc-Key:
+      - 2019fd631de1869b5ea64ab03c9ed879
+      X-Varnish:
+      - '1297601564'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '385'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NSwidGl0bGVzIjpbeyJpc29fMzE2Nl8xIjoiVVMiLCJ0aXRsZSI6
+        IkZvdXIgUm9vbXMgYW5kIGEgSG90ZWwgKFdvcmtpbmcgVGl0bGUpIn0seyJp
+        c29fMzE2Nl8xIjoiVVMiLCJ0aXRsZSI6IkZvdXIgUm9vbXMgYW5kIGEgSG90
+        ZWwifSx7Imlzb18zMTY2XzEiOiJERSIsInRpdGxlIjoiU2lsdmVzdGVyIGlu
+        IGZyZW1kZW4gQmV0dGVuIn0seyJpc29fMzE2Nl8xIjoiQlIiLCJ0aXRsZSI6
+        IkdyYW5kZSBIb3RlbCJ9LHsiaXNvXzMxNjZfMSI6IlBMIiwidGl0bGUiOiJD
+        enRlcnkgcG9rb2plIn0seyJpc29fMzE2Nl8xIjoiQlIiLCJ0aXRsZSI6IkZv
+        dXIgUm9vbXMifSx7Imlzb18zMTY2XzEiOiJSVSIsInRpdGxlIjoi0KfQtdGC
+        0YvRgNC1INC60L7QvNC90LDRgtGLIn1dfQ==
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:32:10 GMT
+recorded_with: VCR 2.5.0

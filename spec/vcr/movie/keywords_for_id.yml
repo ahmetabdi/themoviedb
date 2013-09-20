@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/keywords?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:34:52 GMT
+      Etag:
+      - '"ee9d2f5698c93b9633910c844a051e85"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '80578'
+      X-Memc-Expires:
+      - '5824'
+      X-Memc-Key:
+      - 6e52c1622ee8fd5574d7ee22c40bb7e3
+      X-Varnish:
+      - '1297659234'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":5,"keywords":[{"id":12670,"name":"los angeles"},{"id":612,"name":"hotel"},{"id":613,"name":"new
+        year''s eve"},{"id":616,"name":"witch"},{"id":143,"name":"ganove"},{"id":622,"name":"bet"},{"id":2700,"name":"sperm"},{"id":922,"name":"hotel
+        room"}]}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:34:52 GMT
+recorded_with: VCR 2.5.0

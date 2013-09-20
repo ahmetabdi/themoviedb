@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/translations?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:35:34 GMT
+      Etag:
+      - '"eb9c5f75ef2a84a498ddfac0cbea51de"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '13155'
+      X-Memc-Expires:
+      - '73247'
+      X-Memc-Key:
+      - e4e7151afe9c0f9defd3b2d516eabead
+      X-Varnish:
+      - '699584211'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '708'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NSwidHJhbnNsYXRpb25zIjpbeyJpc29fNjM5XzEiOiJlbiIsIm5h
+        bWUiOiJFbmdsaXNoIiwiZW5nbGlzaF9uYW1lIjoiRW5nbGlzaCJ9LHsiaXNv
+        XzYzOV8xIjoiZGUiLCJuYW1lIjoiRGV1dHNjaCIsImVuZ2xpc2hfbmFtZSI6
+        Ikdlcm1hbiJ9LHsiaXNvXzYzOV8xIjoiaXQiLCJuYW1lIjoiSXRhbGlhbm8i
+        LCJlbmdsaXNoX25hbWUiOiJJdGFsaWFuIn0seyJpc29fNjM5XzEiOiJmciIs
+        Im5hbWUiOiJGcmFuw6dhaXMiLCJlbmdsaXNoX25hbWUiOiJGcmVuY2gifSx7
+        Imlzb182MzlfMSI6ImVzIiwibmFtZSI6IkVzcGHDsW9sIiwiZW5nbGlzaF9u
+        YW1lIjoiU3BhbmlzaCJ9LHsiaXNvXzYzOV8xIjoicnUiLCJuYW1lIjoiUNGD
+        0YHRgdC60LjQuSIsImVuZ2xpc2hfbmFtZSI6IlJ1c3NpYW4ifSx7Imlzb182
+        MzlfMSI6ImNzIiwibmFtZSI6IsSMZXNrw70iLCJlbmdsaXNoX25hbWUiOiJD
+        emVjaCJ9LHsiaXNvXzYzOV8xIjoicHQiLCJuYW1lIjoiUG9ydHVndcOqcyIs
+        ImVuZ2xpc2hfbmFtZSI6IlBvcnR1Z3Vlc2UifSx7Imlzb182MzlfMSI6InBs
+        IiwibmFtZSI6IlBvbHNraSIsImVuZ2xpc2hfbmFtZSI6IlBvbGlzaCJ9LHsi
+        aXNvXzYzOV8xIjoiaHUiLCJuYW1lIjoiTWFneWFyIiwiZW5nbGlzaF9uYW1l
+        IjoiSHVuZ2FyaWFuIn0seyJpc29fNjM5XzEiOiJubCIsIm5hbWUiOiJOZWRl
+        cmxhbmRzIiwiZW5nbGlzaF9uYW1lIjoiRHV0Y2gifV19
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:35:33 GMT
+recorded_with: VCR 2.5.0

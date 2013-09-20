@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/popular?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=14400
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:36:14 GMT
+      Etag:
+      - '"775e058653a594be586fe740e25b7f65"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '12973'
+      X-Memc-Expires:
+      - '1427'
+      X-Memc-Key:
+      - eb13032fb1ef09086dcaac2d14c098c0
+      X-Varnish:
+      - '1297684712'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '5702'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/qEdrjpN74WGQ105xdq05HXsX6QW.jpg","id":109414,"original_title":"This
+        Is the End","release_date":"2013-06-12","poster_path":"/1rMzHyOsk1b1ddcFJgMSB6kOASu.jpg","popularity":101.129869340641,"title":"This
+        Is the End","vote_average":6.6,"vote_count":285},{"adult":false,"backdrop_path":"/pN2qlJjAwXAA1PEz01SYMNe01SZ.jpg","id":82700,"original_title":"After
+        Earth","release_date":"2013-05-30","poster_path":"/pUCK62aHDUJYcCXUvdMKkr3dJmx.jpg","popularity":99.7544671630982,"title":"After
+        Earth","vote_average":5.2,"vote_count":389},{"adult":false,"backdrop_path":"/7DlIoyQ3ecGMklVWyKsneZmVnsi.jpg","id":87421,"original_title":"Riddick","release_date":"2013-09-06","poster_path":"/loRoAKEVmpqeVk4lpeEqHT0gSYD.jpg","popularity":91.1891140767413,"title":"Riddick","vote_average":6.0,"vote_count":435},{"adult":false,"backdrop_path":"/ns0IojuqJe24AHTxe8RVcWJUCDM.jpg","id":54138,"original_title":"Star
+        Trek Into Darkness","release_date":"2013-05-16","poster_path":"/1p7FLAqsH5m53m1LU4avblSqON9.jpg","popularity":82.2094104593004,"title":"Star
+        Trek Into Darkness","vote_average":7.4,"vote_count":1459},{"adult":false,"backdrop_path":"/qozlZC1q9bsM7PRfdrnhmkweA0n.jpg","id":72190,"original_title":"World
+        War Z","release_date":"2013-06-21","poster_path":"/aUFwc338BRhZs1C2cDCrwMzynSk.jpg","popularity":74.8273956065058,"title":"World
+        War Z","vote_average":6.6,"vote_count":847},{"adult":false,"backdrop_path":"/qjfE7SkPXpqFs8FX8rIaG6eO2aK.jpg","id":82992,"original_title":"Fast
+        & Furious 6","release_date":"2013-05-24","poster_path":"/3Izae8UATwSHizQiEVZEWf53wjM.jpg","popularity":58.1801352696763,"title":"Fast
+        & Furious 6","vote_average":6.4,"vote_count":2905},{"adult":false,"backdrop_path":"/mABC3QA9ZdfIeyM1TEywzdMhoUv.jpg","id":8699,"original_title":"Anchorman:
+        The Legend of Ron Burgundy","release_date":"2004-07-09","poster_path":"/pdy6TWKUbSC9vtmxsFA73FZBVP3.jpg","popularity":57.3719868179012,"title":"Anchorman:
+        The Legend of Ron Burgundy","vote_average":6.3,"vote_count":206},{"adult":false,"backdrop_path":"/127rBJibwnrPTWivH1cpSFvRyno.jpg","id":75656,"original_title":"Now
+        You See Me","release_date":"2013-05-31","poster_path":"/A06e9YJ5ry3WXEIFIAD1mKBxcuZ.jpg","popularity":50.9570905869394,"title":"Now
+        You See Me","vote_average":6.9,"vote_count":807},{"adult":false,"backdrop_path":"/n9X2DKItL3V0yq1q1jrk8z5UAki.jpg","id":68721,"original_title":"Iron
+        Man 3","release_date":"2013-05-03","poster_path":"/1Ilv6ryHUv6rt9zIsbSEJUmmbEi.jpg","popularity":44.586155878757,"title":"Iron
+        Man 3","vote_average":6.7,"vote_count":4089},{"adult":false,"backdrop_path":"/kYY4CKjjknT1GY45ZueZs556Mnl.jpg","id":49519,"original_title":"The
+        Croods","release_date":"2013-03-21","poster_path":"/eE8pqVnGF0F6xpaBnCkCJLq72k.jpg","popularity":44.4978677006923,"title":"The
+        Croods","vote_average":6.6,"vote_count":606},{"adult":false,"backdrop_path":"/ld8BcHyIdzMnWGEzE2UkyXUXnHf.jpg","id":75612,"original_title":"Oblivion","release_date":"2013-04-18","poster_path":"/hmOzkHlkGvi8x24fYpFSnXvjklv.jpg","popularity":42.7188294698567,"title":"Oblivion","vote_average":5.9,"vote_count":1747},{"adult":false,"backdrop_path":"/wPn0tR0UAYp7sq087uA5tPcnxVK.jpg","id":14207,"original_title":"The
+        Librarian: Quest for the Spear","release_date":"2004-12-05","poster_path":"/x1RgJmOESoZj0VJbXZCkOmNpJqN.jpg","popularity":34.2294489946546,"title":"The
+        Librarian: Quest for the Spear","vote_average":5.4,"vote_count":14},{"adult":false,"backdrop_path":"/2mdDPszIVJEGZweDzwGyL36ZDC2.jpg","id":64682,"original_title":"The
+        Great Gatsby","release_date":"2013-05-10","poster_path":"/7hNTazFLpoaDMxXArIz0Td28LQe.jpg","popularity":33.0946239495004,"title":"The
+        Great Gatsby","vote_average":7.0,"vote_count":496},{"adult":false,"backdrop_path":"/xIrtFqXc62VGcWKHOsQfCq4j3x0.jpg","id":109439,"original_title":"The
+        Hangover Part III","release_date":"2013-05-23","poster_path":"/84brlAzZw5nn8EuVkDONs7BFnCf.jpg","popularity":33.0546943032798,"title":"The
+        Hangover Part III","vote_average":5.9,"vote_count":712},{"adult":false,"backdrop_path":"/aDuDdJtakSKRZfGwxo2D5hQwr3x.jpg","id":169209,"original_title":"Empire
+        State","release_date":"2013-09-03","poster_path":"/zDJ162ofsBD5uCNGfm9jl1U6r4m.jpg","popularity":32.039309216009,"title":"Empire
+        State","vote_average":4.8,"vote_count":21},{"adult":false,"backdrop_path":"/vSbjlX9y8S2hKNURHEO4GsoIOay.jpg","id":68724,"original_title":"Elysium","release_date":"2013-08-09","poster_path":"/7zOZn1eHAetNUEoVN0LJy5EG4JE.jpg","popularity":31.865935231464,"title":"Elysium","vote_average":6.9,"vote_count":288},{"adult":false,"backdrop_path":"/uWREpRwvl2AYqKNmrubGgE68gnC.jpg","id":134374,"original_title":"Pain
+        & Gain","release_date":"2013-04-26","poster_path":"/3AWSwYavODs0lL916NE9bLJJNTo.jpg","popularity":30.9830156575463,"title":"Pain
+        & Gain","vote_average":6.2,"vote_count":259},{"adult":false,"backdrop_path":"/phDmTHsykcYsNEXgwH1VC4xWUe1.jpg","id":11892,"original_title":"Murder
+        by Numbers","release_date":"2002-04-19","poster_path":"/q36FkTkbJaqzoUqnvLLdusIyIzT.jpg","popularity":30.717434,"title":"Murder
+        by Numbers","vote_average":6.5,"vote_count":14},{"adult":false,"backdrop_path":"/yc0cEEZ9OO6ydyYmCEfY90Q9jII.jpg","id":2787,"original_title":"Pitch
+        Black","release_date":"2000-02-18","poster_path":"/befcTOBP3073hlnny84jydpuXTD.jpg","popularity":30.0888104746366,"title":"Pitch
+        Black","vote_average":6.5,"vote_count":616},{"adult":false,"backdrop_path":"/m4JoQNR8RHYiQ905UiYSX25UULI.jpg","id":138735,"original_title":"Little
+        Thirteen","release_date":"2012-07-04","poster_path":"/qWcGBvpB1pr7fE1jwpgcCsfaBT7.jpg","popularity":29.70808064,"title":"Little
+        Thirteen","vote_average":0.0,"vote_count":0}],"total_pages":6703,"total_results":134055}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:36:14 GMT
+recorded_with: VCR 2.5.0
