@@ -125,7 +125,7 @@ describe Tmdb::Movie do
     end
 
     it "should return popularity" do
-      @movie.popularity.should == 1.04449268
+      @movie.popularity.should == 1.15974723131612
     end
 
     it "should return poster_path" do
@@ -165,7 +165,7 @@ describe Tmdb::Movie do
     end
 
     it "should return vote_count" do
-      @movie.vote_count.should == 11
+      @movie.vote_count.should == 23
     end
   end
 
