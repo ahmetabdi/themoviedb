@@ -5,7 +5,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require '../lib/themoviedb.rb'
+require_relative '../lib/themoviedb.rb'
 
 Tmdb::Api.key("8a221fc31fcdf12a8af827465574ffc9")
 
