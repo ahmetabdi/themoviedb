@@ -15,7 +15,6 @@ describe Tmdb::Movie do
     it { should respond_to field }
   end
 
-
   describe "For a movie" do
     before(:each) do
       @movie = Tmdb::Movie
@@ -214,11 +213,31 @@ describe Tmdb::Movie do
     end
 
     it "should return backdrops" do
-      puts @movie['backdrops']
+      @movie['backdrops'].length == 4
     end
 
     it "should return posters" do
       @movie['posters'].should be_true
+    end
+
+  end
+
+  describe "For other languages" do
+
+    before(:each) do
+      Tmdb::Api.language("de")
+      VCR.use_cassette 'movie/language_german' do
+        @movie = Tmdb::Movie.detail(562)
+      end
+      Tmdb::Api.language(nil)
+    end
+
+    it "should return the german name" do
+      @movie.title.should == "Stirb Langsam"
+    end
+
+    it "should return the german description" do
+      @movie.overview.should == "Eine Gruppe schwerbewaffneter Terroristen stürmt ein Bürohochhaus. Ihr Ziel: 624 Mio. Dollar, die als Wertpapiere in einem computergesicherten Safe lagern. Doch sie haben die Rechnung ohne den New Yorker Cop John McClane gemacht. Erster Teil der „Die Hard“ - Trilogie von 1988, die ein Genre neu belebte und den damals eher unbekannten Bruce Willis zur Action-Ikone aufsteigen ließ."
     end
 
   end

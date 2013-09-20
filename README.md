@@ -26,6 +26,14 @@ https://github.com/ahmetabdi/themoviedb-example
 Tmdb::Api.key("KEY_HERE")
 ```
 
+You can change the language for the returned data with this:
+
+```ruby
+Tmdb::Api.language("de")
+```
+
+The default language is english.
+
 ## Resources
 
 Current available resources:
