@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/changes?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=300
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:32:33 GMT
+      Etag:
+      - '"6d13f62eca6c2c947237edd8984b9b62"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '300'
+      X-Memc-Key:
+      - be739f74300cd7f5a83e6f48bf1351ba
+      X-Varnish:
+      - '1297609784'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '14'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"changes":[]}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:32:33 GMT
+recorded_with: VCR 2.5.0

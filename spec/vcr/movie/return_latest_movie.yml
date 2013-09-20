@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/latest?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:31:10 GMT
+      Etag:
+      - '"0527f7e7ccd04f4ecc230ffb66f119b1"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - MISS
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '86402'
+      X-Memc-Key:
+      - 7d7c5a5093dfb9d7fcd7412f9fd461eb
+      X-Varnish:
+      - '1297580715'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '526'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[],"homepage":null,"id":222841,"imdb_id":null,"original_title":"Barbapapa
+        2 - Het nieuwe huis van Barbapapa","overview":null,"popularity":0.0,"poster_path":null,"production_companies":[],"production_countries":[],"release_date":"","revenue":0,"runtime":null,"spoken_languages":[{"iso_639_1":"nl","name":"Nederlands"}],"status":"Released","tagline":null,"title":"Barbapapa
+        2 - Het nieuwe huis van Barbapapa","vote_average":0.0,"vote_count":0}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:31:10 GMT
+recorded_with: VCR 2.5.0
