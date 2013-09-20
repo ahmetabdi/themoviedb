@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/releases?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:34:52 GMT
+      Etag:
+      - '"68b03caf6e4b368071ecf0ecb87cabf3"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '20257'
+      X-Memc-Expires:
+      - '66145'
+      X-Memc-Key:
+      - 07994aba3d89059b5fe91124ff8b2ffa
+      X-Varnish:
+      - '1297659075'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '365'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":5,"countries":[{"iso_3166_1":"US","certification":"R","release_date":"1995-12-25"},{"iso_3166_1":"DE","certification":"16","release_date":"1996-02-29"},{"iso_3166_1":"CZ","certification":"","release_date":"1997-07-31"},{"iso_3166_1":"GB","certification":"18","release_date":"1995-12-26"},{"iso_3166_1":"CA","certification":"14A","release_date":"1995-09-15"}]}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:34:52 GMT
+recorded_with: VCR 2.5.0

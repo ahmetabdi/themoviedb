@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/lists?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:35:34 GMT
+      Etag:
+      - '"1ae2c0416a67b4c1aac124c6315a6e3f"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - MISS
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '86402'
+      X-Memc-Key:
+      - 3b745b83c37f2cf51da7284c21cf2ad3
+      X-Varnish:
+      - '699584304'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '1183'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NSwicGFnZSI6MSwicmVzdWx0cyI6W3siZGVzY3JpcHRpb24iOiIi
+        LCJmYXZvcml0ZV9jb3VudCI6MiwiaWQiOiI1MGU3NjcyYzc2MGVlMzI0MWE2
+        NDUxMTUiLCJpdGVtX2NvdW50Ijo4NCwiaXNvXzYzOV8xIjoiZW4iLCJuYW1l
+        IjoiTXkgZmF2b3VyaXRlIG1vdmllcy4iLCJwb3N0ZXJfcGF0aCI6Ii90Y1dX
+        OXhPbHh1U2xrTTRxMjVUOUxROUd0QWUuanBnIn0seyJkZXNjcmlwdGlvbiI6
+        IiIsImZhdm9yaXRlX2NvdW50IjoyLCJpZCI6IjUxODU0NWFiMTljMjk1NWE4
+        MzA3Y2YxZSIsIml0ZW1fY291bnQiOjkwLCJpc29fNjM5XzEiOiJlbiIsIm5h
+        bWUiOiJOZXRmbGl4IiwicG9zdGVyX3BhdGgiOiIvcTJIS0p2TmFRZHR2Y1pp
+        d2syaGVscGpQaVpELmpwZyJ9LHsiZGVzY3JpcHRpb24iOiIiLCJmYXZvcml0
+        ZV9jb3VudCI6MSwiaWQiOiI1MGRhZmNkMDc2MGVlMzBhODliMGVjZGMiLCJp
+        dGVtX2NvdW50Ijo0NDAsImlzb182MzlfMSI6ImVuIiwibmFtZSI6Ik15IE1v
+        dmllcyIsInBvc3Rlcl9wYXRoIjoiL2ZBaHJJRlV6S2hwRmJhcXBrT2Z3T3Np
+        MVlOTi5qcGcifSx7ImRlc2NyaXB0aW9uIjoiIiwiZmF2b3JpdGVfY291bnQi
+        OjEsImlkIjoiNTEwMmVlM2Y3NjBlZTM2MDkyMDQ4NTJjIiwiaXRlbV9jb3Vu
+        dCI6NTAsImlzb182MzlfMSI6ImVuIiwibmFtZSI6IlRvIERvIiwicG9zdGVy
+        X3BhdGgiOiIvMWNGc29ZZERPV2xSaEhHeDRKcmVlTElhTmtSLmpwZyJ9LHsi
+        ZGVzY3JpcHRpb24iOiJNb3ZpZXMgcmF0ZWQgNC81IHN0YXJzIiwiZmF2b3Jp
+        dGVfY291bnQiOjEsImlkIjoiNTFkYWQ5NTAxOWMyOTU0M2U1MTRiZTY2Iiwi
+        aXRlbV9jb3VudCI6MzMzLCJpc29fNjM5XzEiOiJlbiIsIm5hbWUiOiI0IFN0
+        YXJzIiwicG9zdGVyX3BhdGgiOiIvb04wRHFDbzRwVFJrOEVydXE2YWlJalRm
+        NTRsLmpwZyJ9LHsiZGVzY3JpcHRpb24iOiJJZGUga2Vyw7xsbmVrIFRhcmFu
+        dMOtbsOzIMOpcyBSb2RyaWd1ZXogZmlsbWplaSIsImZhdm9yaXRlX2NvdW50
+        IjoxLCJpZCI6IjUxZjBkMmE4MTljMjk1NjA5MzFlNTU0ZCIsIml0ZW1fY291
+        bnQiOjUsImlzb182MzlfMSI6ImVuIiwibmFtZSI6IlRhcmFudGlubyDDqXMg
+        Um9kcmlndWV6IGZpbG1layIsInBvc3Rlcl9wYXRoIjoiL2RucTJuaXNyWjhC
+        TG1YMlpXSkJGSEVoOTQ1dy5qcGcifV0sInRvdGFsX3BhZ2VzIjoxLCJ0b3Rh
+        bF9yZXN1bHRzIjo2fQ==
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:35:34 GMT
+recorded_with: VCR 2.5.0

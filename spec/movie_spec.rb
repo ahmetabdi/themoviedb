@@ -1,5 +1,6 @@
 require 'rspec'
 require 'spec_helper'
+require 'vcr'
 
 describe Tmdb::Movie do
 
@@ -14,74 +15,109 @@ describe Tmdb::Movie do
     it { should respond_to field }
   end
 
+
   describe "For a movie" do
     before(:each) do
       @movie = Tmdb::Movie
     end
 
     it "should return the latest movies" do
-      @movie.latest.should be_true
+      VCR.use_cassette 'movie/return_latest_movie' do
+        @movie.latest.should be_true
+      end
     end
 
     it "should return the upcoming movies" do
-      @movie.upcoming.should be_true
+      VCR.use_cassette 'movie/return_upcoming_movie' do
+        @movie.upcoming.should be_true
+      end
     end
 
     it "should show movies that are now playing" do
-      @movie.now_playing.should be_true
+      VCR.use_cassette 'movie/now_playing' do
+        @movie.now_playing.should be_true
+      end
     end
 
     it "should return popular movies" do
-      @movie.popular.should be_true
+      VCR.use_cassette 'movie/popular' do
+        @movie.popular.should be_true
+      end
     end
 
     it "should return top rated movies" do
-      @movie.top_rated.should be_true
+      VCR.use_cassette 'movie/top_rated' do
+        @movie.top_rated.should be_true
+      end
     end
 
     it "should return alternative titles for an ID" do
-      @movie.alternative_titles(5).should be_true
+      VCR.use_cassette 'movie/alternative_titles_for_id' do
+        @movie.alternative_titles(5).should be_true
+      end
     end
 
     it "should return cast information for an ID" do
-      @movie.casts(5).should be_true
+      VCR.use_cassette 'movie/cast_information_for_id' do
+        @movie.casts(5).should be_true
+      end
     end
 
     it "should return crew for an ID" do
-      @movie.crew(5).should be_true
+      VCR.use_cassette 'movie/crew_for_id' do
+        @movie.crew(5).should be_true
+      end
     end
+
     it "should return keywords for an ID" do
-      @movie.keywords(5).should be_true
+      VCR.use_cassette 'movie/keywords_for_id' do
+        @movie.keywords(5).should be_true
+      end
     end
+
     it "should return releases for an ID" do
-      @movie.releases(5).should be_true
+      VCR.use_cassette 'movie/releases_for_id' do
+        @movie.releases(5).should be_true
+      end
     end
 
     it "should return trailers for an ID" do
-      @movie.trailers(5).should be_true
+      VCR.use_cassette 'movie/trailers_for_id' do
+        @movie.trailers(5).should be_true
+      end
     end
 
     it "should return translations for an ID" do
-      @movie.translations(5).should be_true
+      VCR.use_cassette 'movie/translations_for_id' do
+        @movie.translations(5).should be_true
+      end
     end
 
     it "should return similar_movies for an ID" do
-      @movie.similar_movies(5).should be_true
+      VCR.use_cassette 'movie/similar_for_id' do
+        @movie.similar_movies(5).should be_true
+      end
     end
 
     it "should return the list the movie belongs to" do
-      @movie.lists(5).should be_true
+      VCR.use_cassette 'movie/movie_belongs_for_id' do
+        @movie.lists(5).should be_true
+      end
     end
 
     it "should return the changes made" do
-      @movie.changes(5).should be_true
+      VCR.use_cassette 'movie/changes_made' do
+        @movie.changes(5).should be_true
+      end
     end
   end
 
   describe "For a movie detail" do
 
     before(:each) do
-      @movie = Tmdb::Movie.detail(22855)
+      VCR.use_cassette 'movie/detail' do
+        @movie = Tmdb::Movie.detail(22855)
+      end
     end
 
     it "should return a id" do
@@ -172,7 +208,9 @@ describe Tmdb::Movie do
   describe "For a movies images" do
 
     before(:each) do
-      @movie = Tmdb::Movie.images(22855)
+      VCR.use_cassette 'movie/images' do
+        @movie = Tmdb::Movie.images(22855)
+      end
     end
 
     it "should return backdrops" do

@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/movie/5/casts?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 20 Sep 2013 14:34:05 GMT
+      Etag:
+      - '"78c9d48695c6f6c5f4c3f64e4a10b0c6"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '48071'
+      X-Memc-Expires:
+      - '38331'
+      X-Memc-Key:
+      - a71e68c1eb93d11d8accdcfc29c32899
+      X-Varnish:
+      - '1297642617'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '5832'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":5,"cast":[{"id":3122,"name":"Sammi Davis","character":"Jezebel","order":4,"cast_id":22,"profile_path":"/2m6ooKnogelqp5Qf1XvK0H3I7JY.jpg"},{"id":3123,"name":"Amanda
+        De Cadenet","character":"Diana","order":5,"cast_id":23,"profile_path":"/m6poxt6GFglku6yregZH7NxElET.jpg"},{"id":3124,"name":"Valeria
+        Golino","character":"Athena","order":8,"cast_id":24,"profile_path":"/dv2Uw2jKm4sgxnm6Ft0xDyI76Ps.jpg"},{"id":3125,"name":"Madonna","character":"Elspeth","order":12,"cast_id":25,"profile_path":"/n4KXAD2OQRkmTZd4oJ7804z8vZ7.jpg"},{"id":3126,"name":"Ione
+        Skye","character":"Eva","order":15,"cast_id":26,"profile_path":"/zRPIdTnEQO4FioH8wqr0lNQgNmg.jpg"},{"id":3127,"name":"Lili
+        Taylor","character":"Raven","order":9,"cast_id":27,"profile_path":"/3YWIl8sK4Up4kT0BWFtzYF4Eir4.jpg"},{"id":3128,"name":"Alicia
+        Witt","character":"Kiva","order":16,"cast_id":28,"profile_path":"/2486Rrn2lQYpyB5nRzoNg7PyW6M.jpg"},{"id":3130,"name":"Jennifer
+        Beals","character":"Angela","order":2,"cast_id":29,"profile_path":"/bEkrr1HIONx0aokHs9QHbdCz7zn.jpg"},{"id":2555,"name":"David
+        Proval","character":"Siegfried","order":16,"cast_id":30,"profile_path":"/ujBzP61tYlwqWpB3oOxknl1XuEg.jpg"},{"id":3131,"name":"Antonio
+        Banderas","character":"Man","order":1,"cast_id":31,"profile_path":"/85197jARsr06xQ84NhP9YoBL3sR.jpg"},{"id":3132,"name":"Lana
+        McKissack","character":"Sarah","order":16,"cast_id":32,"profile_path":null},{"id":3133,"name":"Patricia
+        Vonne","character":"Corpse","order":11,"cast_id":33,"profile_path":null},{"id":3134,"name":"Tamlyn
+        Tomita","character":"Wife","order":18,"cast_id":34,"profile_path":"/jzIxtUhlLXPzZtWf8GeIWfmvvIk.jpg"},{"id":3135,"name":"Danny
+        Verduzco","character":"Juancho","order":20,"cast_id":35,"profile_path":null},{"id":3136,"name":"Salma
+        Hayek","character":"TV Dancing Girl","order":20,"cast_id":36,"profile_path":"/u5mg73xKVqm8oT93HoMmsgQHyoK.jpg"},{"id":3137,"name":"Paul
+        Calderon","character":"Norman","order":21,"cast_id":37,"profile_path":"/n3jppeBl8jhD7BHZhp4ExvfFdpD.jpg"},{"id":138,"name":"Quentin
+        Tarantino","character":"Chester Rush","order":0,"cast_id":38,"profile_path":"/6grjDWpEIPL5QdRbUZFxVEp5TCd.jpg"},{"id":2545,"name":"Lawrence
+        Bender","character":"Long Hair Yuppy Scum","order":14,"cast_id":39,"profile_path":null},{"id":3138,"name":"Kathy
+        Griffin","character":"Betty","order":19,"cast_id":40,"profile_path":"/83vWmM5GgteuZ1UOU8QLxcKvYOm.jpg"},{"id":3141,"name":"Marisa
+        Tomei","character":"Margaret","order":17,"cast_id":41,"profile_path":"/hBSf52Tn0FcVtGSdspUsyUqmDFv.jpg"},{"id":3129,"name":"Tim
+        Roth","character":"Ted the Bellhop","order":14,"cast_id":42,"profile_path":"/r4jtlboNqWPz2dOHafrPJE4Yd94.jpg"},{"id":62,"name":"Bruce
+        Willis","character":"Leo","order":13,"cast_id":43,"profile_path":"/kI1OluWhLJk3pnR19VjOfABpnTY.jpg"},{"id":37336,"name":"Kimberly
+        Blair","character":"Hooker","order":22,"cast_id":44,"profile_path":null},{"id":3140,"name":"Marc
+        Lawrence","character":"Sam the Bellhop","order":23,"cast_id":45,"profile_path":"/l9BsvMMq9db1eSbnTGia0ymp1mv.jpg"}],"crew":[{"id":3110,"name":"Allison
+        Anders","department":"Writing","job":"Author","profile_path":"/rsfxpcNEdmNqZyNcct0J695LhBK.jpg"},{"id":3111,"name":"Alexandre
+        Rockwell","department":"Writing","job":"Author","profile_path":null},{"id":2294,"name":"Robert
+        Rodriguez","department":"Writing","job":"Author","profile_path":"/isrGQV4k51Nn68taiX2E1neXnaq.jpg"},{"id":138,"name":"Quentin
+        Tarantino","department":"Writing","job":"Author","profile_path":"/6grjDWpEIPL5QdRbUZFxVEp5TCd.jpg"},{"id":3116,"name":"Combustible
+        Edison","department":"Sound","job":"Original Music Composer","profile_path":null},{"id":3117,"name":"Gary
+        Frutkoff","department":"Art","job":"Production Design","profile_path":null},{"id":3119,"name":"Lance
+        Brown","department":"Sound","job":"Sound Designer","profile_path":null},{"id":3110,"name":"Allison
+        Anders","department":"Directing","job":"Director","profile_path":"/rsfxpcNEdmNqZyNcct0J695LhBK.jpg"},{"id":3111,"name":"Alexandre
+        Rockwell","department":"Directing","job":"Director","profile_path":null},{"id":2294,"name":"Robert
+        Rodriguez","department":"Directing","job":"Director","profile_path":"/isrGQV4k51Nn68taiX2E1neXnaq.jpg"},{"id":138,"name":"Quentin
+        Tarantino","department":"Directing","job":"Director","profile_path":"/6grjDWpEIPL5QdRbUZFxVEp5TCd.jpg"},{"id":2545,"name":"Lawrence
+        Bender","department":"Production","job":"Producer","profile_path":null},{"id":138,"name":"Quentin
+        Tarantino","department":"Production","job":"Executive Producer","profile_path":"/6grjDWpEIPL5QdRbUZFxVEp5TCd.jpg"},{"id":3111,"name":"Alexandre
+        Rockwell","department":"Production","job":"Executive Producer","profile_path":null},{"id":37333,"name":"Heidi
+        Vogel","department":"Production","job":"Producer","profile_path":null},{"id":37334,"name":"Paul
+        Hellerman","department":"Production","job":"Producer","profile_path":null},{"id":37335,"name":"Scott
+        Lambert","department":"Production","job":"Producer","profile_path":null},{"id":3116,"name":"Combustible
+        Edison","department":"Sound","job":"Original Music Composer","profile_path":null},{"id":3118,"name":"Russell
+        Gray","department":"Production","job":"Casting","profile_path":null},{"id":11423,"name":"Mayne
+        Berke","department":"Art","job":"Art Direction","profile_path":null},{"id":9042,"name":"Sara
+        Andrews","department":"Art","job":"Set Decoration","profile_path":null},{"id":3110,"name":"Allison
+        Anders","department":"Writing","job":"Screenplay","profile_path":"/rsfxpcNEdmNqZyNcct0J695LhBK.jpg"},{"id":3111,"name":"Alexandre
+        Rockwell","department":"Writing","job":"Screenplay","profile_path":null},{"id":2294,"name":"Robert
+        Rodriguez","department":"Writing","job":"Screenplay","profile_path":"/isrGQV4k51Nn68taiX2E1neXnaq.jpg"},{"id":138,"name":"Quentin
+        Tarantino","department":"Writing","job":"Screenplay","profile_path":"/6grjDWpEIPL5QdRbUZFxVEp5TCd.jpg"}]}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 14:34:05 GMT
+recorded_with: VCR 2.5.0
