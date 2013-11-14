@@ -16,6 +16,8 @@ module Tmdb
         @resource = '/search/movie'
       elsif resource == 'collection' then
         @resource = '/search/collection'
+      elsif resource == 'tv' then
+        @resource = '/search/tv'
       elsif resource == 'person' then
         @resource = '/search/person'
       elsif resource == 'list' then

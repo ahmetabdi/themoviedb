@@ -39,6 +39,9 @@ The default language is english.
 Current available resources:
 * Company
 * Movie
+* TV
+* Season
+* Episode
 * Collection
 * People
 * Genre
@@ -47,6 +50,7 @@ Current available resources:
 
 ```ruby
 Tmdb::Movie.find("batman")
+Tmdb::TV.find("fringe")
 Tmdb::Collection.find("spiderman")
 Tmdb::People.find("samuel jackson")
 Tmdb::Company.find("lucas")
@@ -57,7 +61,7 @@ Tmdb::Genre.find("drama")
 
 ### Usage
 
-resources => person, movie, collection, company
+resources => person, movie, tv, collection, company
 
 ```ruby
 @search = Tmdb::Search.new
@@ -86,7 +90,7 @@ configuration.logo_sizes
 
 ## Detail
 
-Every movie example documented below uses the movie Fight Club (id 550) while every person uses Brad Pitt (id 287). These are only used as examples to show what a real world request looks like.
+Every example documented below uses the movie Fight Club (id 550), the TV show Breaking Bad (id 1396), and every person uses Brad Pitt (id 287). These are only used as examples to show what a real world request looks like.
 
 ### Movie
 
@@ -194,6 +198,108 @@ Tmdb::Movie.lists(22855)
 Get the changes for a specific movie id.
 ```ruby
 Tmdb::Movie.changes(22855)
+```
+
+### TV
+
+```ruby
+show = Tmdb::TV.detail(1396)
+```
+Get the list of popular TV shows. This list refreshes every day.
+```ruby
+Tmdb::TV.popular
+```
+Get the list of top rated TV shows. By default, this list will only include TV shows that have 2 or more votes. This list refreshes every day.
+```ruby
+Tmdb::TV.top_rated
+```
+#### TV - Images
+Get the images (posters and backdrops) for a TV series.
+```ruby
+@show = Tmdb::TV.images(1396)
+```
+Grab Backdrops
+```ruby
+@show['backdrops']
+```
+Grab Posters
+```ruby
+@show['posters']
+```
+#### TV - Cast
+Get the cast information about a TV series.
+```ruby
+Tmdb::TV.cast(1396)
+```
+#### TV - Crew
+Get the crew information about a TV series.
+```ruby
+Tmdb::TV.crew(1396)
+```
+#### TV - External IDs
+Get the external ids that we have stored for a TV series.
+```ruby
+Tmdb::TV.external_ids(1396)
+```
+
+### Season
+
+```ruby
+show = Tmdb::Season.detail(1396, 1)
+```
+#### Season - Images
+Get the images (posters) that we have stored for a TV season by season number.
+```ruby
+@season = Tmdb::Season.images(1396, 1)
+```
+Grab Posters
+```ruby
+@season['posters']
+```
+#### Season - Cast
+Get the cast credits for a TV season by season number.
+```ruby
+Tmdb::Season.cast(1396, 1)
+```
+#### Season - Crew
+Get the crew credits for a TV season by season number.
+```ruby
+Tmdb::Season.crew(1396, 1)
+```
+#### Season - External IDs
+Get the external ids that we have stored for a TV season by season number.
+```ruby
+Tmdb::Season.external_ids(1396, 1)
+```
+
+### Episode
+
+```ruby
+episode = Tmdb::Episode.detail(1396, 1, 1)
+```
+#### Episode - Images
+Get the images (episode stills) for a TV episode by combination of a season and episode number.
+```ruby
+@episode = Tmdb::Episode.images(1396, 1, 1)
+```
+Grab Stills
+```ruby
+@episode['stills']
+```
+#### Episode - Cast
+Get the TV episode cast credits by combination of season and episode number.
+```ruby
+Tmdb::Episode.cast(1396, 1, 1)
+```
+#### Episode - Crew
+Get the TV episode crew credits by combination of season and episode number.
+```ruby
+Tmdb::Episode.crew(1396, 1, 1)
+```
+#### Episode - External IDs
+Get the external ids for a TV episode by comabination of a season and episode number.
+```ruby
+Tmdb::Episode.external_ids(1396, 1, 1)
 ```
 
 ### Company
