@@ -24,6 +24,9 @@ Gem::Specification.new do |s|
                       "lib/themoviedb/people.rb",
                       "lib/themoviedb/resource.rb",
                       "lib/themoviedb/search.rb",
+                      "lib/themoviedb/season.rb",
+                      "lib/themoviedb/episode.rb",
+                      "lib/themoviedb/tv.rb",
                       "spec/movie_spec.rb"
                     ]
   s.test_files    = [
