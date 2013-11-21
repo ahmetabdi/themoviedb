@@ -4,6 +4,7 @@ module Tmdb
     base_uri 'http://api.themoviedb.org/3/'
     format :json
     headers 'Accept' => 'application/json'
+    headers 'Content-Type' => 'application/json'
 
     def self.config
       @@config ||= {}
@@ -19,6 +20,18 @@ module Tmdb
       else
         self.config[:language] = lang
       end
+    end
+
+    def self.etag(etag)
+      headers 'If-None-Match' => '"' + etag + '"'
+    end
+
+    def self.response
+      @@response ||= {}
+    end
+
+    def self.set_response(hash)
+      @@response = hash
     end
 
   end
