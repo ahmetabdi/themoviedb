@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/company/5/movies?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 22 Nov 2013 16:20:42 GMT
+      Etag:
+      - '"7e7bb7901735ecb73ae01814b9bd93f8"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '23690'
+      X-Memc-Expires:
+      - '62712'
+      X-Memc-Key:
+      - 173e9b62da07144664ebc85ea8162b61
+      X-Varnish:
+      - '2487809558'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '5771'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":5,"page":1,"results":[{"adult":false,"backdrop_path":"/6SGePsBXhRWDZ4Q7W3gvyc4glql.jpg","id":97020,"original_title":"RoboCop","release_date":"2014-02-07","poster_path":"/xxLhczZMiJt1iRdhfkVkuMu87si.jpg","popularity":3.13451193740971,"title":"RoboCop","vote_average":10.0,"vote_count":1},{"adult":false,"backdrop_path":"/4obt4AR0GTv3UHirv0gsn26KdgB.jpg","id":43199,"original_title":"The
+        Eddy Duchin Story","release_date":"1956-06-21","poster_path":"/k5Ps1sAPZzTE8CUYu7h8I6q4WFN.jpg","popularity":0.368,"title":"The
+        Eddy Duchin Story","vote_average":10.0,"vote_count":1},{"adult":false,"backdrop_path":"/dtfNOb332IaJlQoShW6lvyDqmRq.jpg","id":35692,"original_title":"The
+        Black Knight","release_date":"1954-08-26","poster_path":"/pfuNXf19lIVRwAGIq1FnhbupMsa.jpg","popularity":0.46,"title":"The
+        Black Knight","vote_average":10.0,"vote_count":1},{"adult":false,"backdrop_path":"/1Iu6grQvFpi0i86s3bxzmz0P7NM.jpg","id":10333,"original_title":"The
+        Prince of Tides","release_date":"1991-12-25","poster_path":"/56eEFAMnlcGEdGCdVE5x6tx7B7F.jpg","popularity":0.368,"title":"The
+        Prince of Tides","vote_average":9.0,"vote_count":1},{"adult":false,"backdrop_path":"/k9dJ6wKKg1Ye8XCGuNOtPoTpRn9.jpg","id":24807,"original_title":"Mr.
+        Deeds Goes to Town","release_date":"1936-04-12","poster_path":"/okosFT368wlEOGnbOX8yZWDnjm.jpg","popularity":0.750603371714599,"title":"Mr.
+        Deeds Goes to Town","vote_average":8.8,"vote_count":5},{"adult":false,"backdrop_path":"/bNRn6r7x3jd4XHqzyiwn6gImaKk.jpg","id":26857,"original_title":"The
+        Tingler","release_date":"1959-07-29","poster_path":"/A57yrG2WnZb6H0ZBPYpN3EW4VMm.jpg","popularity":2.72607319111788,"title":"The
+        Tingler","vote_average":8.5,"vote_count":2},{"adult":false,"backdrop_path":"/aIiSoGJb2M3RsVTUOKwo3Ygh4Gd.jpg","id":164558,"original_title":"One
+        Direction: This Is Us","release_date":"2013-08-30","poster_path":"/f8HCLK5RgOkSiNJ9bGvB0PAZX9j.jpg","popularity":4.75057317723272,"title":"One
+        Direction: This Is Us","vote_average":8.5,"vote_count":16},{"adult":false,"backdrop_path":"/8212U6Plx4bJy9q17uAEwnjSK02.jpg","id":64533,"original_title":"Bruce
+        Springsteen and the E Street Band: Houston 78 House Cut","release_date":"1978-12-08","poster_path":"/AsrPufWD1VO1I9J4zQv6ovdqQAm.jpg","popularity":0.23,"title":"Bruce
+        Springsteen and the E Street Band: Houston 78 House Cut","vote_average":8.5,"vote_count":1},{"adult":false,"backdrop_path":"/pVJUzreUKyMZ6MAsl1aLx8Jyl9w.jpg","id":65114,"original_title":"The
+        Cockleshell Heroes","release_date":"1956-03-27","poster_path":"/hZrdzDjkExYYYMfNupC4Hz4Asqu.jpg","popularity":0.92,"title":"The
+        Cockleshell Heroes","vote_average":8.5,"vote_count":1},{"adult":false,"backdrop_path":"/4Uw0kLJVRZ3Jl5dRY2HS76sRlcG.jpg","id":18118,"original_title":"Mackenna''s
+        Gold","release_date":"1969-01-01","poster_path":"/wACBMORmyP94r7mRmZThIUBMdHM.jpg","popularity":2.07,"title":"Mackenna''s
+        Gold","vote_average":8.3,"vote_count":3},{"adult":false,"backdrop_path":"/jgcZmS6sX56X44vdh34AJKzeR1M.jpg","id":42700,"original_title":"The
+        Night of the Generals","release_date":"1967-01-29","poster_path":"/tD3whXEEdkgLC7jjuhP4Bg99wKH.jpg","popularity":0.452182766236517,"title":"The
+        Night of the Generals","vote_average":8.3,"vote_count":3},{"adult":false,"backdrop_path":"/oSUAezCAa2dXbkJblUqJQwcKVKK.jpg","id":10911,"original_title":"The
+        Guns of Navarone","release_date":"1961-06-22","poster_path":"/eNOAaub9ZVFQjTbZX1UKAXRIfJv.jpg","popularity":2.98545828084078,"title":"The
+        Guns of Navarone","vote_average":8.2,"vote_count":24},{"adult":false,"backdrop_path":"/4JTEWV2NkTlHpbpcdXhSVxj9ATo.jpg","id":25560,"original_title":"The
+        Taming of the Shrew","release_date":"1967-03-08","poster_path":"/uI396OS1mORdEIjgzS446utOWqL.jpg","popularity":0.598,"title":"The
+        Taming of the Shrew","vote_average":8.0,"vote_count":2},{"adult":false,"backdrop_path":"/j7sKT274A4zJ5k1jGqtKJPFA6h0.jpg","id":31650,"original_title":"Someone
+        to Watch Over Me","release_date":"1987-10-09","poster_path":"/dQrYvau9NLJyDyVLhJn5WhpnqBR.jpg","popularity":0.368,"title":"Someone
+        to Watch Over Me","vote_average":8.0,"vote_count":2},{"adult":false,"backdrop_path":"/AseCvbKqGUpdctLDQXcySHe64Ji.jpg","id":21564,"original_title":"Human
+        Desire","release_date":"1954-08-05","poster_path":"/67PQyYNqc4oLyjIFEDKZdFsussb.jpg","popularity":0.630637118546092,"title":"Human
+        Desire","vote_average":8.0,"vote_count":1},{"adult":false,"backdrop_path":null,"id":43253,"original_title":"The
+        Tall T","release_date":"1957-04-02","poster_path":"/30JrfmaXwdEIJigK9uNh32uDzey.jpg","popularity":0.23,"title":"The
+        Tall T","vote_average":8.0,"vote_count":1},{"adult":false,"backdrop_path":"/qWRtM5v44yfuX1foHZPGhYbQEjx.jpg","id":3085,"original_title":"His
+        Girl Friday","release_date":"1940-01-11","poster_path":"/5RPOMMvuAmIXkzKOqCJPbhcSOHL.jpg","popularity":1.18927254505235,"title":"His
+        Girl Friday","vote_average":7.9,"vote_count":7},{"adult":false,"backdrop_path":"/iHMJM1hkV0vripthQHmRMpH6Bjg.jpg","id":47760,"original_title":"Restless","release_date":"2011-09-16","poster_path":"/rBW6dYvQsp0gvQlCKsqnVFOsQuy.jpg","popularity":1.01464915535139,"title":"Restless","vote_average":7.9,"vote_count":14},{"adult":false,"backdrop_path":"/uykne2LCkVuD5NEBzicCmCHFqBa.jpg","id":12102,"original_title":"Kramer
+        vs. Kramer","release_date":"1979-12-19","poster_path":"/AwqsWJGD3P9YJKpOQ48DcXptyEy.jpg","popularity":1.36474516940392,"title":"Kramer
+        vs. Kramer","vote_average":7.8,"vote_count":25},{"adult":false,"backdrop_path":"/fyemcugbcwcP9xvgRBFbKg8vo2M.jpg","id":9267,"original_title":"And
+        Now for Something Completely Different","release_date":"1971-11-09","poster_path":"/tv4ABcIfphERLh4wdge9eW07B3i.jpg","popularity":0.65020872999005,"title":"And
+        Now for Something Completely Different","vote_average":7.6,"vote_count":10}],"total_pages":15,"total_results":287}'
+    http_version: 
+  recorded_at: Fri, 22 Nov 2013 16:20:43 GMT
+recorded_with: VCR 2.5.0

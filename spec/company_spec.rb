@@ -52,4 +52,46 @@ describe Tmdb::Company do
 
   end
 
+  describe "For a company movies" do
+    before(:each) do
+      VCR.use_cassette 'company/movies' do
+        @movies = Tmdb::Company.movies(5)
+        @movie  = @movies.first
+      end
+    end
+
+    it "should give back multiple movies" do
+      @movies.count.should > 1
+    end
+
+    it "should have a id" do
+      @movie["id"].should eq(97020)
+    end
+
+    it "should have a title" do
+      @movie["title"].should eq("RoboCop")
+    end
+
+    it "should have a original title" do
+      @movie["original_title"].should eq("RoboCop")
+    end
+
+    it "should have a poster" do
+      @movie["poster_path"].should eq("/xxLhczZMiJt1iRdhfkVkuMu87si.jpg")
+    end
+
+    it "should have a popularity rating" do
+      @movie["popularity"].should eq(3.13451193740971)
+    end
+
+    it "should show whether it is an adult movie" do
+      @movie["adult"].should eq(false)
+    end
+
+    it "should have a release date" do
+      @movie["release_date"].should eq("2014-02-07")
+    end
+
+  end
+
 end
