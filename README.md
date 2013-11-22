@@ -33,6 +33,7 @@ Tmdb::Api.language("de")
 ```
 
 The default language is english.
+The API supports translations just be aware that it does not fall back to English in the event that a field hasn't been translated.
 
 ## Resources
 
@@ -40,8 +41,8 @@ Current available resources:
 * Company
 * Movie
 * TV
-* Season
-* Episode
+* TV Seasons
+* TV Episodes
 * Collection
 * People
 * Genre
