@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/company/5?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 22 Nov 2013 16:08:47 GMT
+      Etag:
+      - '"b9ca16a921738d1f4307b69b51ee616a"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '84594'
+      X-Memc-Expires:
+      - '1808'
+      X-Memc-Key:
+      - 530491c1bdbc3f41be813bdd0ccdd5f1
+      X-Varnish:
+      - '2487362352'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '750'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"description":"Columbia Pictures Industries, Inc. (CPII) is an American
+        film production and distribution company. Columbia Pictures now forms part
+        of the Columbia TriStar Motion Picture Group, owned by Sony Pictures Entertainment,
+        a subsidiary of the Japanese conglomerate Sony. It is one of the leading film
+        companies in the world, a member of the so-called Big Six. It was one of the
+        so-called Little Three among the eight major film studios of Hollywood''s
+        Golden Age.","headquarters":"Culver City, California","homepage":"http://www.sonypictures.com/","id":5,"logo_path":"/mjUSfXXUhMiLAA1Zq1TfStNSoLR.png","name":"Columbia
+        Pictures","parent_company":{"name":"Sony Pictures Entertainment","id":5752,"logo_path":"/sFg00KK0vVq3oqvkCxRQWApYB83.png"}}'
+    http_version: 
+  recorded_at: Fri, 22 Nov 2013 16:08:48 GMT
+recorded_with: VCR 2.5.0
