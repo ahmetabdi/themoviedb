@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/tv/popular?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 26 Nov 2013 00:17:43 GMT
+      Etag:
+      - '"9e5a9db5dc0d05dc1fd94a54ea3df8f8"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '46332'
+      X-Memc-Expires:
+      - '40070'
+      X-Memc-Key:
+      - 883336c066472f0c8713f1d1866eefdc
+      X-Varnish:
+      - '2698817077'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '5420'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"results":[{"backdrop_path":null,"id":57243,"original_name":"Doctor
+        Who","first_air_date":"2005-03-26","poster_path":"/4a94ptIdYz0JwSzo0dCNuPCcfM8.jpg","popularity":16.5167252220739,"name":"Doctor
+        Who","vote_average":7.875,"vote_count":4},{"backdrop_path":"/A9jyYzO8XEogAHV7LBxF2vWAAXj.jpg","id":1434,"original_name":"Family
+        Guy","first_air_date":"1999-01-31","poster_path":"/n3UBzIx28m3FpC2EDwVJIjvPxnl.jpg","popularity":15.8371373936758,"name":"Family
+        Guy","vote_average":8.125,"vote_count":4},{"backdrop_path":"/faW7Ky7j1jEn8X366oG2VpUtuvr.jpg","id":1667,"original_name":"Saturday
+        Night Live","first_air_date":"1975-10-11","poster_path":"/daNm0Tx09oJ5SZSa7M744Ezi7LQ.jpg","popularity":15.1145652631489,"name":"Saturday
+        Night Live","vote_average":8.33333333333333,"vote_count":3},{"backdrop_path":"/xLY0EByQwZhpHRMMPzMEoQY4Z99.jpg","id":1399,"original_name":"Game
+        of Thrones","first_air_date":"2011-11-02","poster_path":"/pVC9o9LLnhuPpas0B0p9spqAxNg.jpg","popularity":13.0762885495753,"name":"Game
+        of Thrones","vote_average":9.45454545454546,"vote_count":22},{"backdrop_path":"/nGzg3mn3C6fYVE0SvXHmY2XX4P2.jpg","id":1402,"original_name":"The
+        Walking Dead","first_air_date":"2010-10-31","poster_path":"/5WdtVCyLCL6nwciUhZzVA8F0fMT.jpg","popularity":12.4035947906574,"name":"The
+        Walking Dead","vote_average":7.72222222222222,"vote_count":9},{"backdrop_path":"/ikUfFMLSU47N9PXRGb91cO6VPFn.jpg","id":655,"original_name":"Star
+        Trek: The Next Generation","first_air_date":"1987-09-28","poster_path":"/ahSthwnjI5iAsEBGT88My1CWOI1.jpg","popularity":11.6612814027631,"name":"Star
+        Trek: The Next Generation","vote_average":8.25,"vote_count":4},{"backdrop_path":"/6tL4eiGmXJZI2eMWh1rgHdv58kb.jpg","id":2224,"original_name":"The
+        Daily Show","first_air_date":"1996-07-22","poster_path":"/pnQmYxMlJBvnyFElFHbzsPlOUUx.jpg","popularity":10.9435689162026,"name":"The
+        Daily Show","vote_average":0.0,"vote_count":0},{"backdrop_path":"/7P1HSNGCeMAM4hoMjATzlZ1wfOg.jpg","id":1431,"original_name":"CSI:
+        Crime Scene Investigation","first_air_date":"2000-10-06","poster_path":"/5W2qOtSh52ZgJTiaioEsmnbp2xu.jpg","popularity":9.50518362277138,"name":"CSI:
+        Crime Scene Investigation","vote_average":4.5,"vote_count":1},{"backdrop_path":"/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg","id":1396,"original_name":"Breaking
+        Bad","first_air_date":"2008-01-20","poster_path":"/j5k6ZTYqamPDZplCCXuokjJ2PoJ.jpg","popularity":9.23244532629376,"name":"Breaking
+        Bad","vote_average":8.83333333333333,"vote_count":24},{"backdrop_path":"/wY9tYxyhFRDGkQIFGpk4VkVsiXR.jpg","id":456,"original_name":"The
+        Simpsons","first_air_date":"1989-12-17","poster_path":"/oadXgs77zoLQm04J9dG4fQ3Huwn.jpg","popularity":8.26586770925409,"name":"The
+        Simpsons","vote_average":8.54545454545454,"vote_count":11},{"backdrop_path":"/8WhWnYdOHDQgBBg52VhKwmFA0UQ.jpg","id":549,"original_name":"Law
+        & Order","first_air_date":"1990-09-13","poster_path":"/22C3s3PkS7D1F135n8t2uVazOhy.jpg","popularity":7.20177955549531,"name":"Law
+        & Order","vote_average":7.5,"vote_count":2},{"backdrop_path":"/qm7w1YTkPyVXvxR6IizPVL9QkZA.jpg","id":4087,"original_name":"The
+        X-Files","first_air_date":"1993-09-10","poster_path":"/9QLl0uPDJ676lob32hSpaboPIwn.jpg","popularity":6.24700131019469,"name":"The
+        X-Files","vote_average":8.6875,"vote_count":8},{"backdrop_path":"/knB3yzqu3ofy1mR9A3oREijnU7e.jpg","id":4588,"original_name":"ER","first_air_date":"1994-09-19","poster_path":"/qnllIuJI11tskEolTd3QsbR0TuC.jpg","popularity":6.20497357940307,"name":"ER","vote_average":6.0,"vote_count":1},{"backdrop_path":"/m9Vf8V4j9P6oiVgeCPbC1YObaa3.jpg","id":2122,"original_name":"King
+        of the Hill","first_air_date":"1997-01-12","poster_path":"/r6dIrTjWLE3GfcTZzrDYikt6YDn.jpg","popularity":5.56053660996585,"name":"King
+        of the Hill","vote_average":3.0,"vote_count":1},{"backdrop_path":"/fbYSM5VXo9Gaq8V6vlCSv6KRHlx.jpg","id":1418,"original_name":"The
+        Big Bang Theory","first_air_date":"2007-09-24","poster_path":"/mYOWdfjuYqiZC1VS2SPefW3g38Q.jpg","popularity":5.23905172942654,"name":"The
+        Big Bang Theory","vote_average":8.1,"vote_count":15},{"backdrop_path":"/xwIDd7zkknWZ927RXysplAS7mWJ.jpg","id":2518,"original_name":"The
+        Tonight Show with Jay Leno","first_air_date":"1992-05-25","poster_path":"/8mrWLDC4t1KsiyYta7B7iXGgsXz.jpg","popularity":5.16943762946245,"name":"The
+        Tonight Show with Jay Leno","vote_average":0.0,"vote_count":0},{"backdrop_path":"/i10z7Iar6ixBUKj6z3uhdfuRQNv.jpg","id":1433,"original_name":"American
+        Dad!","first_air_date":"2005-02-06","poster_path":"/6DRxd3nI0sBw4lIA5pbeVhoI2nO.jpg","popularity":4.94392340578603,"name":"American
+        Dad!","vote_average":6.5,"vote_count":4},{"backdrop_path":"/4JXoCBhzCVRgm5vcEWYISB7M0Cg.jpg","id":2190,"original_name":"South
+        Park","first_air_date":"1997-08-13","poster_path":"/ytDsUayDM7amugODWNmW3nIZa6P.jpg","popularity":4.84987504292124,"name":"South
+        Park","vote_average":8.91666666666667,"vote_count":6},{"backdrop_path":"/f6KYjReKvN7Km9TnuAnZCqeZ7xT.jpg","id":3713,"original_name":"Gunsmoke","first_air_date":"1955-09-10","poster_path":"/aHIHwuVatcTuPdgPHmqaxhnxL3v.jpg","popularity":4.82703253389001,"name":"Gunsmoke","vote_average":0.0,"vote_count":0},{"backdrop_path":"/fxX3PtHJBj18QJ31jUMNelMKGDe.jpg","id":1408,"original_name":"House","first_air_date":"2004-11-16","poster_path":"/j2Ny9P6RY9i3lfxdyePEUVSN4o5.jpg","popularity":4.68635199507033,"name":"House","vote_average":8.33333333333333,"vote_count":3}],"total_pages":3027,"total_results":60530}'
+    http_version: 
+  recorded_at: Tue, 26 Nov 2013 00:17:46 GMT
+recorded_with: VCR 2.5.0

@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/tv/top_rated?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 26 Nov 2013 00:26:19 GMT
+      Etag:
+      - '"29e11b4d427b5788a277f2e5aa120f1b"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '39115'
+      X-Memc-Expires:
+      - '47287'
+      X-Memc-Key:
+      - 5ce5c09e40253e1ff71ab3e7b0f8703a
+      X-Varnish:
+      - '2699146969'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '5256'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"results":[{"backdrop_path":"/yGW0NX3I8GXPlWPdoWWyaH0AsCk.jpg","id":1104,"original_name":"Mad
+        Men","first_air_date":"2007-07-19","poster_path":"/xA2nHrx2oHGPnL4ehBwPxD0ABvb.jpg","popularity":2.15615937122719,"name":"Mad
+        Men","vote_average":9.66666666666667,"vote_count":3},{"backdrop_path":"/2APnNWNDQtcKgC8lXYwtJVAyNfi.jpg","id":19885,"original_name":"Sherlock","first_air_date":"2010-07-25","poster_path":"/aCt2etumGt5aAXCyMoZALqXhnqD.jpg","popularity":1.2719927169251,"name":"Sherlock","vote_average":9.64285714285714,"vote_count":7},{"backdrop_path":"/xLY0EByQwZhpHRMMPzMEoQY4Z99.jpg","id":1399,"original_name":"Game
+        of Thrones","first_air_date":"2011-11-02","poster_path":"/pVC9o9LLnhuPpas0B0p9spqAxNg.jpg","popularity":13.0762885495753,"name":"Game
+        of Thrones","vote_average":9.45454545454546,"vote_count":22},{"backdrop_path":"/kx83c2RmyYi9XGtPoYqFXAEDtK3.jpg","id":1437,"original_name":"Firefly","first_air_date":"2002-09-20","poster_path":"/jFykyPcd92ecGJwwiqhssoS6MTO.jpg","popularity":3.60675104149289,"name":"Firefly","vote_average":9.28571428571429,"vote_count":7},{"backdrop_path":"/9quXduCcoWcUtcnMOKZb9J77Gev.jpg","id":18347,"original_name":"Community","first_air_date":"2009-09-17","poster_path":"/4mW6xxN8pHtfECWGNHQQmoP34J.jpg","popularity":1.51900143115664,"name":"Community","vote_average":9.125,"vote_count":4},{"backdrop_path":"/nRQb7ymvt0NJvRR2YaSwFWJdAW0.jpg","id":37680,"original_name":"Suits","first_air_date":"2011-06-23","poster_path":"/9mRRbi2akSRqtwJx6EyCfo3gaky.jpg","popularity":1.03872,"name":"Suits","vote_average":9.0,"vote_count":3},{"backdrop_path":"/rd6vbo08CU21CG6kQdZlz2Gpprk.jpg","id":1421,"original_name":"Modern
+        Family","first_air_date":"2009-09-23","poster_path":"/zgwm6oVA91iRdipjzEj9IV1SS8X.jpg","popularity":2.28262809114949,"name":"Modern
+        Family","vote_average":9.0,"vote_count":3},{"backdrop_path":"/5CSqbAncWlzkPz2Qxvbu3vLJLqC.jpg","id":1427,"original_name":"Broadchurch","first_air_date":"2013-03-04","poster_path":"/yYg4z9XrjRbNROc2sVG4H2uq4Nl.jpg","popularity":1.205,"name":"Broadchurch","vote_average":9.0,"vote_count":3},{"backdrop_path":"/6KPVeAKl5CezbPoan0nTRykQok4.jpg","id":1215,"original_name":"Californication","first_air_date":"2007-08-13","poster_path":"/qynpyBArLSmg4wJVoGDzBA82x1M.jpg","popularity":3.60252081007247,"name":"Californication","vote_average":9.0,"vote_count":3},{"backdrop_path":"/4JXoCBhzCVRgm5vcEWYISB7M0Cg.jpg","id":2190,"original_name":"South
+        Park","first_air_date":"1997-08-13","poster_path":"/ytDsUayDM7amugODWNmW3nIZa6P.jpg","popularity":4.84987504292124,"name":"South
+        Park","vote_average":8.91666666666667,"vote_count":6},{"backdrop_path":"/RzFEhhjane7TK1USqZ5JJc4pKa.jpg","id":2490,"original_name":"The
+        IT Crowd","first_air_date":"2006-02-03","poster_path":"/neEcKPGAIictrApAeD2wQvK4eeP.jpg","popularity":1.7185578,"name":"The
+        IT Crowd","vote_average":8.9,"vote_count":5},{"backdrop_path":"/aUDXk7DNvbmsqPrJnLnG6MVi9Bv.jpg","id":1432,"original_name":"Veronica
+        Mars","first_air_date":"2004-09-22","poster_path":"/ewG884trMtmm8FrEAxOKVQDd8cD.jpg","popularity":1.9532666227042,"name":"Veronica
+        Mars","vote_average":8.875,"vote_count":4},{"backdrop_path":"/s6j17VsUe66HXvo6PfgWxUlyeVg.jpg","id":1435,"original_name":"The
+        Good Wife","first_air_date":"2009-09-22","poster_path":"/ueresyKVXxEaEDgJXnpeADGHkC4.jpg","popularity":2.07025890046314,"name":"The
+        Good Wife","vote_average":8.875,"vote_count":4},{"backdrop_path":"/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg","id":1396,"original_name":"Breaking
+        Bad","first_air_date":"2008-01-20","poster_path":"/lVbofIPlw3kYa8FQgHT7GtWMI2Q.jpg","popularity":9.23244532629376,"name":"Breaking
+        Bad","vote_average":8.83333333333333,"vote_count":24},{"backdrop_path":"/t0OdeySIGobyP7foHMNIc9kmVn1.jpg","id":15260,"original_name":"Adventure
+        Time","first_air_date":"2010-04-05","poster_path":"/bZpF5g6u0np0AMYXkug4aJSH3xI.jpg","popularity":2.94545728,"name":"Adventure
+        Time","vote_average":8.83333333333333,"vote_count":3},{"backdrop_path":"/gDbNsqJmf91WqREWcvoui5B6O0E.jpg","id":40008,"original_name":"Hannibal","first_air_date":"2013-04-04","poster_path":"/87eBFE1fhjjdmcPuKJfB6P7qMFp.jpg","popularity":0.90487,"name":"Hannibal","vote_average":8.75,"vote_count":2},{"backdrop_path":"/kgadTwNJYYGZ7LTrw9X7KDiRCfV.jpg","id":1405,"original_name":"Dexter","first_air_date":"2006-10-01","poster_path":"/eIoAzf9czDSWqYneE1fZTQ3iJhB.jpg","popularity":3.8713470556319,"name":"Dexter","vote_average":8.7,"vote_count":10},{"backdrop_path":"/qm7w1YTkPyVXvxR6IizPVL9QkZA.jpg","id":4087,"original_name":"The
+        X-Files","first_air_date":"1993-09-10","poster_path":"/9QLl0uPDJ676lob32hSpaboPIwn.jpg","popularity":6.24700131019469,"name":"The
+        X-Files","vote_average":8.6875,"vote_count":8},{"backdrop_path":"/9K07NwKG879VK0BOj5VfSey6CqS.jpg","id":1398,"original_name":"The
+        Sopranos","first_air_date":"1999-01-10","poster_path":"/z8BBNlEjVDdtHPtPYVCxa9VFnQk.jpg","popularity":1.42277622399362,"name":"The
+        Sopranos","vote_average":8.71428571428571,"vote_count":7},{"backdrop_path":"/TZOtHi7tP7bL34h8Z5rfkSHfGv.jpg","id":1404,"original_name":"Chuck","first_air_date":"2007-09-24","poster_path":"/8JDJWjON3EN96Uz7l1N8v3Q2bap.jpg","popularity":3.40425335200512,"name":"Chuck","vote_average":8.66666666666667,"vote_count":3}],"total_pages":4,"total_results":68}'
+    http_version: 
+  recorded_at: Tue, 26 Nov 2013 00:26:22 GMT
+recorded_with: VCR 2.5.0

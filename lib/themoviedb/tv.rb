@@ -7,7 +7,6 @@ module Tmdb
       :backdrop_path,
       :created_by,
       :episode_run_time,
-      :genres,
       :first_air_date,
       :genres,
       :homepage,
@@ -16,7 +15,7 @@ module Tmdb
       :languages,
       :last_air_date,
       :name,
-      :network,
+      :networks,
       :number_of_episodes,
       :number_of_seasons,
       :original_name,
@@ -29,7 +28,7 @@ module Tmdb
       :vote_average,
       :vote_count
     ]
-    
+
     @@fields.each do |field|
       attr_accessor field
     end

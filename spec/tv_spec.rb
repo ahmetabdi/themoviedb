@@ -1,0 +1,239 @@
+require 'rspec'
+require 'spec_helper'
+require 'vcr'
+
+describe Tmdb::TV do
+
+  @fields = [
+      :backdrop_path,
+      :created_by,
+      :episode_run_time,
+      :first_air_date,
+      :genres,
+      :homepage,
+      :id,
+      :in_production,
+      :languages,
+      :last_air_date,
+      :name,
+      :networks,
+      :number_of_episodes,
+      :number_of_seasons,
+      :original_name,
+      :origin_country,
+      :overview,
+      :popularity,
+      :poster_path,
+      :seasons,
+      :status,
+      :vote_average,
+      :vote_count
+    ]
+
+  @fields.each do |field|
+    it { should respond_to field }
+  end
+
+  describe "For a TV detail" do
+
+    before(:each) do
+      VCR.use_cassette 'tv/detail' do
+        @tv = Tmdb::TV.detail(1396)
+      end
+    end
+
+    it "should return a id" do
+      @tv.id.should == 1396
+    end
+
+    it "should return a backdrop" do
+      @tv.backdrop_path.should == "/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg"
+    end
+
+    it "should return a created date" do
+      @tv.created_by.should == [{"id"=>66633, "name"=>"Vince Gilligan", "profile_path"=>"/wSTvJGz7QbJf1HK2Mv1Cev6W9TV.jpg"}]
+    end
+
+    it "should return a run time" do
+      @tv.episode_run_time.should == [45, 47]
+    end
+
+    it "should return genres" do
+      @tv.genres.should == [{"id"=>18, "name"=>"Drama"}]
+    end
+
+    it "should return a first air date" do
+      @tv.first_air_date.should == "2008-01-20"
+    end
+
+    it "should return a homepage" do
+      @tv.homepage.should == "http://www.amctv.com/shows/breaking-bad"
+    end
+
+    it "should return a production state" do
+      @tv.in_production.should be_false
+    end
+
+    it "should return languages" do
+      @tv.languages.should == ["en", "de", "ro", "es", "fa"]
+    end
+
+    it "should return a last air date" do
+      @tv.last_air_date.should == "2013-09-29"
+    end
+
+    it "should return a name" do
+      @tv.name.should == "Breaking Bad"
+    end
+
+    it "should return a network" do
+      @tv.networks.should == [{"id"=>174, "name"=>"AMC"}]
+    end
+
+    it "should return the number of episodes" do
+      @tv.number_of_episodes.should == 62
+    end
+
+    it "should return the number of seasons" do
+      @tv.number_of_seasons.should == 5
+    end
+
+    it "should return the original name" do
+      @tv.original_name.should == "Breaking Bad"
+    end
+
+    it "should return the origin country" do
+      @tv.origin_country.should == ["US"]
+    end
+
+    it "should return a overview" do
+      @tv.overview.should == "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan. Set and produced in Albuquerque, New Mexico, Breaking Bad is the story of Walter White, a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer at the beginning of the series. He turns to a life of crime, producing and selling methamphetamine, in order to secure his family's financial future before he dies, teaming with his former student, Jesse Pinkman. Heavily serialized, the series is known for positioning its characters in seemingly inextricable corners and has been labeled a contemporary western by its creator."
+    end
+
+    it "should return a popularity rating" do
+      @tv.popularity.should == 9.23244532629376
+    end
+
+    it "should return a poster" do
+      @tv.poster_path.should == "/iRDNn9EHKuBhGa77UBteazvsZa1.jpg"
+    end
+
+    it "should return seasons" do
+      @tv.seasons.should == [{"air_date"=>"2009-02-17", "poster_path"=>"/AngNuUbXSciwLnUXtdOBHqphxNr.jpg", "season_number"=>0}, {"air_date"=>"2008-01-20", "poster_path"=>"/2lhO5zd1nnf7PjC7dGCUo45Volz.jpg", "season_number"=>1}, {"air_date"=>"2009-03-08", "poster_path"=>"/mYsNUgov0AtEnwpNeopj1lgMTf2.jpg", "season_number"=>2}, {"air_date"=>"2010-03-21", "poster_path"=>"/vxoZzDLMwxpuR5i5z4qSIU4LShE.jpg", "season_number"=>3}, {"air_date"=>"2011-07-17", "poster_path"=>"/dzZKSFsV6fREiSCYRj9NPFY4ggd.jpg", "season_number"=>4}, {"air_date"=>"2012-07-15", "poster_path"=>"/8bnD50mYDcoYER5ZcarjBGgAEb6.jpg", "season_number"=>5}]
+    end
+
+    it "should return a status" do
+      @tv.status.should == "Ended"
+    end
+
+    it "should return a vote average" do
+      @tv.vote_average.should == 8.83333333333333
+    end
+
+    it "should return a vote count" do
+      @tv.vote_count.should == 24
+    end
+
+  end
+
+  describe "For popular TV shows" do
+
+    before(:each) do
+      VCR.use_cassette 'tv/popular' do
+        @tv = Tmdb::TV.popular
+      end
+    end
+
+    it "should return an array" do
+      @tv.class.should == Array
+    end
+
+    it "each show should return an id" do
+      @tv.first["id"].should == 57243
+    end
+
+    it "each show should return an name" do
+      @tv.first["name"].should == "Doctor Who"
+    end
+
+    it "each show should return an original name" do
+      @tv.first["original_name"].should == "Doctor Who"
+    end
+
+    it "each show should return an popularity" do
+      @tv.first["popularity"].should == 16.5167252220739
+    end
+
+    it "each show should return an poster_path" do
+      @tv.first["poster_path"].should == "/4a94ptIdYz0JwSzo0dCNuPCcfM8.jpg"
+    end
+
+    it "each show should return an vote_average" do
+      @tv.first["vote_average"].should == 7.875
+    end
+
+    it "each show should return an vote_count" do
+      @tv.first["vote_count"].should == 4
+    end
+
+    it "each show should return an backdrop" do
+      @tv.first["backdrop_path"].should == nil
+    end
+
+    it "each show should return an first air date" do
+      @tv.first["first_air_date"].should == "2005-03-26"
+    end
+
+  end
+
+  describe "For top rated TV shows" do
+
+    before(:each) do
+      VCR.use_cassette 'tv/top_rated' do
+        @tv = Tmdb::TV.top_rated
+      end
+    end
+
+    it "should return an array" do
+      @tv.class.should == Array
+    end
+
+    it "each show should return an id" do
+      @tv.first["id"].should == 1104
+    end
+
+    it "each show should return an name" do
+      @tv.first["name"].should == "Mad Men"
+    end
+
+    it "each show should return an original name" do
+      @tv.first["original_name"].should == "Mad Men"
+    end
+
+    it "each show should return an popularity" do
+      @tv.first["popularity"].should == 2.15615937122719
+    end
+
+    it "each show should return an poster_path" do
+      @tv.first["poster_path"].should == "/xA2nHrx2oHGPnL4ehBwPxD0ABvb.jpg"
+    end
+
+    it "each show should return an vote_average" do
+      @tv.first["vote_average"].should == 9.66666666666667
+    end
+
+    it "each show should return an vote_count" do
+      @tv.first["vote_count"].should == 3
+    end
+
+    it "each show should return an backdrop" do
+      @tv.first["backdrop_path"].should == "/yGW0NX3I8GXPlWPdoWWyaH0AsCk.jpg"
+    end
+
+    it "each show should return an first air date" do
+      @tv.first["first_air_date"].should == "2007-07-19"
+    end
+
+  end
+
+end
