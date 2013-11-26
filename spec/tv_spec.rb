@@ -236,4 +236,183 @@ describe Tmdb::TV do
 
   end
 
+  describe "For a TV shows images" do
+
+    describe "For backdrops" do
+
+      before(:each) do
+        VCR.use_cassette 'tv/images' do
+          @backdrop = Tmdb::TV.images(1396)['backdrops'].first
+        end
+      end
+
+      it "should return a aspect ratio" do
+        @backdrop["aspect_ratio"].should == 1.78
+      end
+
+      it "should return a file path" do
+        @backdrop["file_path"].should == "/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg"
+      end
+
+      it "should return a height" do
+        @backdrop["height"].should == 720
+      end
+
+      it "should return a iso code" do
+        @backdrop["iso_639_1"].should == nil
+      end
+
+      it "should return a vote average" do
+        @backdrop["vote_average"].should == 0.0
+      end
+
+      it "should return a vote count" do
+        @backdrop["vote_count"].should == 0.0
+      end
+
+      it "should return a width" do
+        @backdrop["width"].should == 1280
+      end
+
+    end
+
+    describe "For posters" do
+
+      before(:each) do
+        VCR.use_cassette 'tv/images' do
+          @poster = Tmdb::TV.images(1396)['posters'].first
+        end
+      end
+
+      it "should return a aspect ratio" do
+        @poster["aspect_ratio"].should == 1.0
+      end
+
+      it "should return a file path" do
+        @poster["file_path"].should == "/lVbofIPlw3kYa8FQgHT7GtWMI2Q.jpg"
+      end
+
+      it "should return a height" do
+        @poster["height"].should == 1000
+      end
+
+      it "should return a iso code" do
+        @poster["iso_639_1"].should == "nl"
+      end
+
+      it "should return a vote average" do
+        @poster["vote_average"].should == 5.3125
+      end
+
+      it "should return a vote count" do
+        @poster["vote_count"].should == 1
+      end
+
+      it "should return a width" do
+        @poster["width"].should == 1000
+      end
+
+    end
+
+  end
+
+  describe "For a TV shows cast" do
+
+    before(:each) do
+      VCR.use_cassette 'tv/cast' do
+        @cast = Tmdb::TV.cast(1396).first
+      end
+    end
+
+    it "should return a id" do
+      @cast['id'].should == 17419
+    end
+
+    it "should return a name" do
+      @cast['name'].should == "Bryan Cranston"
+    end
+
+    it "should return a order" do
+      @cast['order'].should == 0
+    end
+
+    it "should return a profile image" do
+      @cast['profile_path'].should == "/qXWgFCk4OJqmLRUBEj7cbp8dnkx.jpg"
+    end
+
+    it "should return a character name" do
+      @cast['character'].should == "Walter White"
+    end
+
+    it "should return a credit id" do
+      @cast['credit_id'].should == "52542282760ee313280017f9"
+    end
+
+  end
+
+  describe "For a TV shows crew" do
+
+    before(:each) do
+      VCR.use_cassette 'tv/crew' do
+        @crew = Tmdb::TV.crew(1396).first
+      end
+    end
+
+    it "should return a id" do
+      @crew['id'].should == 29779
+    end
+
+    it "should return a department" do
+      @crew['department'].should == "Production"
+    end
+
+    it "should return a job" do
+      @crew['job'].should == "Executive Producer"
+    end
+
+    it "should return a name" do
+      @crew['name'].should == "Michelle MacLaren"
+    end
+
+    it "should return a profile image" do
+      @crew['profile_path'].should == nil
+    end
+
+  end
+
+  describe "For a TV shows external ids" do
+
+    before(:each) do
+      VCR.use_cassette 'tv/external_ids' do
+        @external = Tmdb::TV.external_ids(1396)
+      end
+    end
+
+    it "should return a id" do
+      @external['id'].should == 1396
+    end
+
+    it "should return a imdb id" do
+      @external['imdb_id'].should == "tt0903747"
+    end
+
+    it "should return a tvdb id" do
+      @external['tvdb_id'].should == 81189
+    end
+
+    it "should return a tvrage id" do
+      @external['tvrage_id'].should == 18164
+    end
+
+    it "should return a freebase id" do
+      @external['freebase_id'].should == "/en/breaking_bad"
+    end
+
+    it "should return a freebase mid" do
+      @external['freebase_mid'].should == "/m/03d34x8"
+    end
+
+
+  end
+
 end

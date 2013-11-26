@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/tv/1396/credits?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 26 Nov 2013 00:44:04 GMT
+      Etag:
+      - '"dfef0e62336602e32f6fd7b5be1c6bb4"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '13364'
+      X-Memc-Expires:
+      - '73038'
+      X-Memc-Key:
+      - ff58313494259ee31c15cd8400e51804
+      X-Varnish:
+      - '2699806583'
+      X-Varnish-Sid:
+      - tm-v-p-1200
+      Content-Length:
+      - '1552'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"cast":[{"character":"Walter White","credit_id":"52542282760ee313280017f9","id":17419,"name":"Bryan
+        Cranston","profile_path":"/qXWgFCk4OJqmLRUBEj7cbp8dnkx.jpg","order":0},{"character":"Skyler
+        White","credit_id":"52542282760ee3132800181b","id":134531,"name":"Anna Gunn","profile_path":"/lKlGjfmu9mJcF4upNrhtG3X9uyq.jpg","order":1},{"character":"Jesse
+        Pinkman","credit_id":"52542282760ee31328001845","id":84497,"name":"Aaron Paul","profile_path":"/oTceEUb6A9Bg6DeUTJBTETUOEAy.jpg","order":2},{"character":"Hank
+        Schrader","credit_id":"52542283760ee3132800187b","id":14329,"name":"Dean Norris","profile_path":"/500eNhWneDTXQuEXg6BR269IjHr.jpg","order":3},{"character":"Marie
+        Schrader","credit_id":"52542283760ee31328001891","id":1217934,"name":"Betsy
+        Brandt","profile_path":"/zpmsca1HCVqYrtWXV9xdmsECDTI.jpg","order":4},{"character":"Walter
+        White Jr.","credit_id":"52542284760ee313280018a9","id":1223196,"name":"RJ
+        Mitte","profile_path":"/hO5HJKM6p6SQjpdV8Fs64BJWzmT.jpg","order":5},{"character":"Saul
+        Goodman","credit_id":"5271b180760ee35afc09bb8d","id":59410,"name":"Bob Odenkirk","profile_path":"/8Xkrpac7iYqUsO7ImMEfNlYRjfS.jpg","order":73}],"crew":[{"department":"Production","id":29779,"name":"Michelle
+        MacLaren","job":"Executive Producer","profile_path":null},{"department":"Production","id":5162,"name":"Mark
+        Johnson","job":"Executive Producer","profile_path":"/yKGF6cbzyP03Gl1QhVLCu1gWSW6.jpg"},{"department":"Production","id":66633,"name":"Vince
+        Gilligan","job":"Executive Producer","profile_path":"/wSTvJGz7QbJf1HK2Mv1Cev6W9TV.jpg"}],"id":1396}'
+    http_version: 
+  recorded_at: Tue, 26 Nov 2013 00:44:06 GMT
+recorded_with: VCR 2.5.0

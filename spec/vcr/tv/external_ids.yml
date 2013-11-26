@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/tv/1396/external_ids?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=86402
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 26 Nov 2013 00:49:43 GMT
+      Etag:
+      - '"985f35fb49d902cab4200ee680eae8e1"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '86402'
+      X-Memc-Key:
+      - 7c8188d4ff96952bbef2d9154131fe1b
+      X-Varnish:
+      - '2083782524'
+      X-Varnish-Sid:
+      - tm-v-p-1100
+      Content-Length:
+      - '128'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":1396,"imdb_id":"tt0903747","freebase_id":"/en/breaking_bad","freebase_mid":"/m/03d34x8","tvdb_id":81189,"tvrage_id":18164}'
+    http_version: 
+  recorded_at: Tue, 26 Nov 2013 00:49:46 GMT
+recorded_with: VCR 2.5.0
