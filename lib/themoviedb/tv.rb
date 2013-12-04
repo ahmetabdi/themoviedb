@@ -45,6 +45,12 @@ module Tmdb
       search.fetch
     end
 
+    #Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates
+    def self.discover
+      search = Tmdb::Search.new("/discover/tv")
+      search.fetch
+    end
+
     #Get the cast information about a TV series.
     def self.cast(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")

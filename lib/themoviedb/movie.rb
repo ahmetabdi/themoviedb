@@ -63,6 +63,12 @@ module Tmdb
       search.fetch
     end
 
+    #Discover movies by different types of data like average rating, number of votes, genres and certifications.
+    def self.discover
+      search = Tmdb::Search.new("/discover/movie")
+      search.fetch
+    end
+
     #Get the alternative titles for a specific movie id.
     def self.alternative_titles(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/alternative_titles")
