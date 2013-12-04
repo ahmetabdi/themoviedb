@@ -64,8 +64,9 @@ module Tmdb
     end
 
     #Discover movies by different types of data like average rating, number of votes, genres and certifications.
-    def self.discover
+    def self.discover(conditions={})
       search = Tmdb::Search.new("/discover/movie")
+      search.filter(conditions)
       search.fetch
     end
 
