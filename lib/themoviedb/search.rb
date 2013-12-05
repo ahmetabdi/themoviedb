@@ -45,6 +45,8 @@ module Tmdb
         conditions.each do |key, value|
           if self.respond_to?(key)
             self.send(key, value)
+          else
+            @params[key] = value
           end
         end
       end
