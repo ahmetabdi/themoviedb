@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/find/81189?api_key=8a221fc31fcdf12a8af827465574ffc9&external_source=tvdb_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=10800
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Dec 2013 20:33:46 GMT
+      Etag:
+      - '"60f5f1af502b9aa61fcfea4830a338a6"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '1819'
+      X-Memc-Expires:
+      - '8981'
+      X-Memc-Key:
+      - f7c566c5f019cf8f8aa2d04cd69d71eb
+      Content-Length:
+      - '328'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"movie_results":[],"person_results":[],"tv_results":[{"backdrop_path":"/8STVFl9kvWtFAydXUFHIUvT47AA.jpg","id":1396,"original_name":"Breaking
+        Bad","first_air_date":"2008-01-20","poster_path":"/iRDNn9EHKuBhGa77UBteazvsZa1.jpg","popularity":9.20681555883354,"name":"Breaking
+        Bad","vote_average":9.07575757575758,"vote_count":33}]}'
+    http_version: 
+  recorded_at: Thu, 26 Dec 2013 20:33:44 GMT
+recorded_with: VCR 2.5.0

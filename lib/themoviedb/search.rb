@@ -36,6 +36,8 @@ module Tmdb
         @resource = '/search/company'
       elsif resource == 'keyword' then
         @resource = '/search/keyword'
+      elsif resource == 'find'
+        @resource = '/find'
       end
       self
     end
@@ -58,9 +60,14 @@ module Tmdb
     end
 
     #Send back whole response
-    def fetch_response
-      options = @params.merge(Api.config)
+    def fetch_response(conditions={})
+      if conditions[:external_source]
+        options = @params.merge(Api.config.merge({external_source: conditions[:external_source]}))
+      else
+        options = @params.merge(Api.config)
+      end
       response = Api.get(@resource, :query => options)
+
       etag = response.headers['etag'].gsub /"/, ''
       Api.set_response({'code' => response.code, 'etag' => etag})
       response.to_hash

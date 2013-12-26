@@ -27,10 +27,13 @@ Gem::Specification.new do |s|
                       "lib/themoviedb/season.rb",
                       "lib/themoviedb/episode.rb",
                       "lib/themoviedb/tv.rb",
-                      "spec/movie_spec.rb"
+                      "lib/themoviedb/find.rb"
                     ]
   s.test_files    = [
-                      "spec/movie_spec.rb"
+                      "spec/movie_spec.rb",
+                      "spec/tv_spec.rb",
+                      "spec/company_spec.rb",
+                      "spec/find_spec.rb"
                     ]
   s.require_paths = ["lib"]
   s.add_dependency('httparty')

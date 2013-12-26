@@ -46,6 +46,7 @@ Current available resources:
 * Collection
 * People
 * Genre
+* Find
 
 ## Example
 
@@ -71,12 +72,29 @@ resources => person, movie, tv, collection, company
 @search.fetch # makes request
 ```
 
+## Find
+
+The supported external sources for each object are as follows:
+Movies: imdb_id
+People: imdb_id, freebase_mid, freebase_id, tvrage_id
+TV Series: imdb_id, freebase_mid, freebase_id, tvdb_id, tvrage_id
+
+```ruby
+Tmdb::Find.imdb_id('id')
+Tmdb::Find.freebase_mid('id')
+Tmdb::Find.freebase_id('id')
+Tmdb::Find.tvrage_id('id')
+Tmdb::Find.tvdb_id('id')
+```
+
+The responses are in the hash with movie_results, person_results and tv_results
+
 
 ## Configuration
 
 Get the system wide configuration information. Some elements of the API require some knowledge of this configuration data. The purpose of this is to try and keep the actual API responses as light as possible.
 This method currently holds the data relevant to building image URLs as well as the change key map.
-To build an image URL, you will need 3 pieces of data. The base_url, size and file_path. Simply combine them all and you will have a fully qualified URL. 
+To build an image URL, you will need 3 pieces of data. The base_url, size and file_path. Simply combine them all and you will have a fully qualified URL.
 Here’s an example URL: http://cf2.imgobject.com/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg
 
 ```ruby

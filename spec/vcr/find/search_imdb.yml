@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/find/tt1375666?api_key=8a221fc31fcdf12a8af827465574ffc9&external_source=imdb_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=10800
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 26 Dec 2013 20:33:46 GMT
+      Etag:
+      - '"15204f34d5e9797ae9b5d9c0a5d1b1f2"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '1111'
+      X-Memc-Expires:
+      - '9689'
+      X-Memc-Key:
+      - 0dba9e4edb5548234efd993b388775ed
+      Content-Length:
+      - '326'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"movie_results":[{"adult":false,"backdrop_path":"/s2bT29y0ngXxxu2IA8AOzzXTRhd.jpg","id":27205,"original_title":"Inception","release_date":"2010-07-16","poster_path":"/tAXARVreJnWfoANIHASmgYk4SB0.jpg","popularity":11.2317772040632,"title":"Inception","vote_average":7.4,"vote_count":5461}],"person_results":[],"tv_results":[]}'
+    http_version: 
+  recorded_at: Thu, 26 Dec 2013 20:33:43 GMT
+recorded_with: VCR 2.5.0
