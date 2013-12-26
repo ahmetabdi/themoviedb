@@ -38,15 +38,15 @@ The API supports translations just be aware that it does not fall back to Englis
 ## Resources
 
 Current available resources:
-* Company
-* Movie
-* TV
-* TV Seasons
-* TV Episodes
-* Collection
-* People
-* Genre
-* Find
+* [Company](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#company)
+* [Movie](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#movie)
+* [TV](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#tv)
+* [TV Seasons](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#season)
+* [TV Episodes](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#episode)
+* [Collection](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#collection)
+* [People](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#people)
+* [Genre](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#genre)
+* [Find](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#find)
 
 ## Example
 
