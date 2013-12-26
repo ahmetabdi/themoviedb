@@ -48,6 +48,20 @@ Current available resources:
 * [Genre](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#genre)
 * [Find](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#find)
 
+Missing resources:
+* Account
+* Authentication
+* Changes
+* Collections
+* Credits
+* Discover
+* Jobs
+* Keywords
+* Lists
+* Networks
+* Reviews
+* Reviews
+
 ## Example
 
 ```ruby
