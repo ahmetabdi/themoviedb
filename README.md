@@ -60,7 +60,6 @@ Missing resources:
 * Lists
 * Networks
 * Reviews
-* Reviews
 
 ## Example
 
