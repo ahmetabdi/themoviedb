@@ -109,6 +109,12 @@ describe Tmdb::Movie do
         @movie.changes(5).should be_true
       end
     end
+
+    it "should return credits for an ID" do
+      VCR.use_cassette 'movie/credits_for_id' do
+        @movie.credits(5).should be_true
+      end
+    end
   end
 
   describe "For a movie detail" do
