@@ -140,5 +140,11 @@ module Tmdb
       search.fetch_response
     end
 
+    #Get the credits for a specific person id.
+    def self.credits(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
+      search.fetch_response
+    end
+
   end
 end

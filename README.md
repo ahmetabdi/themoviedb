@@ -231,6 +231,11 @@ Get the changes for a specific movie id.
 ```ruby
 Tmdb::Movie.changes(22855)
 ```
+#### Movie - Credits
+Get the credits for a specific movie id.
+```ruby
+Tmdb::Movie.credits(22855)
+```
 
 ### TV
 
