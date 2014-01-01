@@ -34,6 +34,22 @@ describe Tmdb::TV do
     it { should respond_to field }
   end
 
+  describe "For Chuck it should return images" do
+    before(:each) do
+      VCR.use_cassette 'tv/test_chuck' do
+        @tv = Tmdb::TV.images(1404)
+      end
+    end
+
+    it "should return backdrops for chuck" do
+      @tv['backdrops'].length.should >= 1
+    end
+
+    it "should return posters for chuck" do
+      @tv['posters'].length.should >= 1
+    end
+  end
+
   describe "For a TV detail" do
 
     before(:each) do
@@ -47,7 +63,7 @@ describe Tmdb::TV do
     end
 
     it "should return a backdrop" do
-      @tv.backdrop_path.should == "/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg"
+      @tv.backdrop_path.should == "/8STVFl9kvWtFAydXUFHIUvT47AA.jpg"
     end
 
     it "should return a created date" do
@@ -111,7 +127,7 @@ describe Tmdb::TV do
     end
 
     it "should return a popularity rating" do
-      @tv.popularity.should == 9.23244532629376
+      @tv.popularity.should == 6.60821276854239
     end
 
     it "should return a poster" do
@@ -119,7 +135,7 @@ describe Tmdb::TV do
     end
 
     it "should return seasons" do
-      @tv.seasons.should == [{"air_date"=>"2009-02-17", "poster_path"=>"/AngNuUbXSciwLnUXtdOBHqphxNr.jpg", "season_number"=>0}, {"air_date"=>"2008-01-20", "poster_path"=>"/2lhO5zd1nnf7PjC7dGCUo45Volz.jpg", "season_number"=>1}, {"air_date"=>"2009-03-08", "poster_path"=>"/mYsNUgov0AtEnwpNeopj1lgMTf2.jpg", "season_number"=>2}, {"air_date"=>"2010-03-21", "poster_path"=>"/vxoZzDLMwxpuR5i5z4qSIU4LShE.jpg", "season_number"=>3}, {"air_date"=>"2011-07-17", "poster_path"=>"/dzZKSFsV6fREiSCYRj9NPFY4ggd.jpg", "season_number"=>4}, {"air_date"=>"2012-07-15", "poster_path"=>"/8bnD50mYDcoYER5ZcarjBGgAEb6.jpg", "season_number"=>5}]
+      @tv.seasons.should == [{"air_date"=>"2009-02-17", "poster_path"=>"/AngNuUbXSciwLnUXtdOBHqphxNr.jpg", "season_number"=>0}, {"air_date"=>"2008-01-20", "poster_path"=>"/dHCYpEoHEjAV6Xt3eyNthkdLRl3.jpg", "season_number"=>1}, {"air_date"=>"2009-03-08", "poster_path"=>"/rCdISteF1GPvPsy0a5L0LDffjtP.jpg", "season_number"=>2}, {"air_date"=>"2010-03-21", "poster_path"=>"/vxoZzDLMwxpuR5i5z4qSIU4LShE.jpg", "season_number"=>3}, {"air_date"=>"2011-07-17", "poster_path"=>"/y4UJMKqfgDHLKDTp5uOe9oZWYnr.jpg", "season_number"=>4}, {"air_date"=>"2012-07-15", "poster_path"=>"/ih1JKNxEzW56azeFpEQmdu4poA4.jpg", "season_number"=>5}]
     end
 
     it "should return a status" do
@@ -127,11 +143,11 @@ describe Tmdb::TV do
     end
 
     it "should return a vote average" do
-      @tv.vote_average.should == 8.83333333333333
+      @tv.vote_average.should == 8.86764705882353
     end
 
     it "should return a vote count" do
-      @tv.vote_count.should == 24
+      @tv.vote_count.should == 34
     end
 
   end

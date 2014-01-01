@@ -18,45 +18,35 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - '*'
-      Age:
-      - '0'
       Cache-Control:
-      - public, max-age=86402
+      - public, max-age=21600
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Mon, 25 Nov 2013 23:55:30 GMT
+      - Wed, 01 Jan 2014 14:14:55 GMT
       Etag:
-      - '"b7d2d835884b06ebf9ee991cb8a4fc99"'
+      - '"c613579a358bc5a869f3b1a975bb7545"'
       Server:
       - nginx
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
-      Via:
-      - 1.1 varnish
-      X-Cache:
-      - MISS
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '21647'
+      - '13422'
       X-Memc-Expires:
-      - '64755'
+      - '8178'
       X-Memc-Key:
       - 784bb2de3776b09b09db0c8e57046b8b
-      X-Varnish:
-      - '2697875180'
-      X-Varnish-Sid:
-      - tm-v-p-1200
       Content-Length:
       - '1939'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"backdrop_path":"/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg","created_by":[{"id":66633,"name":"Vince
+      string: '{"backdrop_path":"/8STVFl9kvWtFAydXUFHIUvT47AA.jpg","created_by":[{"id":66633,"name":"Vince
         Gilligan","profile_path":"/wSTvJGz7QbJf1HK2Mv1Cev6W9TV.jpg"}],"episode_run_time":[45,47],"first_air_date":"2008-01-20","genres":[{"id":18,"name":"Drama"}],"homepage":"http://www.amctv.com/shows/breaking-bad","id":1396,"in_production":false,"languages":["en","de","ro","es","fa"],"last_air_date":"2013-09-29","name":"Breaking
         Bad","networks":[{"id":174,"name":"AMC"}],"number_of_episodes":62,"number_of_seasons":5,"original_name":"Breaking
         Bad","origin_country":["US"],"overview":"Breaking Bad is an American crime
@@ -67,7 +57,7 @@ http_interactions:
         selling methamphetamine, in order to secure his family''s financial future
         before he dies, teaming with his former student, Jesse Pinkman. Heavily serialized,
         the series is known for positioning its characters in seemingly inextricable
-        corners and has been labeled a contemporary western by its creator.","popularity":9.23244532629376,"poster_path":"/iRDNn9EHKuBhGa77UBteazvsZa1.jpg","seasons":[{"air_date":"2009-02-17","poster_path":"/AngNuUbXSciwLnUXtdOBHqphxNr.jpg","season_number":0},{"air_date":"2008-01-20","poster_path":"/2lhO5zd1nnf7PjC7dGCUo45Volz.jpg","season_number":1},{"air_date":"2009-03-08","poster_path":"/mYsNUgov0AtEnwpNeopj1lgMTf2.jpg","season_number":2},{"air_date":"2010-03-21","poster_path":"/vxoZzDLMwxpuR5i5z4qSIU4LShE.jpg","season_number":3},{"air_date":"2011-07-17","poster_path":"/dzZKSFsV6fREiSCYRj9NPFY4ggd.jpg","season_number":4},{"air_date":"2012-07-15","poster_path":"/8bnD50mYDcoYER5ZcarjBGgAEb6.jpg","season_number":5}],"status":"Ended","vote_average":8.83333333333333,"vote_count":24}'
+        corners and has been labeled a contemporary western by its creator.","popularity":6.60821276854239,"poster_path":"/iRDNn9EHKuBhGa77UBteazvsZa1.jpg","seasons":[{"air_date":"2009-02-17","poster_path":"/AngNuUbXSciwLnUXtdOBHqphxNr.jpg","season_number":0},{"air_date":"2008-01-20","poster_path":"/dHCYpEoHEjAV6Xt3eyNthkdLRl3.jpg","season_number":1},{"air_date":"2009-03-08","poster_path":"/rCdISteF1GPvPsy0a5L0LDffjtP.jpg","season_number":2},{"air_date":"2010-03-21","poster_path":"/vxoZzDLMwxpuR5i5z4qSIU4LShE.jpg","season_number":3},{"air_date":"2011-07-17","poster_path":"/y4UJMKqfgDHLKDTp5uOe9oZWYnr.jpg","season_number":4},{"air_date":"2012-07-15","poster_path":"/ih1JKNxEzW56azeFpEQmdu4poA4.jpg","season_number":5}],"status":"Ended","vote_average":8.86764705882353,"vote_count":34}'
     http_version: 
-  recorded_at: Mon, 25 Nov 2013 23:55:33 GMT
+  recorded_at: Wed, 01 Jan 2014 14:14:55 GMT
 recorded_with: VCR 2.5.0
