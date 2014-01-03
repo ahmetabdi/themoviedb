@@ -121,6 +121,7 @@ module Tmdb
     #Get the similar movies for a specific movie id.
     def self.similar_movies(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/similar_movies")
+      search.filter(conditions)
       search.fetch_response['results']
     end
 
