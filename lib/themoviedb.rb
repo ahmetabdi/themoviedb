@@ -9,6 +9,3 @@ end
   require File.join(File.dirname(__FILE__), "themoviedb", inc)
 end
 
-module Tmdb
-  VERSION = "0.0.15"
-end
