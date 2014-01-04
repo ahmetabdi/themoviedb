@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "themoviedb"
+require File.expand_path("../lib/themoviedb/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "themoviedb"
@@ -27,7 +26,8 @@ Gem::Specification.new do |s|
                       "lib/themoviedb/season.rb",
                       "lib/themoviedb/episode.rb",
                       "lib/themoviedb/tv.rb",
-                      "lib/themoviedb/find.rb"
+                      "lib/themoviedb/find.rb",
+                      "lib/themoviedb/version.rb"
                     ]
   s.test_files    = [
                       "spec/movie_spec.rb",
