@@ -36,5 +36,5 @@ Gem::Specification.new do |s|
                       "spec/find_spec.rb"
                     ]
   s.require_paths = ["lib"]
-  s.add_dependency('httparty')
+  s.add_dependency('httparty', '~> 0')
 end
