@@ -1,6 +1,6 @@
 ## Information
 
-### themoviedb
+### themoviedb [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ahmetabdi/themoviedb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 A Ruby wrapper for the [The Movie Database API](http://docs.themoviedb.apiary.io/).
 
