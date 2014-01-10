@@ -68,7 +68,9 @@ module Tmdb
       end
       response = Api.get(@resource, :query => options)
 
-      etag = response.headers['etag'].gsub /"/, ''
+      original_etag = response.headers.fetch('etag', '')
+      etag = original_etag.gsub(/"/, '')
+
       Api.set_response({'code' => response.code, 'etag' => etag})
       response.to_hash
     end
