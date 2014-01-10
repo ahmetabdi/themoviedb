@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/people/popular?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2lu":
+      - !binary |-
+        Kg==
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTE0NDAw
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
+      !binary "RGF0ZQ==":
+      - !binary |-
+        RnJpLCAxMCBKYW4gMjAxNCAxNDoxNzo1OCBHTVQ=
+      !binary "RXRhZw==":
+      - !binary |-
+        IjQzNzI5YmRjZDkyNjNmMzliYTdhYTE4OGMzMzE1Y2ZjIg==
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbng=
+      !binary "U3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "WC1NZW1j":
+      - !binary |-
+        SElU
+      !binary "WC1NZW1jLUFnZQ==":
+      - !binary |-
+        MTM3MDQ=
+      !binary "WC1NZW1jLUV4cGlyZXM=":
+      - !binary |-
+        Njk2
+      !binary "WC1NZW1jLUtleQ==":
+      - !binary |-
+        M2ZmZDQxM2JmZDc2YWY5ZjI0MGFlNTE2YjE2ZTQyZDU=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MjU5NQ==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJyZXN1bHRzIjpbeyJhZHVsdCI6ZmFsc2UsImlkIjo3NDc1
+        MCwibmFtZSI6Ikdlb3JnZXMgU3QuIFBpZXJyZSIsInBvcHVsYXJpdHkiOjM4
+        LjY2MDg1OTEwODUyNDEsInByb2ZpbGVfcGF0aCI6Ii83ZkFZeDIwbjRRZlAy
+        UnlLcnBTQjRUamRZRGUuanBnIn0seyJhZHVsdCI6ZmFsc2UsImlkIjoxMTk0
+        ODIzLCJuYW1lIjoiQWJpZ2FpbCBTZXZlcmFuY2UiLCJwb3B1bGFyaXR5Ijoz
+        OC4yNzcyNSwicHJvZmlsZV9wYXRoIjpudWxsfSx7ImFkdWx0IjpmYWxzZSwi
+        aWQiOjEyMzU1MjQsIm5hbWUiOiJDYXJyaWUgQ2Fpbi1TcGFya3MiLCJwb3B1
+        bGFyaXR5IjozMC40MjUsInByb2ZpbGVfcGF0aCI6bnVsbH0seyJhZHVsdCI6
+        ZmFsc2UsImlkIjo4MTY3LCJuYW1lIjoiUGF1bCBXYWxrZXIiLCJwb3B1bGFy
+        aXR5IjozMC42OTkyODM1ODM2NDI3LCJwcm9maWxlX3BhdGgiOiIvdUJWT05m
+        UEhwYzJaWXhHcFBpOTlDYXVSbmhyLmpwZyJ9LHsiYWR1bHQiOmZhbHNlLCJp
+        ZCI6NTY3MzQsIm5hbWUiOiJDaGxvw6sgR3JhY2UgTW9yZXR6IiwicG9wdWxh
+        cml0eSI6MjUuOTYzOTU0MDM5MzE2NiwicHJvZmlsZV9wYXRoIjoiL3dZYUJF
+        VjNTT1lhSmJvNkZES3BRVzlobE1XdC5qcGcifSx7ImFkdWx0IjpmYWxzZSwi
+        aWQiOjYzLCJuYW1lIjoiTWlsbGEgSm92b3ZpY2giLCJwb3B1bGFyaXR5Ijoy
+        MC42MzE5MjI3NzM5NTI5LCJwcm9maWxlX3BhdGgiOiIvbWNOZ0xhcklWaG83
+        TGhlV2N2ZDFvUTJ0Qk9nLmpwZyJ9LHsiYWR1bHQiOmZhbHNlLCJpZCI6NjE5
+        MywibmFtZSI6Ikxlb25hcmRvIERpQ2FwcmlvIiwicG9wdWxhcml0eSI6MTku
+        MDg4NjIzMzIwMjMyMSwicHJvZmlsZV9wYXRoIjoiLzEzZnJ1Nk85M3hBcmg0
+        ZWJ2bnZESmtYUUloei5qcGcifSx7ImFkdWx0IjpmYWxzZSwiaWQiOjEyODM1
+        LCJuYW1lIjoiVmluIERpZXNlbCIsInBvcHVsYXJpdHkiOjE3LjczNzAyOTI4
+        MDU1NTYsInByb2ZpbGVfcGF0aCI6Ii9xd3lmek1LSWh4SjdvbHM2NkZnRWY3
+        ZUdkY0kuanBnIn0seyJhZHVsdCI6ZmFsc2UsImlkIjo5NzYsIm5hbWUiOiJK
+        YXNvbiBTdGF0aGFtIiwicG9wdWxhcml0eSI6MTYuODcyMTgxNDc5NzY2MSwi
+        cHJvZmlsZV9wYXRoIjoiL1BoV2lXZ2FzbmNHV0Q5TGRic0djbXhrVjRyLmpw
+        ZyJ9LHsiYWR1bHQiOmZhbHNlLCJpZCI6MTMyNywibmFtZSI6IklhbiBNY0tl
+        bGxlbiIsInBvcHVsYXJpdHkiOjE1LjI3MDY5NTY4MDI1MDgsInByb2ZpbGVf
+        cGF0aCI6Ii9jNTFtUDQ2b1BnQWdGZjdiRldWSGxTY1p5bk0uanBnIn0seyJh
+        ZHVsdCI6ZmFsc2UsImlkIjoxODkxOCwibmFtZSI6IkR3YXluZSBKb2huc29u
+        IiwicG9wdWxhcml0eSI6MTMuMjMxODcyNTA1NTAzNywicHJvZmlsZV9wYXRo
+        IjoiL240MzJ2eEtpTXBnZENtT2pxN1VYNkdhdGlzYS5qcGcifSx7ImFkdWx0
+        IjpmYWxzZSwiaWQiOjEzNzIsIm5hbWUiOiJLYXJsIFVyYmFuIiwicG9wdWxh
+        cml0eSI6MTIuOTI3NDM4OTE1ODkxNywicHJvZmlsZV9wYXRoIjoiL3RIWU9V
+        TzMzSzdpYUR3OG5YeXFSdkRJa1Z1TS5qcGcifSx7ImFkdWx0IjpmYWxzZSwi
+        aWQiOjIzNDM1MiwibmFtZSI6Ik1hcmdvdCBSb2JiaWUiLCJwb3B1bGFyaXR5
+        IjoxMi4zMTczOTk2MTkzOTM3LCJwcm9maWxlX3BhdGgiOiIvb3pmSTVZZlZF
+        QVlzZ1lia056NFNOUTFPT294LmpwZyJ9LHsiYWR1bHQiOmZhbHNlLCJpZCI6
+        MjEwMDcsIm5hbWUiOiJKb25haCBIaWxsIiwicG9wdWxhcml0eSI6MTIuMjYz
+        NDYzMzcwMjM1MSwicHJvZmlsZV9wYXRoIjoiLzdHWHpweUhMQ0VBMzZKOWJp
+        QjB3SlZBYXVpTy5qcGcifSx7ImFkdWx0IjpmYWxzZSwiaWQiOjE3NjQ3LCJu
+        YW1lIjoiTWljaGVsbGUgUm9kcmlndWV6IiwicG9wdWxhcml0eSI6MTIuMjI1
+        MzkyMTUwNjE3NiwicHJvZmlsZV9wYXRoIjoiL3YzN1ZLME1OdVJ1Sk9DS1BL
+        SmNaQUpYUkE1ci5qcGcifSx7ImFkdWx0IjpmYWxzZSwiaWQiOjUxNzk4LCJu
+        YW1lIjoiS2F0ZWUgU2Fja2hvZmYiLCJwb3B1bGFyaXR5IjoxMS43Nzg1MTgy
+        ODU1OTU2LCJwcm9maWxlX3BhdGgiOiIvOE5jWkp4TlJTeFAyUWVnY1dlWDhX
+        RG5GbFNzLmpwZyJ9LHsiYWR1bHQiOmZhbHNlLCJpZCI6MTMyNDAsIm5hbWUi
+        OiJNYXJrIFdhaGxiZXJnIiwicG9wdWxhcml0eSI6MTEuNTczNzczMzQ2MDQz
+        OSwicHJvZmlsZV9wYXRoIjoiL2VHSGdsMHNSZzBlY0t1QWlIS2VoUFVuWTFs
+        TC5qcGcifSx7ImFkdWx0IjpmYWxzZSwiaWQiOjUxNjgsIm5hbWUiOiJHYWJy
+        aWVsIEJ5cm5lIiwicG9wdWxhcml0eSI6MTEuNTI5NDE3MDE3MjkwMywicHJv
+        ZmlsZV9wYXRoIjoiL3lRUjZFeHUxMjk0MG9SWG9DV213VUx5V0xQOC5qcGci
+        fSx7ImFkdWx0IjpmYWxzZSwiaWQiOjcwNTUsIm5hbWUiOiJTaWVubmEgR3Vp
+        bGxvcnkiLCJwb3B1bGFyaXR5IjoxMS40Nzg5MDI4NDIwNzc4LCJwcm9maWxl
+        X3BhdGgiOiIvcFd5TGVKQ2xkR3RlQmJTdTlGaEMwZWY1TFp4LmpwZyJ9LHsi
+        YWR1bHQiOmZhbHNlLCJpZCI6MzEsIm5hbWUiOiJUb20gSGFua3MiLCJwb3B1
+        bGFyaXR5IjoxMS40NDMxOTM2ODgxODQ0LCJwcm9maWxlX3BhdGgiOiIveHhQ
+        TXVjb3Uyd1JEeExydWQ4aTJENGRzeXdoLmpwZyJ9XSwidG90YWxfcGFnZXMi
+        OjI5NTMxLCJ0b3RhbF9yZXN1bHRzIjo1OTA2MTZ9
+    http_version: 
+  recorded_at: Fri, 10 Jan 2014 14:17:57 GMT
+recorded_with: VCR 2.5.0
