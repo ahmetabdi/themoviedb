@@ -38,15 +38,16 @@ The API supports translations just be aware that it does not fall back to Englis
 ## Resources
 
 Current available resources:
-* [Company](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#company)
-* [Movie](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#movie)
-* [TV](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#tv)
-* [TV Seasons](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#season)
-* [TV Episodes](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#episode)
-* [Collection](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#collection)
-* [People](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#people)
-* [Genre](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#genre)
-* [Find](https://github.com/ahmetabdi/themoviedb/blob/master/README.md#find)
+* [Company](#company)
+* [Movie](#movie)
+* [TV](#tv)
+* [TV Seasons](#season)
+* [TV Episodes](#episode)
+* [Collection](#collection)
+* [People](#people)
+* [Genre](#genre)
+* [Jobs](#jobs)
+* [Find](#find)
 
 Missing resources:
 * Account
@@ -55,7 +56,6 @@ Missing resources:
 * Collections
 * Credits
 * Discover
-* Jobs
 * Keywords
 * Lists
 * Networks
@@ -427,6 +427,13 @@ genre.get_page(page_number) => Returns next set of movies.
 Get a list of all genres.
 ```ruby
 Tmdb::Genre.list
+```
+
+### Job
+
+Get a list of all jobs.
+```ruby
+Tmdb::Job.list
 ```
 
 ## License
