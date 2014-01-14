@@ -10,6 +10,7 @@ GEM
       multi_xml (>= 0.5.2)
     multi_json (1.7.9)
     multi_xml (0.5.4)
+    rake (0.9.6)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -30,6 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   httparty
+  rake
   rspec
   vcr (~> 2.5.0)
   webmock (= 1.13.0)
