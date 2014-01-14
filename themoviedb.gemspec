@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
                       "lib/themoviedb/company.rb",
                       "lib/themoviedb/configuration.rb",
                       "lib/themoviedb/genre.rb",
+                      "lib/themoviedb/job.rb",
                       "lib/themoviedb/movie.rb",
                       "lib/themoviedb/people.rb",
                       "lib/themoviedb/resource.rb",
@@ -33,6 +34,7 @@ Gem::Specification.new do |s|
                       "spec/movie_spec.rb",
                       "spec/tv_spec.rb",
                       "spec/company_spec.rb",
+                      "spec/people_spec.rb",
                       "spec/find_spec.rb"
                     ]
   s.require_paths = ["lib"]
