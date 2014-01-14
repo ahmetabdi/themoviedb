@@ -440,7 +440,7 @@ Tmdb::Job.list
 
 themoviedb - A ruby wrapper for the movie database API
 
-Copyright (C) 2013  Ahmet Abdi
+Copyright (C) 2014  Ahmet Abdi
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
