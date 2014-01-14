@@ -46,7 +46,7 @@ Current available resources:
 * [Collection](#collection)
 * [People](#people)
 * [Genre](#genre)
-* [Jobs](#jobs)
+* [Job](#job)
 * [Find](#find)
 
 Missing resources:
