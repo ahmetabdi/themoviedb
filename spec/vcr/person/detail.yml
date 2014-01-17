@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/person/5292?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - public, max-age=21600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 17 Jan 2014 10:21:13 GMT
+      Etag:
+      - ! '"6ef7d968e639ccabfd41a04f8fee4d14"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '18064'
+      X-Memc-Expires:
+      - '3536'
+      X-Memc-Key:
+      - ed42d86cc61e24e2c6c7cc228aef60ee
+      Content-Length:
+      - '1184'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"adult":false,"also_known_as":[],"biography":"From Wikipedia, the
+        free encyclopedia.\n\nDenzel Hayes Washington, Jr. (born December 28, 1954)
+        is an American actor, screenwriter, director and film producer. He first rose
+        to prominence when he joined the cast of the medical drama St. Elsewhere,
+        playing Dr. Philip Chandler for six years. He has received much critical acclaim
+        for his work in film since the 1990s, including for his portrayals of real-life
+        figures, such as Steve Biko, Malcolm X, Rubin \"Hurricane\" Carter, Melvin
+        B. Tolson, Frank Lucas, and Herman Boone.\n\nWashington has received two Academy
+        Awards, two Golden Globe awards, a Tony Award. He is notable for winning the
+        Best Supporting Actor for Glory in 1989; and the Academy Award for Best Actor
+        in 2001 for his role in the film Training Day\n\nDescription above from the
+        Wikipedia article Denzel Washington, licensed under CC-BY-SA, full list of
+        contributors on Wikipedia.","birthday":"1954-12-28","deathday":"","homepage":"","id":5292,"imdb_id":"nm0000243","name":"Denzel
+        Washington","place_of_birth":"Mount Vernon, New York, USA","popularity":5.84657127434854,"profile_path":"/khMf8LLTtppUwuZqqnigD2nAy26.jpg"}'
+    http_version: 
+  recorded_at: Fri, 17 Jan 2014 10:21:13 GMT
+recorded_with: VCR 2.5.0

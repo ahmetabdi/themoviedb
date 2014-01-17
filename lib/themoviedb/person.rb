@@ -1,6 +1,6 @@
 module Tmdb
-  class People < Resource
-    has_resource 'person', :plural => 'persons'
+  class Person < Resource
+    has_resource 'person', :plural => 'people'
 
     #http://docs.themoviedb.apiary.io/#people
     @@fields = [
@@ -15,20 +15,20 @@ module Tmdb
       :place_of_birth,
       :profile_path
     ]
-    
+
     @@fields.each do |field|
       attr_accessor field
     end
 
     #Get the list of popular people on The Movie Database. This list refreshes every day.
     def self.popular
-      search = Tmdb::Search.new("/people/popular")
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/popular")
       search.fetch
     end
 
     #Get the latest person id.
     def self.latest
-      search = Tmdb::Search.new("/people/latest")
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/latest")
       search.fetch_response
     end
 
@@ -45,8 +45,8 @@ module Tmdb
     end
 
     #Get the changes for a specific person id.
-    #Changes are grouped by key, and ordered by date in descending order. 
-    #By default, only the last 24 hours of changes are returned. 
+    #Changes are grouped by key, and ordered by date in descending order.
+    #By default, only the last 24 hours of changes are returned.
     #The maximum number of days that can be returned in a single request is 14. The language is present on fields that are translatable.
     def self.changes(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/changes")
