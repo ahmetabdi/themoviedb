@@ -44,7 +44,7 @@ Current available resources:
 * [TV Seasons](#season)
 * [TV Episodes](#episode)
 * [Collection](#collection)
-* [Person](#Person)
+* [Person](#person)
 * [Genre](#genre)
 * [Job](#job)
 * [Find](#find)
