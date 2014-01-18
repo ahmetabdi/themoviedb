@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/person/5292/changes?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - public, max-age=300
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 17 Jan 2014 10:29:24 GMT
+      Etag:
+      - ! '"6d13f62eca6c2c947237edd8984b9b62"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '23'
+      X-Memc-Expires:
+      - '277'
+      X-Memc-Key:
+      - 6f0782e6d535b8790309b9008dfb60a8
+      Content-Length:
+      - '14'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"changes":[]}'
+    http_version: 
+  recorded_at: Fri, 17 Jan 2014 10:29:24 GMT
+recorded_with: VCR 2.5.0

@@ -44,7 +44,7 @@ Current available resources:
 * [TV Seasons](#season)
 * [TV Episodes](#episode)
 * [Collection](#collection)
-* [People](#people)
+* [Person](#person)
 * [Genre](#genre)
 * [Job](#job)
 * [Find](#find)
@@ -67,7 +67,7 @@ Missing resources:
 Tmdb::Movie.find("batman")
 Tmdb::TV.find("fringe")
 Tmdb::Collection.find("spiderman")
-Tmdb::People.find("samuel jackson")
+Tmdb::Person.find("samuel jackson")
 Tmdb::Company.find("lucas")
 Tmdb::Genre.find("drama")
 ```
@@ -370,45 +370,45 @@ Get all of the images for a particular collection by collection id.
 Tmdb::Collection.images(51845)
 ```
 
-### People
+### Person
 
 ```ruby
-people = Tmdb::People.detail(287)
-people.id => 287
-people.name => "Brad Pitt"
-people.place_of_birth => "Shawnee, Oklahoma, United States"
-people.also_known_as => []
-people.adult => false
-people.biography => "From Wikipedia, the free"..
-people.birthday => "1963-12-18"
-people.deathday => ""
-people.homepage => "http://simplybrad.com/"
-people.profile_path => "w8zJQuN7tzlm6FY9mfGKihxp3Cb.jpg"
+person = Tmdb::Person.detail(287)
+person.id => 287
+person.name => "Brad Pitt"
+person.place_of_birth => "Shawnee, Oklahoma, United States"
+person.also_known_as => []
+person.adult => false
+person.biography => "From Wikipedia, the free"..
+person.birthday => "1963-12-18"
+person.deathday => ""
+person.homepage => "http://simplybrad.com/"
+person.profile_path => "w8zJQuN7tzlm6FY9mfGKihxp3Cb.jpg"
 ```
 
 Get the list of popular people on The Movie Database. This list refreshes every day.
 ```ruby
-Tmdb::People.popular
+Tmdb::Person.popular
 ```
 
 Get the latest person id.
 ```ruby
-Tmdb::People.latest
+Tmdb::Person.latest
 ```
 
 Get the credits for a specific person id.
 ```ruby
-Tmdb::People.credits(287)
+Tmdb::Person.credits(287)
 ```
 
 Get the images for a specific person id.
 ```ruby
-Tmdb::People.images(287)
+Tmdb::Person.images(287)
 ```
 
 Get the changes for a specific person id.
 ```ruby
-Tmdb::People.changes(287)
+Tmdb::Person.changes(287)
 ```
 
 ### Genre

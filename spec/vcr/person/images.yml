@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/person/5292/images?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - public, max-age=21600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 17 Jan 2014 10:25:54 GMT
+      Etag:
+      - ! '"e842b71eeefc46f1255f81b5fcb614e0"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '18613'
+      X-Memc-Expires:
+      - '2987'
+      X-Memc-Key:
+      - e9b75a67fbe585b9f0f1e1968f5816fa
+      Content-Length:
+      - '695'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":5292,"profiles":[{"file_path":"/khMf8LLTtppUwuZqqnigD2nAy26.jpg","width":1000,"height":1500,"iso_639_1":null,"aspect_ratio":0.67},{"file_path":"/v4RpAp8FYRhi1fBYrNjFD9Tlx1e.jpg","width":1000,"height":1500,"iso_639_1":null,"aspect_ratio":0.67},{"file_path":"/qsDTrQBazVl2X9nEZGtbdjcOek3.jpg","width":333,"height":462,"iso_639_1":null,"aspect_ratio":0.72},{"file_path":"/h07lR1uQybACgpVJULOcGU1AsCj.jpg","width":376,"height":490,"iso_639_1":null,"aspect_ratio":0.77},{"file_path":"/wG5fp2nVBaiSDGVvAAHTwuIDLR4.jpg","width":540,"height":720,"iso_639_1":null,"aspect_ratio":0.75},{"file_path":"/6pc2Vg2m1XG6kWcRBjf29NuE7Oo.jpg","width":696,"height":1024,"iso_639_1":null,"aspect_ratio":0.68}]}'
+    http_version: 
+  recorded_at: Fri, 17 Jan 2014 10:25:54 GMT
+recorded_with: VCR 2.5.0

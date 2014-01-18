@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/person/latest?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - public, max-age=0
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 17 Jan 2014 10:27:46 GMT
+      Etag:
+      - ! '"f89509253e345f71d36123d12c11c5c3"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - MISS
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '0'
+      X-Memc-Key:
+      - f3535a1d77fc4fccfeaaa01025d7fe11
+      Content-Length:
+      - '213'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"adult":false,"also_known_as":[],"biography":null,"birthday":null,"deathday":null,"homepage":null,"id":1285914,"imdb_id":"","name":"Victor
+        Papadopoulos","place_of_birth":null,"popularity":0.0,"profile_path":null}'
+    http_version: 
+  recorded_at: Fri, 17 Jan 2014 10:27:46 GMT
+recorded_with: VCR 2.5.0
