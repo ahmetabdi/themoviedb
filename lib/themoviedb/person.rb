@@ -13,7 +13,12 @@ module Tmdb
       :id,
       :name,
       :place_of_birth,
-      :profile_path
+      :profile_path,
+      :movie_credits,
+      :tv_credits,
+      :combined_credits,
+      :images,
+      :changes
     ]
 
     @@fields.each do |field|
