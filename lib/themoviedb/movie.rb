@@ -26,7 +26,17 @@ module Tmdb
       :tagline,
       :title,
       :vote_average,
-      :vote_count
+      :vote_count,
+      :alternative_titles,
+      :credits,
+      :images,
+      :keywords,
+      :releases,
+      :trailers,
+      :translations,
+      :reviews,
+      :lists,
+      :changes
     ]
     
     @@fields.each do |field|
