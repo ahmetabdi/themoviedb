@@ -27,7 +27,9 @@ describe Tmdb::TV do
       :seasons,
       :status,
       :vote_average,
-      :vote_count
+      :vote_count,
+      :credits,
+      :external_ids
     ]
 
   @fields.each do |field|
@@ -150,6 +152,27 @@ describe Tmdb::TV do
       @tv.vote_count.should == 34
     end
 
+  end
+
+  describe "For a TV detail with appended response" do
+    let(:append_fields) { %w{ credits external_ids }.join(',') }
+
+    before(:each) do
+      VCR.use_cassette 'tv/detail_with_appeded_response' do
+        @tv = Tmdb::TV.detail(1396, append_to_response: append_fields)
+      end
+    end
+
+    it 'should return credits' do
+      @tv.credits['cast'].size.should == 7
+      @tv.credits['cast'].first['id'].should == 17419
+      @tv.credits['crew'].size.should == 4
+      @tv.credits['crew'].first['id'].should == 5162
+    end
+
+    it 'should return external_ids' do
+      @tv.external_ids['imdb_id'].should == 'tt0903747'
+    end
   end
 
   describe "For popular TV shows" do

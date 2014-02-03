@@ -26,7 +26,9 @@ module Tmdb
       :seasons,
       :status,
       :vote_average,
-      :vote_count
+      :vote_count,
+      :credits,
+      :external_ids
     ]
 
     @@fields.each do |field|
