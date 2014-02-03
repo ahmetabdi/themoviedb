@@ -6,7 +6,8 @@ require 'vcr'
 describe Tmdb::Person do
   @fields = [:id,:name,:place_of_birth,:also_known_as,
              :adult,:biography,:birthday,:deathday,:homepage,
-             :profile_path]
+             :profile_path,:movie_credits,:tv_credits,:combined_credits,
+             :images,:changes]
 
   @fields.each do |field|
     it { should respond_to field }
@@ -87,6 +88,46 @@ describe Tmdb::Person do
 
     it "should return an array with also known as names" do
       @person.also_known_as.should == []
+    end
+  end
+
+  describe 'For a person detail with appended response' do
+    let(:append_fields) { %w{ movie_credits tv_credits combined_credits images changes }.join(',') }
+
+    before(:each) do
+      VCR.use_cassette 'person/detail_with_appended_response' do
+        @person = Tmdb::Person.detail(5292, append_to_response: append_fields)
+      end
+    end
+
+    it 'should return movie credits' do
+      @person.movie_credits['cast'].size.should == 47
+      @person.movie_credits['cast'].first['id'].should == 388
+      @person.movie_credits['crew'].size.should == 4
+      @person.movie_credits['crew'].first['id'].should == 13435
+    end
+
+    it 'should return tv credits' do
+      @person.tv_credits['cast'].size.should == 17
+      @person.tv_credits['cast'].first['id'].should == 1709
+      @person.tv_credits['crew'].size.should == 3
+      @person.tv_credits['crew'].first['id'].should == 18881
+    end
+
+    it 'should return combined credits' do
+      @person.combined_credits['cast'].size.should == 64
+      @person.combined_credits['cast'].first['id'].should == 388
+      @person.combined_credits['crew'].size.should == 7
+      @person.combined_credits['crew'].first['id'].should == 13435
+    end
+
+    it 'should return images' do
+      @person.images['profiles'].size.should == 6
+      @person.images['profiles'].first['file_path'].should == '/khMf8LLTtppUwuZqqnigD2nAy26.jpg'
+    end
+
+    it 'should return changes' do
+      @person.changes['changes'].should == []
     end
   end
 

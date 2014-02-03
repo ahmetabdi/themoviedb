@@ -10,7 +10,8 @@ describe Tmdb::Movie do
              :overview,:popularity,:poster_path,:production_companies,
              :production_countries,:release_date,:revenue,:runtime,
              :spoken_languages,:status,:tagline,:title,:vote_average,
-             :vote_count]
+             :vote_count,:alternative_titles,:credits,:images,:keywords,
+             :releases,:trailers,:translations,:reviews,:lists]
 
   @fields.each do |field|
     it { should respond_to field }
@@ -208,6 +209,69 @@ describe Tmdb::Movie do
 
     it "should return vote_count" do
       @movie.vote_count.should == 23
+    end
+  end
+
+  describe 'For a movie detail with appended response' do
+    let(:append_fields) { %w{ alternative_titles credits images keywords releases
+                            trailers translations reviews lists changes }.join(',') }
+    before(:each) do
+      VCR.use_cassette 'movie/detail_with_appended_response' do
+        @movie = Tmdb::Movie.detail(22855, append_to_response: append_fields)
+      end
+    end
+
+    it 'should return alternative_titles' do
+      @movie.alternative_titles['titles'].size.should == 4
+      @movie.alternative_titles['titles'].first['title'].should == 'Superman und Batman Public Enemies'
+    end
+
+    it 'should return credits' do
+      @movie.credits['cast'].size.should == 20
+      @movie.credits['cast'].first['id'].should == 34947
+      @movie.credits['crew'].size.should == 3
+      @movie.credits['crew'].first['id'].should == 90367
+    end
+
+    it 'should return images' do
+      @movie.images['backdrops'].size.should == 6
+      @movie.images['backdrops'].first['file_path'].should == '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
+      @movie.images['posters'].size.should == 9
+      @movie.images['posters'].first['file_path'].should == '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
+    end
+
+    it 'should return keywords' do
+      @movie.keywords['keywords'].size.should == 2
+      @movie.keywords['keywords'].first['id'].should == 9715
+    end
+
+    it 'should return releases' do
+      @movie.releases['countries'].size.should == 1
+      @movie.releases['countries'].first['release_date'].should == '2009-09-29'
+    end
+
+    it 'should return trailers' do
+      @movie.trailers['quicktime'].should == []
+      @movie.trailers['youtube'].size.should == 1
+      @movie.trailers['youtube'].first['name'].should == 'Official Preview Trailer'
+    end
+
+    it 'should return translations' do
+      @movie.translations['translations'].size.should == 13
+      @movie.translations['translations'].first['name'].should == 'English'
+    end
+
+    it 'should return reviews' do
+      @movie.reviews['results'].should == []
+    end
+
+    it 'should return lists' do
+      @movie.lists['results'].size.should == 4
+      @movie.lists['results'].first['id'].should == '51d6b52219c295172912ff1e'
+    end
+
+    it 'should return changes' do
+      @movie.changes['changes'].should == []
     end
   end
 
