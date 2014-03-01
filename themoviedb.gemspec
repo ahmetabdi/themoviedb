@@ -1,5 +1,8 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path("../lib/themoviedb/version", __FILE__)
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require "themoviedb/version"
 
 Gem::Specification.new do |s|
   s.name        = "themoviedb"
@@ -38,5 +41,11 @@ Gem::Specification.new do |s|
                       "spec/find_spec.rb"
                     ]
   s.require_paths = ["lib"]
-  s.add_dependency('httparty', '~> 0')
+
+  s.add_runtime_dependency 'httparty', '~> 0.11.0'
+
+  s.add_development_dependency 'vcr',     '~> 2.8.0'
+  s.add_development_dependency 'rake',    '~> 10.0'
+  s.add_development_dependency 'rspec',   '~> 2.14'
+  s.add_development_dependency 'webmock', '~> 1.15.0'
 end
