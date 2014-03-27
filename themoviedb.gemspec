@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
                     ]
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency 'httparty', '~> 0.11.0'
+  s.add_runtime_dependency 'httparty', '>= 0.11', '< 0.13'
 
   s.add_development_dependency 'vcr',     '~> 2.8.0'
   s.add_development_dependency 'rake',    '~> 10.0'
