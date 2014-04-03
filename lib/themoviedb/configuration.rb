@@ -44,7 +44,7 @@ module Tmdb
     private
 
     def images_config
-      fetch_response['images'] || {}
+      @images_config ||= fetch_response['images'] || {}
     end
   end
 end
