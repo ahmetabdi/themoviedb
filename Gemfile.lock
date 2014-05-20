@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    themoviedb (0.0.21)
+    themoviedb (0.0.22)
       httparty
 
 GEM
