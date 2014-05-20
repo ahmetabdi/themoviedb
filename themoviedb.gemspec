@@ -42,10 +42,10 @@ Gem::Specification.new do |s|
                     ]
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency 'httparty', '~> 0.11.0'
+  s.add_runtime_dependency 'httparty'
 
-  s.add_development_dependency 'vcr',     '~> 2.8.0'
-  s.add_development_dependency 'rake',    '~> 10.0'
-  s.add_development_dependency 'rspec',   '~> 2.14'
-  s.add_development_dependency 'webmock', '~> 1.15.0'
+  s.add_development_dependency 'vcr'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'webmock'
 end
