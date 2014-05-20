@@ -4,6 +4,8 @@
 
 A Ruby wrapper for the [The Movie Database API](http://docs.themoviedb.apiary.io/).
 
+Ruby >= 1.9.3
+
 Provides a simple, easy to use interface for the Movie Database API.
 
 Get your API key [here](https://www.themoviedb.org/account).
