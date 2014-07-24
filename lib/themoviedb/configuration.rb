@@ -1,4 +1,4 @@
-module Tmdb 
+module Tmdb
   class Configuration
     def initialize()
       @params = {}
@@ -6,8 +6,8 @@ module Tmdb
       self
     end
 
-    # To build an image URL, you will need 3 pieces of data. 
-    # The base_url, size and file_path. 
+    # To build an image URL, you will need 3 pieces of data.
+    # The base_url, size and file_path.
     # Simply combine them all and you will have a fully qualified URL. Here’s an example URL:
     # http://cf2.imgobject.com/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg
     def base_url

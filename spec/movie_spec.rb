@@ -140,7 +140,7 @@ describe Tmdb::Movie do
     end
 
     it "should return a belongs_to_collection" do
-      @movie.belongs_to_collection.should == {"id"=>51845, "name"=>"DC Universe Animated Original Movies", "poster_path"=>"/qB1Qe5qIbHvr3NsH9xKwCi6WHMn.jpg", "backdrop_path"=>"/3DMJMsy8Yo1LjgFckXIAnHgLo9O.jpg"}
+      @movie.belongs_to_collection.name.should == "DC Universe Animated Original Movies"
     end
 
     it "should return a budget" do
@@ -148,7 +148,7 @@ describe Tmdb::Movie do
     end
 
     it "should return genres" do
-      @movie.genres.should == [{"id"=>28, "name"=>"Action"}, {"id"=>12, "name"=>"Adventure"}, {"id"=>16, "name"=>"Animation"}]
+      @movie.genres.should_not == []
     end
 
     it "should return homepage" do
@@ -176,11 +176,11 @@ describe Tmdb::Movie do
     end
 
     it "should return production_companies" do
-      @movie.production_companies.should == [{"name"=>"DC Comics", "id"=>429}, {"name"=>"Warner Premiere", "id"=>4811}]
+      @movie.production_companies.should_not == []
     end
 
     it "should return production_countries" do
-      @movie.production_countries.should == [{"iso_3166_1"=>"US", "name"=>"United States of America"}]
+      @movie.production_countries.should_not == []
     end
 
     it "should return release_date" do
@@ -196,7 +196,7 @@ describe Tmdb::Movie do
     end
 
     it "should return spoken_languages" do
-      @movie.spoken_languages.should == [{"iso_639_1"=>"en", "name"=>"English"}]
+      @movie.spoken_languages.first.name.should == "English"
     end
 
     it "should return status" do
@@ -222,56 +222,56 @@ describe Tmdb::Movie do
     end
 
     it 'should return alternative_titles' do
-      @movie.alternative_titles['titles'].size.should == 4
-      @movie.alternative_titles['titles'].first['title'].should == 'Superman und Batman Public Enemies'
+      @movie.alternative_titles.titles.size.should == 4
+      @movie.alternative_titles.titles.first.title.should == 'Superman und Batman Public Enemies'
     end
 
     it 'should return credits' do
-      @movie.credits['cast'].size.should == 20
-      @movie.credits['cast'].first['id'].should == 34947
-      @movie.credits['crew'].size.should == 3
-      @movie.credits['crew'].first['id'].should == 90367
+      @movie.credits.cast.size.should == 20
+      @movie.credits.cast.first.id.should == 34947
+      @movie.credits.crew.size.should == 3
+      @movie.credits.crew.first.id.should == 90367
     end
 
     it 'should return images' do
-      @movie.images['backdrops'].size.should == 6
-      @movie.images['backdrops'].first['file_path'].should == '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
-      @movie.images['posters'].size.should == 9
-      @movie.images['posters'].first['file_path'].should == '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
+      @movie.images.backdrops.size.should == 6
+      @movie.images.backdrops.first.file_path.should == '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
+      @movie.images.posters.size.should == 9
+      @movie.images.posters.first.file_path.should == '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
     end
 
     it 'should return keywords' do
-      @movie.keywords['keywords'].size.should == 2
-      @movie.keywords['keywords'].first['id'].should == 9715
+      @movie.keywords.keywords.size.should == 2
+      @movie.keywords.keywords.first.id.should == 9715
     end
 
     it 'should return releases' do
-      @movie.releases['countries'].size.should == 1
-      @movie.releases['countries'].first['release_date'].should == '2009-09-29'
+      @movie.releases.countries.size.should == 1
+      @movie.releases.countries.first.release_date.should == '2009-09-29'
     end
 
     it 'should return trailers' do
-      @movie.trailers['quicktime'].should == []
-      @movie.trailers['youtube'].size.should == 1
-      @movie.trailers['youtube'].first['name'].should == 'Official Preview Trailer'
+      @movie.trailers.quicktime.should == []
+      @movie.trailers.youtube.size.should == 1
+      @movie.trailers.youtube.first.name.should == 'Official Preview Trailer'
     end
 
     it 'should return translations' do
-      @movie.translations['translations'].size.should == 13
-      @movie.translations['translations'].first['name'].should == 'English'
+      @movie.translations.translations.size.should == 13
+      @movie.translations.translations.first.name.should == 'English'
     end
 
     it 'should return reviews' do
-      @movie.reviews['results'].should == []
+      @movie.reviews.results.should == []
     end
 
     it 'should return lists' do
-      @movie.lists['results'].size.should == 4
-      @movie.lists['results'].first['id'].should == '51d6b52219c295172912ff1e'
+      @movie.lists.results.size.should == 4
+      @movie.lists.results.first.id.should == '51d6b52219c295172912ff1e'
     end
 
     it 'should return changes' do
-      @movie.changes['changes'].should == []
+      @movie.changes.changes.should == []
     end
   end
 
@@ -284,11 +284,11 @@ describe Tmdb::Movie do
     end
 
     it "should return backdrops" do
-      @movie['backdrops'].length == 4
+      @movie.backdrops.length == 4
     end
 
     it "should return posters" do
-      @movie['posters'].should be_true
+      @movie.posters.should be_true
     end
 
   end
@@ -308,7 +308,7 @@ describe Tmdb::Movie do
     end
 
     it "should return the german description" do
-      @movie.overview.should == "Eine Gruppe schwerbewaffneter Terroristen stürmt ein Bürohochhaus. Ihr Ziel: 624 Mio. Dollar, die als Wertpapiere in einem computergesicherten Safe lagern. Doch sie haben die Rechnung ohne den New Yorker Cop John McClane gemacht. Erster Teil der „Die Hard“ - Trilogie von 1988, die ein Genre neu belebte und den damals eher unbekannten Bruce Willis zur Action-Ikone aufsteigen ließ."
+      @movie.overview.should == "Eigentlich möchte der New Yorker Polizist John McClane dieses Weihnachten nur seine Noch-Ehefrau Holly, welche in Los Angeles in einer großen, erfolgreichen Firma Karriere gemacht hat, besuchen und das Fest mit den beiden gemeinsamen Kinder verbringen. Als die Feierlichkeiten im Nakatomi Plaza beginnen sollen, stürmt eine Gruppe von Terroristen das Hochhaus und nur John McClane schafft es ihnen zu entwischen. Lediglich bewaffnet mit ein paar Zigaretten und einem Walkie-Talkie, wodurch er den Funk der Geiselnehmer mithören kann, und mit Waffen, welche die Terroristen gelegentlich so rumliegen lassen, muss John nun nicht nur sein eigenes Leben retten, sondern möglichst auch das aller anderen Beteiligten. Und so beschließt er, die äußerst brutale Truppe auszumerzen und sich einen Terroristen nach dem anderen vorzuknöpfen. Während draußen dann schon die Polizei und das FBI stümperhaft versucht, das Gebäude zu stürmen, kämpft McClane ohne Schuhe gegen die 12 Aggressoren..."
     end
 
   end

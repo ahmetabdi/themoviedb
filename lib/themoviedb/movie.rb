@@ -38,7 +38,7 @@ module Tmdb
       :lists,
       :changes
     ]
-    
+
     @@fields.each do |field|
       attr_accessor field
     end
@@ -89,13 +89,13 @@ module Tmdb
     #Get the cast information for a specific movie id.
     def self.casts(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/casts")
-      search.fetch_response['cast']
+      search.fetch_response.cast
     end
 
     #Get the cast information for a specific movie id.
     def self.crew(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/casts")
-      search.fetch_response['crew']
+      search.fetch_response.crew
     end
 
     #Get the images (posters and backdrops) for a specific movie id.
@@ -127,12 +127,12 @@ module Tmdb
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/translations")
       search.fetch_response
     end
-    
+
     #Get the similar movies for a specific movie id.
     def self.similar_movies(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/similar_movies")
       search.filter(conditions)
-      search.fetch_response['results']
+      search.fetch
     end
 
     #Get the lists that the movie belongs to.
@@ -142,9 +142,9 @@ module Tmdb
     end
 
     #Get the changes for a specific movie id.
-    #Changes are grouped by key, and ordered by date in descending order. 
-    #By default, only the last 24 hours of changes are returned. 
-    #The maximum number of days that can be returned in a single request is 14. 
+    #Changes are grouped by key, and ordered by date in descending order.
+    #By default, only the last 24 hours of changes are returned.
+    #The maximum number of days that can be returned in a single request is 14.
     #The language is present on fields that are translatable.
     def self.changes(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/changes")

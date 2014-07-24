@@ -22,22 +22,23 @@ module Tmdb
     end
 
     def resource(resource)
-      if resource == 'movie' then
-        @resource = '/search/movie'
-      elsif resource == 'collection' then
-        @resource = '/search/collection'
-      elsif resource == 'tv' then
-        @resource = '/search/tv'
-      elsif resource == 'person' then
-        @resource = '/search/person'
-      elsif resource == 'list' then
-        @resource = '/search/list'
-      elsif resource == 'company' then
-        @resource = '/search/company'
-      elsif resource == 'keyword' then
-        @resource = '/search/keyword'
-      elsif resource == 'find'
-        @resource = '/find'
+      @resource = case resource
+      when 'movie'
+        '/search/movie'
+      when 'collection'
+        '/search/collection'
+      when 'tv'
+        '/search/tv'
+      when 'person'
+        '/search/person'
+      when 'list'
+        '/search/list'
+      when 'company'
+        '/search/company'
+      when 'keyword'
+        '/search/keyword'
+      when 'find'
+        '/find'
       end
       self
     end
@@ -55,8 +56,8 @@ module Tmdb
     end
 
     #Sends back main data
-    def fetch()
-      fetch_response['results']
+    def fetch
+      fetch_response.results
     end
 
     #Send back whole response
@@ -72,7 +73,7 @@ module Tmdb
       etag = original_etag.gsub(/"/, '')
 
       Api.set_response({'code' => response.code, 'etag' => etag})
-      response.to_hash
+      return response.to_hash.to_hashugar
     end
   end
 end

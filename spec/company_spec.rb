@@ -47,7 +47,7 @@ describe Tmdb::Company do
     end
 
     it "could have a parent company" do
-      @company.parent_company["name"].should eq("Sony Pictures Entertainment")
+      @company.parent_company.name.should eq("Sony Pictures Entertainment")
     end
 
   end
@@ -65,31 +65,31 @@ describe Tmdb::Company do
     end
 
     it "should have a id" do
-      @movie["id"].should eq(97020)
+      @movie.id.should eq(97020)
     end
 
     it "should have a title" do
-      @movie["title"].should eq("RoboCop")
+      @movie.title.should eq("RoboCop")
     end
 
     it "should have a original title" do
-      @movie["original_title"].should eq("RoboCop")
+      @movie.original_title.should eq("RoboCop")
     end
 
     it "should have a poster" do
-      @movie["poster_path"].should eq("/xxLhczZMiJt1iRdhfkVkuMu87si.jpg")
+      @movie.poster_path.should eq("/xxLhczZMiJt1iRdhfkVkuMu87si.jpg")
     end
 
     it "should have a popularity rating" do
-      @movie["popularity"].should eq(3.13451193740971)
+      @movie.popularity.should eq(3.13451193740971)
     end
 
     it "should show whether it is an adult movie" do
-      @movie["adult"].should eq(false)
+      @movie.adult.should eq(false)
     end
 
     it "should have a release date" do
-      @movie["release_date"].should eq("2014-02-07")
+      @movie.release_date.should eq("2014-02-07")
     end
 
   end

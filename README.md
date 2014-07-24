@@ -186,11 +186,11 @@ Get the images (posters and backdrops) for a specific movie id.
 ```
 Grab Backdrops
 ```ruby
-@movie['backdrops']
+@movie.backdrops
 ```
 Grab Posters
 ```ruby
-@movie['posters']
+@movie.posters
 ```
 
 #### Movie - Casts
@@ -259,11 +259,11 @@ Get the images (posters and backdrops) for a TV series.
 ```
 Grab Backdrops
 ```ruby
-@show['backdrops']
+@show.backdrops
 ```
 Grab Posters
 ```ruby
-@show['posters']
+@show.posters
 ```
 #### TV - Cast
 Get the cast information about a TV series.
@@ -293,7 +293,7 @@ Get the images (posters) that we have stored for a TV season by season number.
 ```
 Grab Posters
 ```ruby
-@season['posters']
+@season.posters
 ```
 #### Season - Cast
 Get the cast credits for a TV season by season number.
@@ -323,7 +323,7 @@ Get the images (episode stills) for a TV episode by combination of a season and 
 ```
 Grab Stills
 ```ruby
-@episode['stills']
+@episode.stills
 ```
 #### Episode - Cast
 Get the TV episode cast credits by combination of season and episode number.

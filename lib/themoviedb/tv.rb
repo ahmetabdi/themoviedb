@@ -57,13 +57,13 @@ module Tmdb
     #Get the cast information about a TV series.
     def self.cast(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
-      search.fetch_response['cast']
+      search.fetch_response.cast
     end
 
     #Get the crew information about a TV series.
     def self.crew(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
-      search.fetch_response['crew']
+      search.fetch_response.crew
     end
 
     #Get the external ids that we have stored for a TV series.

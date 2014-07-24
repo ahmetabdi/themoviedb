@@ -101,33 +101,33 @@ describe Tmdb::Person do
     end
 
     it 'should return movie credits' do
-      @person.movie_credits['cast'].size.should == 47
-      @person.movie_credits['cast'].first['id'].should == 388
-      @person.movie_credits['crew'].size.should == 4
-      @person.movie_credits['crew'].first['id'].should == 13435
+      @person.movie_credits.cast.size.should == 47
+      @person.movie_credits.cast.first.id.should == 388
+      @person.movie_credits.crew.size.should == 4
+      @person.movie_credits.crew.first.id.should == 13435
     end
 
     it 'should return tv credits' do
-      @person.tv_credits['cast'].size.should == 17
-      @person.tv_credits['cast'].first['id'].should == 1709
-      @person.tv_credits['crew'].size.should == 3
-      @person.tv_credits['crew'].first['id'].should == 18881
+      @person.tv_credits.cast.size.should == 17
+      @person.tv_credits.cast.first.id.should == 1709
+      @person.tv_credits.crew.size.should == 3
+      @person.tv_credits.crew.first.id.should == 18881
     end
 
     it 'should return combined credits' do
-      @person.combined_credits['cast'].size.should == 64
-      @person.combined_credits['cast'].first['id'].should == 388
-      @person.combined_credits['crew'].size.should == 7
-      @person.combined_credits['crew'].first['id'].should == 13435
+      @person.combined_credits.cast.size.should == 64
+      @person.combined_credits.cast.first.id.should == 388
+      @person.combined_credits.crew.size.should == 7
+      @person.combined_credits.crew.first.id.should == 13435
     end
 
     it 'should return images' do
-      @person.images['profiles'].size.should == 6
-      @person.images['profiles'].first['file_path'].should == '/khMf8LLTtppUwuZqqnigD2nAy26.jpg'
+      @person.images.profiles.size.should == 6
+      @person.images.profiles.first.file_path.should == '/khMf8LLTtppUwuZqqnigD2nAy26.jpg'
     end
 
     it 'should return changes' do
-      @person.changes['changes'].should == []
+      @person.changes.changes.should == []
     end
   end
 
@@ -139,7 +139,7 @@ describe Tmdb::Person do
     end
 
     it "should return profiles" do
-      @person_images['profiles'].length == 6
+      @person_images.profiles.length == 6
     end
   end
 end

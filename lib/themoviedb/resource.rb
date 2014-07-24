@@ -2,15 +2,15 @@ module Tmdb
   class Resource
     @@endpoints = {}
     @@endpoint_id = {}
-    
+
     def self.has_resource(singular=nil, opts={})
-      @@endpoints[self.name.downcase] = { 
-        :singular => singular.nil? ? "#{self.name.downcase}" : singular, 
+      @@endpoints[self.name.downcase] = {
+        :singular => singular.nil? ? "#{self.name.downcase}" : singular,
         :plural => opts[:plural].nil? ? "#{self.name.downcase}s" : opts[:plural]
       }
       @@endpoint_id[self.name.downcase] = opts[:id].nil? ? "" : "#{opts[:id]}-"
     end
-    
+
     def self.endpoints
       @@endpoints[self.name.downcase]
     end
@@ -18,12 +18,12 @@ module Tmdb
     def self.endpoint_id
       @@endpoint_id[self.name.downcase]
     end
-    
+
     #Get the basic resource information for a specific id.
     def self.detail(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}")
       search.filter(conditions)
-      self.new(search.fetch_response)
+      search.fetch_response
     end
 
     def self.list(conditions={})
@@ -33,7 +33,7 @@ module Tmdb
         self.new(result)
       end
     end
-    
+
     def self.search(query)
       search = Tmdb::Search.new
       search.resource("#{self.endpoints[:singular]}")
@@ -42,7 +42,7 @@ module Tmdb
         self.new(result)
       end
     end
-    
+
     class << self
       alias_method :find, :search
     end
