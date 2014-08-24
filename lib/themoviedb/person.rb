@@ -57,7 +57,7 @@ module Tmdb
 
     #Get external ID's for a specific person id.
     def self.external_ids(id, conditions={})
-      search = Tmdb::Search.new("/#{self.endpoints[:singular]}#{self.endpoint_id + id.to_s}/external_ids")
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/external_ids")
       search.fetch_response
     end
 

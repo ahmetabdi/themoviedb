@@ -379,13 +379,16 @@ person = Tmdb::Person.detail(287)
 person.id => 287
 person.name => "Brad Pitt"
 person.place_of_birth => "Shawnee, Oklahoma, United States"
-person.also_known_as => []
+person.also_known_as => ["William Bradley Pitt"]
 person.adult => false
 person.biography => "From Wikipedia, the free"..
 person.birthday => "1963-12-18"
 person.deathday => ""
-person.homepage => "http://simplybrad.com/"
-person.profile_path => "w8zJQuN7tzlm6FY9mfGKihxp3Cb.jpg"
+person.homepage => ""
+person.profile_path => "/kc3M04QQAuZ9woUvH3Ju5T7ZqG5.jpg"
+person.imdb_id = > "nm0000093"
+person.popularity => "11.7667725"
+
 ```
 
 Get the list of popular people on The Movie Database. This list refreshes every day.
@@ -398,16 +401,30 @@ Get the latest person id.
 Tmdb::Person.latest
 ```
 
-Get the credits for a specific person id.
+Get the combined credits for a specific person id.
 ```ruby
 Tmdb::Person.credits(287)
 ```
-
+Get the movie credits for a specific person id.
+```ruby
+Tmdb::Person.movie_credits(287)
+```
+Get the TV credits for a specific person id.
+```ruby
+Tmdb::Person.tv_credits(287)
+```
+Get the external id's for a specific person id.
+```ruby
+Tmdb::Person.external_ids(287)
+```
 Get the images for a specific person id.
 ```ruby
 Tmdb::Person.images(287)
 ```
-
+Get the tagged images for a specific person id.
+```ruby
+Tmdb::Person.tagged_images(287)
+```
 Get the changes for a specific person id.
 ```ruby
 Tmdb::Person.changes(287)
