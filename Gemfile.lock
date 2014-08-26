@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    themoviedb (0.0.23)
+    themoviedb (0.0.24)
       hashugar
       httparty
 
