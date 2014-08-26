@@ -37,15 +37,39 @@ module Tmdb
       search.fetch_response
     end
 
-    #Get the credits for a specific person id.
+    #Get the combined credits for a specific person id.
     def self.credits(id, conditions={})
-      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/credits")
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/combined_credits")
+      search.fetch_response
+    end
+
+    #Get film credits for a specific person id.
+    def self.movie_credits(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/movie_credits")
+      search.fetch_response
+    end
+
+    #Get TV credits for a specific person id.
+    def self.tv_credits(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/tv_credits")
+      search.fetch_response
+    end
+
+    #Get external ID's for a specific person id.
+    def self.external_ids(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/external_ids")
       search.fetch_response
     end
 
     #Get the images for a specific person id.
     def self.images(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/images")
+      search.fetch_response
+    end
+
+    #Get the tagged images for a specific person id.
+    def self.tagged_images(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/tagged_images")
       search.fetch_response
     end
 
