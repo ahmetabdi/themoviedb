@@ -10,7 +10,7 @@ module Tmdb
       :parts,
       :poster_path
     ]
-    
+
     @@fields.each do |field|
       attr_accessor field
     end

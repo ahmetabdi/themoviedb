@@ -12,7 +12,7 @@ module Tmdb
       :name,
       :parent_company
     ]
-    
+
     @@fields.each do |field|
       attr_accessor field
     end
