@@ -1,5 +1,9 @@
 ## Information
 
+# This repository is no longer maintained.
+
+Issue reports and pull requests will not be attended.
+
 ### themoviedb [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ahmetabdi/themoviedb/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Build Status](https://travis-ci.org/ahmetabdi/themoviedb.png?branch=master)](https://travis-ci.org/ahmetabdi/themoviedb) [![Gem Version](https://badge.fury.io/rb/themoviedb.png)](http://badge.fury.io/rb/themoviedb)
 
 A Ruby wrapper for the [The Movie Database API](http://docs.themoviedb.apiary.io/).
