@@ -128,87 +128,87 @@ describe Tmdb::Movie do
     end
 
     it "should return a id" do
-      @movie.id.should == 22855
+      @movie['id'].should == 22855
     end
 
     it "should return a adult" do
-      @movie.adult.should == false
+      @movie['adult'].should == false
     end
 
     it "should return a backdrop_path" do
-      @movie.backdrop_path.should == "/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg"
+      @movie['backdrop_path'].should == "/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg"
     end
 
     it "should return a belongs_to_collection" do
-      @movie.belongs_to_collection.name.should == "DC Universe Animated Original Movies"
+      @movie['belongs_to_collection']['name'].should == "DC Universe Animated Original Movies"
     end
 
     it "should return a budget" do
-      @movie.budget.should == 0
+      @movie['budget'].should == 0
     end
 
     it "should return genres" do
-      @movie.genres.should_not == []
+      @movie['genres'].should_not == []
     end
 
     it "should return homepage" do
-      @movie.homepage.should == "http://www.warnervideo.com/supermanbatmandvd/"
+      @movie['homepage'].should == "http://www.warnervideo.com/supermanbatmandvd/"
     end
 
     it "should return a imdb_id" do
-      @movie.imdb_id.should == "tt1398941"
+      @movie['imdb_id'].should == "tt1398941"
     end
 
     it "should return a original_title" do
-      @movie.original_title.should == "Superman/Batman: Public Enemies"
+      @movie['original_title'].should == "Superman/Batman: Public Enemies"
     end
 
     it "should return a overview" do
-      @movie.overview.should == "United States President Lex Luthor uses the oncoming trajectory of a Kryptonite meteor to frame Superman and declare a $1 billion bounty on the heads of the Man of Steel and his ‘partner in crime’, Batman. Heroes and villains alike launch a relentless pursuit of Superman and Batman, who must unite—and recruit help—to try and stave off the action-packed onslaught, stop the meteor Luthors plot."
+      @movie['overview'].should == "United States President Lex Luthor uses the oncoming trajectory of a Kryptonite meteor to frame Superman and declare a $1 billion bounty on the heads of the Man of Steel and his ‘partner in crime’, Batman. Heroes and villains alike launch a relentless pursuit of Superman and Batman, who must unite—and recruit help—to try and stave off the action-packed onslaught, stop the meteor Luthors plot."
     end
 
     it "should return popularity" do
-      @movie.popularity.should == 1.15974723131612
+      @movie['popularity'].should == 1.15974723131612
     end
 
     it "should return poster_path" do
-      @movie.poster_path.should == "/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg"
+      @movie['poster_path'].should == "/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg"
     end
 
     it "should return production_companies" do
-      @movie.production_companies.should_not == []
+      @movie['production_companies'].should_not == []
     end
 
     it "should return production_countries" do
-      @movie.production_countries.should_not == []
+      @movie['production_countries'].should_not == []
     end
 
     it "should return release_date" do
-      @movie.release_date.should == "2009-09-29"
+      @movie['release_date'].should == "2009-09-29"
     end
 
     it "should return revenue" do
-      @movie.revenue.should == 0
+      @movie['revenue'].should == 0
     end
 
     it "should return a runtime" do
-      @movie.runtime.should == 67
+      @movie['runtime'].should == 67
     end
 
     it "should return spoken_languages" do
-      @movie.spoken_languages.first.name.should == "English"
+      @movie['spoken_languages'].first['name'].should == "English"
     end
 
     it "should return status" do
-      @movie.status.should == "Released"
+      @movie['status'].should == "Released"
     end
 
     it "should return vote_average" do
-      @movie.vote_average.should == 7.4
+      @movie['vote_average'].should == 7.4
     end
 
     it "should return vote_count" do
-      @movie.vote_count.should == 23
+      @movie['vote_count'].should == 23
     end
   end
 
@@ -222,56 +222,56 @@ describe Tmdb::Movie do
     end
 
     it 'should return alternative_titles' do
-      @movie.alternative_titles.titles.size.should == 4
-      @movie.alternative_titles.titles.first.title.should == 'Superman und Batman Public Enemies'
+      @movie['alternative_titles']['titles'].size.should == 4
+      @movie['alternative_titles']['titles'].first['title'].should == 'Superman und Batman Public Enemies'
     end
 
     it 'should return credits' do
-      @movie.credits.cast.size.should == 20
-      @movie.credits.cast.first.id.should == 34947
-      @movie.credits.crew.size.should == 3
-      @movie.credits.crew.first.id.should == 90367
+      @movie['credits']['cast'].size.should == 20
+      @movie['credits']['cast'].first['id'].should == 34947
+      @movie['credits']['crew'].size.should == 3
+      @movie['credits']['crew'].first['id'].should == 90367
     end
 
     it 'should return images' do
-      @movie.images.backdrops.size.should == 6
-      @movie.images.backdrops.first.file_path.should == '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
-      @movie.images.posters.size.should == 9
-      @movie.images.posters.first.file_path.should == '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
+      @movie['images']['backdrops'].size.should == 6
+      @movie['images']['backdrops'].first['file_path'].should == '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
+      @movie['images']['posters'].size.should == 9
+      @movie['images']['posters'].first['file_path'].should == '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
     end
 
     it 'should return keywords' do
-      @movie.keywords.keywords.size.should == 2
-      @movie.keywords.keywords.first.id.should == 9715
+      @movie['keywords']['keywords'].size.should == 2
+      @movie['keywords']['keywords'].first['id'].should == 9715
     end
 
     it 'should return releases' do
-      @movie.releases.countries.size.should == 1
-      @movie.releases.countries.first.release_date.should == '2009-09-29'
+      @movie['releases']['countries'].size.should == 1
+      @movie['releases']['countries'].first['release_date'].should == '2009-09-29'
     end
 
     it 'should return trailers' do
-      @movie.trailers.quicktime.should == []
-      @movie.trailers.youtube.size.should == 1
-      @movie.trailers.youtube.first.name.should == 'Official Preview Trailer'
+      @movie['trailers']['quicktime'].should == []
+      @movie['trailers']['youtube'].size.should == 1
+      @movie['trailers']['youtube'].first['name'].should == 'Official Preview Trailer'
     end
 
     it 'should return translations' do
-      @movie.translations.translations.size.should == 13
-      @movie.translations.translations.first.name.should == 'English'
+      @movie['translations']['translations'].size.should == 13
+      @movie['translations']['translations'].first['name'].should == 'English'
     end
 
     it 'should return reviews' do
-      @movie.reviews.results.should == []
+      @movie['reviews']['results'].should == []
     end
 
     it 'should return lists' do
-      @movie.lists.results.size.should == 4
-      @movie.lists.results.first.id.should == '51d6b52219c295172912ff1e'
+      @movie['lists']['results'].size.should == 4
+      @movie['lists']['results'].first['id'].should == '51d6b52219c295172912ff1e'
     end
 
     it 'should return changes' do
-      @movie.changes.changes.should == []
+      @movie['changes']['changes'].should == []
     end
   end
 
@@ -284,11 +284,11 @@ describe Tmdb::Movie do
     end
 
     it "should return backdrops" do
-      @movie.backdrops.length == 4
+      @movie['backdrops'].length == 4
     end
 
     it "should return posters" do
-      @movie.posters.should be_true
+      @movie['posters'].should be_true
     end
 
   end
@@ -304,11 +304,11 @@ describe Tmdb::Movie do
     end
 
     it "should return the german name" do
-      @movie.title.should == "Stirb Langsam"
+      @movie['title'].should == "Stirb Langsam"
     end
 
     it "should return the german description" do
-      @movie.overview.should == "Eigentlich möchte der New Yorker Polizist John McClane dieses Weihnachten nur seine Noch-Ehefrau Holly, welche in Los Angeles in einer großen, erfolgreichen Firma Karriere gemacht hat, besuchen und das Fest mit den beiden gemeinsamen Kinder verbringen. Als die Feierlichkeiten im Nakatomi Plaza beginnen sollen, stürmt eine Gruppe von Terroristen das Hochhaus und nur John McClane schafft es ihnen zu entwischen. Lediglich bewaffnet mit ein paar Zigaretten und einem Walkie-Talkie, wodurch er den Funk der Geiselnehmer mithören kann, und mit Waffen, welche die Terroristen gelegentlich so rumliegen lassen, muss John nun nicht nur sein eigenes Leben retten, sondern möglichst auch das aller anderen Beteiligten. Und so beschließt er, die äußerst brutale Truppe auszumerzen und sich einen Terroristen nach dem anderen vorzuknöpfen. Während draußen dann schon die Polizei und das FBI stümperhaft versucht, das Gebäude zu stürmen, kämpft McClane ohne Schuhe gegen die 12 Aggressoren..."
+      @movie['overview'].should == "Eigentlich möchte der New Yorker Polizist John McClane dieses Weihnachten nur seine Noch-Ehefrau Holly, welche in Los Angeles in einer großen, erfolgreichen Firma Karriere gemacht hat, besuchen und das Fest mit den beiden gemeinsamen Kinder verbringen. Als die Feierlichkeiten im Nakatomi Plaza beginnen sollen, stürmt eine Gruppe von Terroristen das Hochhaus und nur John McClane schafft es ihnen zu entwischen. Lediglich bewaffnet mit ein paar Zigaretten und einem Walkie-Talkie, wodurch er den Funk der Geiselnehmer mithören kann, und mit Waffen, welche die Terroristen gelegentlich so rumliegen lassen, muss John nun nicht nur sein eigenes Leben retten, sondern möglichst auch das aller anderen Beteiligten. Und so beschließt er, die äußerst brutale Truppe auszumerzen und sich einen Terroristen nach dem anderen vorzuknöpfen. Während draußen dann schon die Polizei und das FBI stümperhaft versucht, das Gebäude zu stürmen, kämpft McClane ohne Schuhe gegen die 12 Aggressoren..."
     end
 
   end

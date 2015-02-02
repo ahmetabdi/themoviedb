@@ -57,7 +57,7 @@ module Tmdb
 
     #Sends back main data
     def fetch
-      fetch_response.results
+      fetch_response['results']
     end
 
     #Send back whole response
@@ -73,7 +73,7 @@ module Tmdb
       etag = original_etag.gsub(/"/, '')
 
       Api.set_response({'code' => response.code, 'etag' => etag})
-      return response.to_hash.to_hashugar
+      return response.to_hash
     end
   end
 end

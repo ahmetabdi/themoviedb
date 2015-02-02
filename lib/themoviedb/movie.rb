@@ -89,13 +89,13 @@ module Tmdb
     #Get the cast information for a specific movie id.
     def self.casts(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/casts")
-      search.fetch_response.cast
+      search.fetch_response['cast']
     end
 
     #Get the cast information for a specific movie id.
     def self.crew(id, conditions={})
       search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/casts")
-      search.fetch_response.crew
+      search.fetch_response['crew']
     end
 
     #Get the images (posters and backdrops) for a specific movie id.

@@ -12,13 +12,13 @@ module Tmdb
     #Get the TV episode cast credits by combination of season and episode number.
     def self.cast(id, season, episode, conditions={})
       search = Tmdb::Search.new("/tv/#{self.endpoint_id + id.to_s}/season/#{self.endpoint_id + season.to_s}/#{self.endpoints[:singular]}/#{self.endpoint_id + episode.to_s}/credits")
-      search.fetch_response.cast
+      search.fetch_response['cast']
     end
 
     #Get the TV episode crew credits by combination of season and episode number.
     def self.crew(id, season, episode, conditions={})
       search = Tmdb::Search.new("/tv/#{self.endpoint_id + id.to_s}/season/#{self.endpoint_id + season.to_s}/#{self.endpoints[:singular]}/#{self.endpoint_id + episode.to_s}/credits")
-      search.fetch_response.crew
+      search.fetch_response['crew']
     end
 
     #Get the external ids for a TV episode by comabination of a season and episode number.

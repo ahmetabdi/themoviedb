@@ -51,43 +51,43 @@ describe Tmdb::Person do
     end
 
     it "should return a id" do
-      @person.id.should == 5292
+      @person['id'].should == 5292
     end
 
     it "should return a name" do
-      @person.name.should == "Denzel Washington"
+      @person['name'].should == "Denzel Washington"
     end
 
     it "should return a adult" do
-      @person.adult.should == false
+      @person['adult'].should == false
     end
 
     it "should return a biography" do
-      @person.biography.should == "From Wikipedia, the free encyclopedia.\n\nDenzel Hayes Washington, Jr. (born December 28, 1954) is an American actor, screenwriter, director and film producer. He first rose to prominence when he joined the cast of the medical drama St. Elsewhere, playing Dr. Philip Chandler for six years. He has received much critical acclaim for his work in film since the 1990s, including for his portrayals of real-life figures, such as Steve Biko, Malcolm X, Rubin \"Hurricane\" Carter, Melvin B. Tolson, Frank Lucas, and Herman Boone.\n\nWashington has received two Academy Awards, two Golden Globe awards, a Tony Award. He is notable for winning the Best Supporting Actor for Glory in 1989; and the Academy Award for Best Actor in 2001 for his role in the film Training Day\n\nDescription above from the Wikipedia article Denzel Washington, licensed under CC-BY-SA, full list of contributors on Wikipedia."
+      @person['biography'].should == "From Wikipedia, the free encyclopedia.\n\nDenzel Hayes Washington, Jr. (born December 28, 1954) is an American actor, screenwriter, director and film producer. He first rose to prominence when he joined the cast of the medical drama St. Elsewhere, playing Dr. Philip Chandler for six years. He has received much critical acclaim for his work in film since the 1990s, including for his portrayals of real-life figures, such as Steve Biko, Malcolm X, Rubin \"Hurricane\" Carter, Melvin B. Tolson, Frank Lucas, and Herman Boone.\n\nWashington has received two Academy Awards, two Golden Globe awards, a Tony Award. He is notable for winning the Best Supporting Actor for Glory in 1989; and the Academy Award for Best Actor in 2001 for his role in the film Training Day\n\nDescription above from the Wikipedia article Denzel Washington, licensed under CC-BY-SA, full list of contributors on Wikipedia."
     end
 
     it "should return a birthday" do
-      @person.birthday.should == "1954-12-28"
+      @person['birthday'].should == "1954-12-28"
     end
 
     it "should return a deathday" do
-      @person.deathday.should == ""
+      @person['deathday'].should == ""
     end
 
     it "should return a homepage" do
-      @person.homepage.should == ""
+      @person['homepage'].should == ""
     end
 
     it "should return a place of birth" do
-      @person.place_of_birth.should == "Mount Vernon, New York, USA"
+      @person['place_of_birth'].should == "Mount Vernon, New York, USA"
     end
 
     it "should return a profile path" do
-      @person.profile_path.should == "/khMf8LLTtppUwuZqqnigD2nAy26.jpg"
+      @person['profile_path'].should == "/khMf8LLTtppUwuZqqnigD2nAy26.jpg"
     end
 
     it "should return an array with also known as names" do
-      @person.also_known_as.should == []
+      @person['also_known_as'].should == []
     end
   end
 
@@ -101,33 +101,33 @@ describe Tmdb::Person do
     end
 
     it 'should return movie credits' do
-      @person.movie_credits.cast.size.should == 47
-      @person.movie_credits.cast.first.id.should == 388
-      @person.movie_credits.crew.size.should == 4
-      @person.movie_credits.crew.first.id.should == 13435
+      @person['movie_credits']['cast'].size.should == 47
+      @person['movie_credits']['cast'].first['id'].should == 388
+      @person['movie_credits']['crew'].size.should == 4
+      @person['movie_credits']['crew'].first['id'].should == 13435
     end
 
     it 'should return tv credits' do
-      @person.tv_credits.cast.size.should == 17
-      @person.tv_credits.cast.first.id.should == 1709
-      @person.tv_credits.crew.size.should == 3
-      @person.tv_credits.crew.first.id.should == 18881
+      @person['tv_credits']['cast'].size.should == 17
+      @person['tv_credits']['cast'].first['id'].should == 1709
+      @person['tv_credits']['crew'].size.should == 3
+      @person['tv_credits']['crew'].first['id'].should == 18881
     end
 
     it 'should return combined credits' do
-      @person.combined_credits.cast.size.should == 64
-      @person.combined_credits.cast.first.id.should == 388
-      @person.combined_credits.crew.size.should == 7
-      @person.combined_credits.crew.first.id.should == 13435
+      @person['combined_credits']['cast'].size.should == 64
+      @person['combined_credits']['cast'].first['id'].should == 388
+      @person['combined_credits']['crew'].size.should == 7
+      @person['combined_credits']['crew'].first['id'].should == 13435
     end
 
     it 'should return images' do
-      @person.images.profiles.size.should == 6
-      @person.images.profiles.first.file_path.should == '/khMf8LLTtppUwuZqqnigD2nAy26.jpg'
+      @person['images']['profiles'].size.should == 6
+      @person['images']['profiles'].first['file_path'].should == '/khMf8LLTtppUwuZqqnigD2nAy26.jpg'
     end
 
     it 'should return changes' do
-      @person.changes.changes.should == []
+      @person['changes']['changes'].should == []
     end
   end
 
@@ -139,7 +139,7 @@ describe Tmdb::Person do
     end
 
     it "should return profiles" do
-      @person_images.profiles.length == 6
+      @person_images['profiles'].length == 6
     end
   end
 end
