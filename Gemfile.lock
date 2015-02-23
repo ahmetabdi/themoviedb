@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    themoviedb (0.0.25)
+    themoviedb (0.1.0)
       httparty
 
 GEM
@@ -14,7 +14,7 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    json (1.8.1)
+    json (1.8.2)
     multi_xml (0.5.5)
     rake (10.3.2)
     rspec (2.14.1)
