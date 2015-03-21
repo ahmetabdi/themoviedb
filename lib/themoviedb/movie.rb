@@ -12,6 +12,7 @@ module Tmdb
       :homepage,
       :id,
       :imdb_id,
+      :original_language,
       :original_title,
       :overview,
       :popularity,
