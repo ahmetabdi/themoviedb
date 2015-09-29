@@ -4,15 +4,12 @@ module Tmdb::Configuration
   class Api
     include Singleton
 
-    attr_reader :base_url, :version, :api_key
+    attr_reader :base_url, :version
+    attr_accessor :api_key
 
     def initialize
-      self.base_url = "https://api.themoviedb.org/3/".freeze
-      self.version = 3.freeze
-    end
-
-    def connect(api_key)
-      @api_key = api_key
+      @base_url = "https://api.themoviedb.org/3/".freeze
+      @version = 3.freeze
     end
 
     def url_for(action, params={})
@@ -21,8 +18,5 @@ module Tmdb::Configuration
       url.query = URI.encode_www_form(params) if params
       url.to_s
     end
-
-    private
-      attr_writer :base_url, :api_key, :version
   end
 end
