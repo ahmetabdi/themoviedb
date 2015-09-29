@@ -5,26 +5,14 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require_relative '../lib/themoviedb.rb'
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'themoviedb'
 require 'vcr'
 
-Tmdb::Api.key("8a221fc31fcdf12a8af827465574ffc9")
+Tmdb.connect("8a221fc31fcdf12a8af827465574ffc9")
 
 VCR.configure do |c|
-  #the directory where your cassettes will be saved
-  c.cassette_library_dir = 'spec/vcr'
-  # your HTTP request service. You can also use fakeweb, webmock, and more
+  c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  c.allow_http_connections_when_no_cassette = true
   c.hook_into :webmock
-end
-
-RSpec.configure do |config|
-  config.treat_symbols_as_metadata_keys_with_true_values = true
-  config.run_all_when_everything_filtered = true
-  config.filter_run :focus
-
-  # Run specs in random order to surface order dependencies. If you find an
-  # order dependency and want to debug it, you can fix the order by providing
-  # the seed, which is printed after each run.
-  #     --seed 1234
-  config.order = 'random'
 end

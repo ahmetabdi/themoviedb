@@ -1,11 +1,10 @@
-require 'rubygems'
-require 'httparty'
+require 'require_all'
+require_all 'lib'
 
-["api", "search", "resource", "configuration"].each do |inc|
-  require File.join(File.dirname(__FILE__), "themoviedb", inc)
+module Tmdb
+  def self.connect(api_key)
+    Tmdb::Configuration::Api.instance.tap do |api|
+      api.connect(api_key)
+    end
+  end
 end
-
-["movie", "tv", "season", "episode", "collection", "person", "company", "genre", "find", "job"].each do |inc|
-  require File.join(File.dirname(__FILE__), "themoviedb", inc)
-end
-
