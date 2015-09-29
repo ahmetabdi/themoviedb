@@ -1,4 +1,5 @@
 require 'representable/json'
+require 'ostruct'
 
 class Tmdb::ApiResource < OpenStruct
 
