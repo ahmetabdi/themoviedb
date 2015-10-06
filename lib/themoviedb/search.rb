@@ -72,7 +72,17 @@ module Tmdb
       original_etag = response.headers.fetch('etag', '')
       etag = original_etag.gsub(/"/, '')
 
-      Api.set_response({'code' => response.code, 'etag' => etag})
+      response_meta = { 'code' => response.code, 'etag' => etag }
+
+      if response.code == 429
+        response_meta['retry_after'] = response.headers.fetch( 'Retry-After' ).to_i
+      else
+        response_meta['rate_limit'] = response.headers.fetch( 'X-RateLimit-Limit' ).to_i
+        response_meta['rate_limit_remaining'] = response.headers.fetch( 'X-RateLimit-Remaining' ).to_i
+        response_meta['rate_limit_reset'] = response.headers.fetch( 'X-RateLimit-Reset' ).to_i
+      end
+
+      Api.set_response( response_meta )
       return response.to_hash
     end
   end
