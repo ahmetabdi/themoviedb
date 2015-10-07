@@ -11,23 +11,23 @@ module Tmdb
     end
 
     # Get the list of movies playing that have been, or are being released this week.
-    def self.now_playing
-      build_collection(Tmdb::Requester.get('movie/now_playing')['results'], MovieRepresenter)
+    def self.now_playing(page = 1)
+      build_collection(Tmdb::Requester.get('movie/now_playing', { page: page })['results'], MovieRepresenter)
     end
 
     # Get the list of popular movies.
-    def self.popular
-      build_collection(Tmdb::Requester.get('movie/popular')['results'], MovieRepresenter)
+    def self.popular(page = 1)
+      build_collection(Tmdb::Requester.get('movie/popular', { page: page })['results'], MovieRepresenter)
     end
 
     # Get the list of top rated movies.
-    def self.top_rated
-      build_collection(Tmdb::Requester.get('movie/top_rated')['results'], MovieRepresenter)
+    def self.top_rated(page = 1)
+      build_collection(Tmdb::Requester.get('movie/top_rated', { page: page })['results'], MovieRepresenter)
     end
 
     # Get the list of upcoming movies by release date.
-    def self.upcoming
-      build_collection(Tmdb::Requester.get('movie/upcoming')['results'], MovieRepresenter)
+    def self.upcoming(page = 1)
+      build_collection(Tmdb::Requester.get('movie/upcoming', { page: page })['results'], MovieRepresenter)
     end
   end
 end

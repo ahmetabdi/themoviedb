@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/movie/latest?api_key=8a221fc31fcdf12a8af827465574ffc9
+    uri: https://api.themoviedb.org/3/movie/latest?api_key=8a221fc31fcdf12a8af827465574ffc9&language=en
     body:
       encoding: US-ASCII
       string: ''
@@ -13,8 +13,6 @@ http_interactions:
       - gzip, deflate
       Content-Type:
       - application/json
-      Authorization:
-      - Token token="8a221fc31fcdf12a8af827465574ffc9"
       User-Agent:
       - Ruby
   response:
@@ -26,18 +24,22 @@ http_interactions:
       - "*"
       Cache-Control:
       - public, max-age=0
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 29 Sep 2015 09:11:27 GMT
+      - Wed, 07 Oct 2015 08:18:04 GMT
       Etag:
-      - '"799974ec15f4e83bae53fcf76034c60e"'
+      - W/"280e8dfb1673775ecd6066b67fd663dc"
       Last-Modified:
-      - '2015-09-29 09:05:23 +0000'
+      - '2015-10-07 08:04:30 +0000'
       Server:
       - openresty
       Status:
       - 200 OK
+      Vary:
+      - Accept-Encoding
       X-Memc:
       - MISS
       X-Memc-Age:
@@ -51,17 +53,29 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '39'
       X-Ratelimit-Reset:
-      - '1443517897'
+      - '1444205893'
       Content-Length:
-      - '816'
+      - '666'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":1500,"genres":[{"id":12,"name":"Adventure"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"}],"homepage":null,"id":361942,"imdb_id":"tt5065072","original_language":"de","original_title":"Krimi
-        unter Teck - Spur in die Vergangenheit","overview":null,"popularity":0.0,"poster_path":"/2p1DATAjNSJvqJfMssYwSgtGO0e.jpg","production_companies":[{"name":"Last
-        Salvation Records","id":64440},{"name":"HotRoad Film & Videoproduktion","id":64441}],"production_countries":[{"iso_3166_1":"DE","name":"Germany"}],"release_date":"","revenue":0,"runtime":null,"spoken_languages":[{"iso_639_1":"de","name":"Deutsch"}],"status":"Released","tagline":null,"title":"Krimi
-        unter Teck - Spur in die Vergangenheit","video":true,"vote_average":10.0,"vote_count":1}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA12Tz27TQBDGX2W1Fy5pcPonaXIjFLUUKAEiVQhV1iQ7sbdZ
+        75rddUKoKnFA4hEQN8QNceOC+zZ+FGY3wSAOieL5Zuabmfx8w0FUyvPRApTD
+        Dp/BfCmsKdMSfM5H/L5/9jCfqPz8wduhPnTmdfVocDrVF6fyqOxelxmnElRG
+        Zy71Jp0bpXDupdF8pCulSKxEhtQ+6fAMtUXHR29uuBR81DvucA0FksmJhQL4
+        bWcnJIPDYau9NAXoOfLbqw7PTYElZCFMviH3oL9/PBzQ70LM0hAIgrEykxpU
+        qkBn1TYf9b+Cl16FaFN/bOpfTf2lufvQ1D+a+lNT/wyJK7QriWtKmeQWkOXg
+        2AxRM1EVJQo227AcLZuZzcJK1IIBfaRjdAlUmy57lSMTOJcCHfOGzWnwmJKj
+        KmPlrmxiZcFoQRoyhulAxvouO0OLzFGTAtE7dglKmbLDgAbRwoVuCtYbKljn
+        Jg4XHcjJUw1YBLYwlhwZOCczXaCmppc5LZDTlGtjl2FaQdOSbWxAtRZ9ZSkj
+        tJpVnpXWFNJhmPqeUluLwEfIjWfpsjGlhVUN7amNZ0vEMlrsauPS2xO212GG
+        /k9WGItdOnVpykqBlX5DkHSTEHAebcvf9fmT+Xhx9BheqJPp+n12jIvx8wIn
+        w3fTHX9kJaoIHfFXlKBlpOzqP6XS3m4VwsyZ9KDX76c9spie8Za2aQ6SqBER
+        N4sKwWEqwAdtP0mGe71kLxnwoK1QVxjBttRahvJeQk+uNEvULXt/DfsHw+hH
+        e7V+Tf2ViGvq7+H7jmD83NTfornz4CsXXoDtFIKKPGRK6h3+fxh+Go5KUefY
+        hcxyT9KKuDPtK70yHlMgouObEG8cQ/EkFLj9Dc6pEk0EBAAA
     http_version: 
-  recorded_at: Tue, 29 Sep 2015 09:11:34 GMT
+  recorded_at: Wed, 07 Oct 2015 08:18:04 GMT
 recorded_with: VCR 2.9.3

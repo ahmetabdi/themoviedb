@@ -9,8 +9,6 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'themoviedb'
 require 'vcr'
 
-Tmdb.connect('8a221fc31fcdf12a8af827465574ffc9')
-
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.allow_http_connections_when_no_cassette = true
