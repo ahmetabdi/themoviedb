@@ -24,22 +24,18 @@ http_interactions:
       - "*"
       Cache-Control:
       - public, max-age=0
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 07 Oct 2015 08:18:04 GMT
+      - Thu, 08 Oct 2015 12:28:54 GMT
       Etag:
-      - W/"280e8dfb1673775ecd6066b67fd663dc"
+      - '"701692071003f98e79714d7d25515630"'
       Last-Modified:
-      - '2015-10-07 08:04:30 +0000'
+      - '2015-10-08 12:16:55 +0000'
       Server:
       - openresty
       Status:
       - 200 OK
-      Vary:
-      - Accept-Encoding
       X-Memc:
       - MISS
       X-Memc-Age:
@@ -53,29 +49,16 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '39'
       X-Ratelimit-Reset:
-      - '1444205893'
+      - '1444307344'
       Content-Length:
-      - '666'
+      - '522'
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA12Tz27TQBDGX2W1Fy5pcPonaXIjFLUUKAEiVQhV1iQ7sbdZ
-        75rddUKoKnFA4hEQN8QNceOC+zZ+FGY3wSAOieL5Zuabmfx8w0FUyvPRApTD
-        Dp/BfCmsKdMSfM5H/L5/9jCfqPz8wduhPnTmdfVocDrVF6fyqOxelxmnElRG
-        Zy71Jp0bpXDupdF8pCulSKxEhtQ+6fAMtUXHR29uuBR81DvucA0FksmJhQL4
-        bWcnJIPDYau9NAXoOfLbqw7PTYElZCFMviH3oL9/PBzQ70LM0hAIgrEykxpU
-        qkBn1TYf9b+Cl16FaFN/bOpfTf2lufvQ1D+a+lNT/wyJK7QriWtKmeQWkOXg
-        2AxRM1EVJQo227AcLZuZzcJK1IIBfaRjdAlUmy57lSMTOJcCHfOGzWnwmJKj
-        KmPlrmxiZcFoQRoyhulAxvouO0OLzFGTAtE7dglKmbLDgAbRwoVuCtYbKljn
-        Jg4XHcjJUw1YBLYwlhwZOCczXaCmppc5LZDTlGtjl2FaQdOSbWxAtRZ9ZSkj
-        tJpVnpXWFNJhmPqeUluLwEfIjWfpsjGlhVUN7amNZ0vEMlrsauPS2xO212GG
-        /k9WGItdOnVpykqBlX5DkHSTEHAebcvf9fmT+Xhx9BheqJPp+n12jIvx8wIn
-        w3fTHX9kJaoIHfFXlKBlpOzqP6XS3m4VwsyZ9KDX76c9spie8Za2aQ6SqBER
-        N4sKwWEqwAdtP0mGe71kLxnwoK1QVxjBttRahvJeQk+uNEvULXt/DfsHw+hH
-        e7V+Tf2ViGvq7+H7jmD83NTfornz4CsXXoDtFIKKPGRK6h3+fxh+Go5KUefY
-        hcxyT9KKuDPtK70yHlMgouObEG8cQ/EkFLj9Dc6pEk0EBAAA
+      encoding: UTF-8
+      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[],"homepage":"","id":363077,"imdb_id":"tt1105397","original_language":"en","original_title":"Trigon
+        Fire","overview":"Phillipino War Movie","popularity":0.0,"poster_path":"/eRyhaNkCDgDFqN31xR7C7PLF7oA.jpg","production_companies":[],"production_countries":[],"release_date":"1989-01-01","revenue":0,"runtime":90,"spoken_languages":[],"status":"Released","tagline":"","title":"Trigon
+        Fire","video":false,"vote_average":0.0,"vote_count":0}'
     http_version: 
-  recorded_at: Wed, 07 Oct 2015 08:18:04 GMT
+  recorded_at: Thu, 08 Oct 2015 12:28:54 GMT
 recorded_with: VCR 2.9.3

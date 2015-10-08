@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/22855?api_key=8a221fc31fcdf12a8af827465574ffc9&language=fr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=28800
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 08 Oct 2015 12:29:01 GMT
+      Etag:
+      - W/"5afd0a7fd624ec741beccb1bc751c584"
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '9141'
+      X-Memc-Expires:
+      - '19659'
+      X-Memc-Key:
+      - d26aac51101601ee285e0e0a7d20d369
+      X-Ratelimit-Limit:
+      - '40'
+      X-Ratelimit-Remaining:
+      - '22'
+      X-Ratelimit-Reset:
+      - '1444307344'
+      Content-Length:
+      - '801'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA2VU224aMRD9FcsvfaGEXQiwvJGUULXQpkUkUqtq5ewOixuv
+        7foCQREfRH+DH+t4WSCoEg/gmTlzZuYcXinLvXB0sGDCQoM+sew5N0qnmrkl
+        HdArNt2MpmP/GH95aA9b66UfTXsPn3V32ms3f+uCYgkIJQubOpVmSgjIHFeS
+        Dl4pz+kgTlpJu92gkpWAcDOvwZRMkityw1z4MpS8ZA5ycnuubVCtrANzIrFo
+        LR7WQ9VZDCfP8ebrdPyymid3ujO6mRxJXPKWXogtvvq8AByu1aAFSAOWDn4e
+        eEXdE6cDg9B326hJ98/BA6NjJIrPkRVI5w3Q7a8GXaoSNCvCO5KpMOL+9TV+
+        LfOnNPymzkXtpJ90IkxQhhdcMpEKJgt/qIMw9ynguBNvF3Z1WNeA3PsnwTMy
+        klBynAdLVmBWHNaBErHc+WoWku93Fqze78x+Bw1SgkWu9vLZDsgEXsjEu6Uy
+        BKwj9/hseY6TEXBEMDLhhQeSY+Unbx3POBhbZTJPbGicYdSTQnmkgZywsklm
+        4IU9HhhxTle3mIwsbMDPlHQGCNbLUIx42LvgJVSdwRvC5YIjX8HdfhdKnQmJ
+        ZP831MELy1zVL0D8QZJvRtEItVIbxpHM3HHBLZM1qHXMeYcTEc0MZ0QrfFyo
+        AASGeAkE75qDc+zI8Mi+cURfIC4BJCcxH2EsluBWcFu4Dqc41uRMWmLxDJkq
+        tVCnacW7j6osw0LJHZhmpXTtBTJxG5RpM+r14ij5T//t+Xok2I+74XQ8u//W
+        W5fjFp91Zh8LPq31r43KfaXVNLRkMogjiL1W64dbNFjJs6CYIMdOnARN19FH
+        hrczeP0gKpR0ndOPoiDuC2yPcxyxuVVpO+p20wgx5jN68sZc8mDpGe4alaMW
+        ZFiC4RmrvGJAALOQ5hjE3LjVSt7jJ05oiOH2PVSONdiKB7gu+shq9Qzy5Jdz
+        /247qdpX9qnbj2SBJ19W3ap7Yzr9fmibY5pjGJe1WS+cNn3jtJEMHrNEV44L
+        i1uhM9Tpr3KlHKQMT1/5t9tM6qdqR3RwHW3/AXrn/fpdBQAA
+    http_version: 
+  recorded_at: Thu, 08 Oct 2015 12:29:01 GMT
+recorded_with: VCR 2.9.3

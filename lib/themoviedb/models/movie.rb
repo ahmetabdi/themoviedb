@@ -1,8 +1,8 @@
 module Tmdb
   class Movie < Tmdb::ApiResource
     # Get the basic movie information for a specific movie id.
-    def self.find(id)
-      build_single_resource(Tmdb::Requester.get("movie/#{id}"), MovieRepresenter)
+    def self.find(id, append_to_response = [])
+      build_single_resource(Tmdb::Requester.get("movie/#{id}", { append_to_response: append_to_response }), MovieRepresenter)
     end
 
     # Get the latest movie id.

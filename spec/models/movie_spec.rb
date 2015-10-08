@@ -118,7 +118,7 @@ describe Tmdb::Movie do
     end
 
     context '.find' do
-      let(:movie) { VCR.use_cassette('movie/find') { Tmdb::Movie.find(22855) } }
+      let(:movie) { VCR.use_cassette('movie/find/default') { Tmdb::Movie.find(22855) } }
 
       context 'responds to its methods' do
         [:adult,
@@ -149,12 +149,19 @@ describe Tmdb::Movie do
          :tagline].each do |field|
           it { expect(movie).to respond_to(field) }
         end
-      end
 
-      context 'with a language code' do
-      end
+        it 'should respond with a language code' do
+          @tmdb.language = 'fr'
+          VCR.use_cassette 'movie/find/language' do
+            expect(Tmdb::Movie.find(22855).title).to eq('SuperMan/Batman: Ennemis publics')
+          end
+        end
 
-      context 'with append_to_response options' do
+        it 'should respond with append_to_response options' do
+          VCR.use_cassette 'movie/find/append_to_response' do
+            expect(Tmdb::Movie.find(22855, ['alternative_titles']).alternative_titles).not_to be_nil
+          end
+        end
       end
     end
   end

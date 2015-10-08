@@ -63,4 +63,5 @@ module MovieRepresenter
   # ],
   property :status
   property :tagline
+  property :alternative_titles
 end
