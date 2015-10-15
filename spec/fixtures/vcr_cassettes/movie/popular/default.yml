@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:29 GMT
+      - Thu, 15 Oct 2015 09:18:18 GMT
       Etag:
       - W/"1b7ca64e8b9c4066fe5297065b84b5ff"
       Server:
@@ -41,9 +41,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '8729'
+      - '10998'
       X-Memc-Expires:
-      - '5671'
+      - '3402'
       X-Memc-Key:
       - c0039d7b582c3d86436c11d425930ee3
       X-Ratelimit-Limit:
@@ -51,9 +51,9 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '30'
       X-Ratelimit-Reset:
-      - '1444898435'
-      Content-Length:
-      - '8226'
+      - '1444900704'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
@@ -243,5 +243,5 @@ http_interactions:
         y+5+Vjuq+P2D09YSNbab7O+qvaZniXVsKhlP1p6USX6hyK23xalqvdH8ExQt
         DVMoEP/2RUImWGkylpFrcfE3kqp1u9ao/+n/A7Kd++4/SQAA
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:29 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:18 GMT
 recorded_with: VCR 2.9.3

@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:28 GMT
+      - Thu, 15 Oct 2015 09:18:17 GMT
       Etag:
       - W/"b63b79a81fc83b782bf15a0ce74babd5"
       Server:
@@ -41,9 +41,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '4448'
+      - '6717'
       X-Memc-Expires:
-      - '9952'
+      - '7683'
       X-Memc-Key:
       - 94adcdd718c5c9f2933d953637cfb530
       X-Ratelimit-Limit:
@@ -51,7 +51,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '32'
       X-Ratelimit-Reset:
-      - '1444898435'
+      - '1444900704'
       Content-Length:
       - '4962'
       Connection:
@@ -171,7 +171,7 @@ http_interactions:
         7fVZf2w5fbPUoJah7b4l9mQZbxnUeKFhf4e9pzyFPeH70GARA8eVFx5eQm8a
         xu//B/EnPTPVLgAA
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:28 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:17 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/now_playing?api_key=8a221fc31fcdf12a8af827465574ffc9&language=fr&page=2
@@ -201,7 +201,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:29 GMT
+      - Thu, 15 Oct 2015 09:18:17 GMT
       Etag:
       - W/"2b3d109fcc3a602ef1e355a0d7b7e208"
       Server:
@@ -213,9 +213,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '10467'
+      - '12735'
       X-Memc-Expires:
-      - '3933'
+      - '1665'
       X-Memc-Key:
       - 1dfd37c71616682e9e0f5ace38c23d6f
       X-Ratelimit-Limit:
@@ -223,7 +223,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '31'
       X-Ratelimit-Reset:
-      - '1444898435'
+      - '1444900704'
       Content-Length:
       - '3914'
       Connection:
@@ -319,5 +319,5 @@ http_interactions:
         BI14wqXqDXf4Bnv6cPgYVfcPD/Pz/mA0cBo81/0beXJ/0pyyhluIrmND+Fhp
         sBRIsw3njXGp+TMAkUE5Hn7H38YBThb+aktdePqNnGdZP/8LRvJ/vXQnAAA=
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:29 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:17 GMT
 recorded_with: VCR 2.9.3

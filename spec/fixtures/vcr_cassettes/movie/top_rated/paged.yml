@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:31 GMT
+      - Thu, 15 Oct 2015 09:18:20 GMT
       Etag:
       - W/"deccb8b2df7b4811f4ec58ed8c7706a6"
       Server:
@@ -41,9 +41,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '19986'
+      - '22255'
       X-Memc-Expires:
-      - '8814'
+      - '6545'
       X-Memc-Key:
       - b7cbf9727306b318f173494062da5047
       X-Ratelimit-Limit:
@@ -51,9 +51,9 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '24'
       X-Ratelimit-Reset:
-      - '1444898435'
-      Transfer-Encoding:
-      - chunked
+      - '1444900704'
+      Content-Length:
+      - '6952'
       Connection:
       - keep-alive
     body:
@@ -215,7 +215,7 @@ http_interactions:
         f3dnNrneq53f1o7X/QipU67WKrVm68lzloH1Jk+pVjvNXwDPaQg0/MDflSfM
         AhkA5JvFD8xrbbjU/wOpxDniej4AAA==
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:31 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:20 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/top_rated?api_key=8a221fc31fcdf12a8af827465574ffc9&language=fr&page=2
@@ -245,7 +245,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:32 GMT
+      - Thu, 15 Oct 2015 09:18:20 GMT
       Etag:
       - W/"721f604c70f20d6905ce2c199314c9f1"
       Server:
@@ -257,9 +257,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '17140'
+      - '19408'
       X-Memc-Expires:
-      - '11660'
+      - '9392'
       X-Memc-Key:
       - 795f539c08ed77eb4171e51c04de589a
       X-Ratelimit-Limit:
@@ -267,9 +267,9 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '23'
       X-Ratelimit-Reset:
-      - '1444898435'
-      Transfer-Encoding:
-      - chunked
+      - '1444900704'
+      Content-Length:
+      - '6612'
       Connection:
       - keep-alive
     body:
@@ -423,5 +423,5 @@ http_interactions:
         Gk6mFn2LLqxn9mj/Zu1qu3P+uLu/N+gebd/Knro9mH0x6NXxss5rYjqYjdyi
         PMg+GtB25+e07KkmyfsNvlBK8aB+ffbK/JultXa7+fP/B/8GozRzOgAA
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:32 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:20 GMT
 recorded_with: VCR 2.9.3

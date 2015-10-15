@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:34 GMT
+      - Thu, 15 Oct 2015 09:18:23 GMT
       Etag:
       - W/"396bc3d4ec2ec240883d8237e30257df"
       Server:
@@ -41,17 +41,17 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '8904'
+      - '11173'
       X-Memc-Expires:
-      - '19896'
+      - '17627'
       X-Memc-Key:
       - d26aac51101601ee285e0e0a7d20d369
       X-Ratelimit-Limit:
       - '40'
       X-Ratelimit-Remaining:
-      - '19'
+      - '18'
       X-Ratelimit-Reset:
-      - '1444898435'
+      - '1444900704'
       Content-Length:
       - '801'
       Connection:
@@ -78,5 +78,70 @@ http_interactions:
         9+/FSdW+sk/dfiQLPPmy6lbdG9Pp90PbHNMcw7iszXrhtOkbp41k8JglunJc
         WNwKnaFOf5Ur5SBlePrKv71mUj9VO6KDbrT9B7rI4kVdBQAA
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:34 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:23 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/22855/alternative_titles?api_key=8a221fc31fcdf12a8af827465574ffc9&country=&language=fr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=28800
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 15 Oct 2015 09:18:23 GMT
+      Etag:
+      - '"9d2fbb555bc7c4c6dde0165b5de68d0b"'
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '18389'
+      X-Memc-Expires:
+      - '10411'
+      X-Memc-Key:
+      - 5076519074e5e738acdd39c7160147f0
+      X-Ratelimit-Limit:
+      - '40'
+      X-Ratelimit-Remaining:
+      - '17'
+      X-Ratelimit-Reset:
+      - '1444900704'
+      Content-Length:
+      - '358'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MjI4NTUsInRpdGxlcyI6W3siaXNvXzMxNjZfMSI6IlVTIiwidGl0
+        bGUiOiJTdXBlcm1hbiB1bmQgQmF0bWFuIFB1YmxpYyBFbmVtaWVzIn0seyJp
+        c29fMzE2Nl8xIjoiVVMiLCJ0aXRsZSI6IlN1cGVybWFuL0JhdG1hbjogUHVi
+        bGljIEVuZW1pZXMifSx7Imlzb18zMTY2XzEiOiJCUiIsInRpdGxlIjoiU3Vw
+        ZXJtYW4gJiBCYXRtYW4gLSBJbmltaWdvcyBQw7pibGljb3MifSx7Imlzb18z
+        MTY2XzEiOiJDQSIsInRpdGxlIjoiU3VwZXJtYW4gYW5kIEJhdG1hbiAtIFB1
+        YmxpYyBFbmVtaWVzICgyMDA5KSJ9LHsiaXNvXzMxNjZfMSI6IkFVIiwidGl0
+        bGUiOiJTdXBlcm1hbiAmIEJhdG1hbiAtIFB1YmxpYyBFbmVtaWVzIn1dfQ==
+    http_version: 
+  recorded_at: Thu, 15 Oct 2015 09:18:23 GMT
 recorded_with: VCR 2.9.3

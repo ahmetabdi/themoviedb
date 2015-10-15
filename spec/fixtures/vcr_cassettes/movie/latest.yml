@@ -24,22 +24,18 @@ http_interactions:
       - "*"
       Cache-Control:
       - public, max-age=0
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 08:40:25 GMT
+      - Thu, 15 Oct 2015 09:18:14 GMT
       Etag:
-      - W/"d23aeee14a4eb43136ef2543a3b2cb65"
+      - '"879939c700e96ed7f6621a16ea62fd88"'
       Last-Modified:
-      - '2015-10-15 08:37:27 +0000'
+      - '2015-10-15 09:17:17 +0000'
       Server:
       - openresty
       Status:
       - 200 OK
-      Vary:
-      - Accept-Encoding
       X-Memc:
       - MISS
       X-Memc-Age:
@@ -53,29 +49,17 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '39'
       X-Ratelimit-Reset:
-      - '1444898435'
+      - '1444900704'
       Content-Length:
-      - '633'
+      - '588'
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA31Ty27bMBD8lQUvviiuDddO7FvQomnQFghSNAVaFAJNraSN
-        KVLlQ44Q5N+zpB0nvfRggN7HzO5o9lHIKuogNrXUHguxlWpXOduXvQyt2Jio
-        NQdRW9P4MthSWa1RBbLmlIxVgwwwK0SDxqEXm9+PgiqxWSwLYWSHYiM+2A6r
-        UTz9KUTLz142KSqKQ91qsV5yLXXVtkwBEcJscTGbreZcYR01ZKQutTRNPDSi
-        eZsIFHSK/mzRIUw+TuCKnPYwuZ2ksgHdQLjngktQOnZ+hNFG00AnDaT5Krg0
-        FS8IKJ3xEFoEYiBbQ0seolEaYd9aaKWHLaLJFdHoqHYjOFTUE5rwUr9laE0s
-        1xS+Yh1gT6EFY0G1lhRyOkCwoFEOCEmLAhjNY/AMUENtXZqLtGTKtA4nO0zZ
-        W7tFF2wBEhyp9s0OPtY1OqaE2tkOZGfQk5zCdWOsk4fJ0sh7OSaS/FYUxvQY
-        AY1ipICOuaMDFY1JUPdxQB4DfV4d+U+IUuuRFVA8dZaJuMfx7hVI/pEBa7Js
-        h1RHXrWENfjiwJT2yOSy7xPwqRJH9FP+VL3to5aOR2M7TWcp4HmwoxfFu/WP
-        Znj4duf+or1enP96sO+/DLtmGb9fNdP7vkkIzlYx25Od2vUs5NGPRx/e0SDh
-        E+nOH713sViukiv/aWQ53EsjeVsu5qtVOef2m8/iZOmbljT1PbHY2dcO+Zt6
-        LCsZUnq+Xq/OZhdns3ORcqxfxHwkjtEpIfDb93aH5uTsV0a+iEwY9CthZvFB
-        hsh14vZAV3E+yGS440H9/xgGqtCejn2wAUv2octXlRXPoawAB56eASZJt6se
-        BAAA
+      encoding: UTF-8
+      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[],"homepage":"","id":363962,"imdb_id":"tt2771374","original_language":"en","original_title":"I
+        Am Victor","overview":"Centers on Victor Port, a high-powered divorce attorney
+        with a unique view of relationships.","popularity":0.0,"poster_path":null,"production_companies":[],"production_countries":[],"release_date":"","revenue":0,"runtime":0,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"I
+        Am Victor","video":false,"vote_average":0.0,"vote_count":0}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 08:40:26 GMT
+  recorded_at: Thu, 15 Oct 2015 09:18:14 GMT
 recorded_with: VCR 2.9.3
