@@ -159,7 +159,7 @@ describe Tmdb::Movie do
 
         it 'should respond with append_to_response options' do
           VCR.use_cassette 'movie/find/append_to_response' do
-            expect(Tmdb::Movie.find(22855, ['alternative_titles']).alternative_titles).not_to be_nil
+            expect(Tmdb::Movie.find(22855, append: ['alternative_titles']).alternative_titles).not_to be_nil
           end
         end
       end
