@@ -29,9 +29,9 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 08 Oct 2015 12:29:03 GMT
+      - Thu, 15 Oct 2015 08:40:33 GMT
       Etag:
-      - W/"5afd0a7fd624ec741beccb1bc751c584"
+      - W/"396bc3d4ec2ec240883d8237e30257df"
       Server:
       - openresty
       Status:
@@ -41,9 +41,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '9143'
+      - '8903'
       X-Memc-Expires:
-      - '19657'
+      - '19897'
       X-Memc-Key:
       - d26aac51101601ee285e0e0a7d20d369
       X-Ratelimit-Limit:
@@ -51,7 +51,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '21'
       X-Ratelimit-Reset:
-      - '1444307344'
+      - '1444898435'
       Content-Length:
       - '801'
       Connection:
@@ -59,24 +59,24 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
-        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
+        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
-        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
+        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
     http_version: 
-  recorded_at: Thu, 08 Oct 2015 12:29:02 GMT
+  recorded_at: Thu, 15 Oct 2015 08:40:33 GMT
 recorded_with: VCR 2.9.3

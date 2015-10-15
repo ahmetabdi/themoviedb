@@ -41,8 +41,8 @@ describe Tmdb::Movie do
 
       it 'should returned paged results' do
         VCR.use_cassette 'movie/upcoming/paged' do
-          upcoming_page_1 = subject.upcoming(1)
-          upcoming_page_2 = subject.upcoming(2)
+          upcoming_page_1 = subject.upcoming(page: 1)
+          upcoming_page_2 = subject.upcoming(page: 2)
           expect(upcoming_page_1).not_to eq(upcoming_page_2)
         end
       end
@@ -64,8 +64,8 @@ describe Tmdb::Movie do
 
       it 'should returned paged results' do
         VCR.use_cassette 'movie/now_playing/paged' do
-          now_playing_page_1 = subject.now_playing(1)
-          now_playing_page_2 = subject.now_playing(2)
+          now_playing_page_1 = subject.now_playing(page: 1)
+          now_playing_page_2 = subject.now_playing(page: 2)
           expect(now_playing_page_1).not_to eq(now_playing_page_2)
         end
       end
@@ -87,8 +87,8 @@ describe Tmdb::Movie do
 
       it 'should returned paged results' do
         VCR.use_cassette 'movie/popular/paged' do
-          popular_page_1 = subject.popular(1)
-          popular_page_2 = subject.popular(2)
+          popular_page_1 = subject.popular(page: 1)
+          popular_page_2 = subject.popular(page: 2)
           expect(popular_page_1).not_to eq(popular_page_2)
         end
       end
@@ -110,8 +110,8 @@ describe Tmdb::Movie do
 
       it 'should returned paged results' do
         VCR.use_cassette 'movie/top_rated/paged' do
-          top_rated_page_1 = subject.top_rated(1)
-          top_rated_page_2 = subject.top_rated(2)
+          top_rated_page_1 = subject.top_rated(page: 1)
+          top_rated_page_2 = subject.top_rated(page: 2)
           expect(top_rated_page_1).not_to eq(top_rated_page_2)
         end
       end
@@ -160,6 +160,12 @@ describe Tmdb::Movie do
         it 'should respond with append_to_response options' do
           VCR.use_cassette 'movie/find/append_to_response' do
             expect(Tmdb::Movie.find(22855, append: ['alternative_titles']).alternative_titles).not_to be_nil
+          end
+        end
+
+        it 'should not respond with append_to_response options' do
+          VCR.use_cassette 'movie/find/empty_append_to_response' do
+            expect(Tmdb::Movie.find(22855).alternative_titles).to eq(nil)
           end
         end
       end
