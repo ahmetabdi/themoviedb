@@ -12,8 +12,8 @@ Get your API key [here](https://www.themoviedb.org/account).
 
 ## Getting started
 
-```ruby
-gem install themoviedb
+```bash
+$ gem install themoviedb
 ```
 
 Example usage of the 'themovedb' gem
