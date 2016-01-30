@@ -1,6 +1,6 @@
 module Tmdb
   class Configuration
-    def initialize()
+    def initialize
       @params = {}
       @resource = '/configuration'
       self
@@ -37,7 +37,7 @@ module Tmdb
 
     def fetch_response
       options = @params.merge(Api.config)
-      response = Api.get(@resource, :query => options)
+      response = Api.get(@resource, query: options)
       response.to_hash
     end
 
