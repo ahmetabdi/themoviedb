@@ -20,7 +20,7 @@ module Tmdb
     # Get the list of movies associated with a particular company.
     def self.movies(id, _conditions = {})
       search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/movies")
-      search.fetch
+      search.fetch.collect { |result| Tmdb::Movie.new(result) }
     end
   end
 end

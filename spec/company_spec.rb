@@ -62,31 +62,31 @@ describe Tmdb::Company do
     end
 
     it 'should have a id' do
-      expect(@movie['id']).to eq(97_020)
+      expect(@movie.id).to eq(97_020)
     end
 
     it 'should have a title' do
-      expect(@movie['title']).to eq('RoboCop')
+      expect(@movie.title).to eq('RoboCop')
     end
 
     it 'should have a original title' do
-      expect(@movie['original_title']).to eq('RoboCop')
+      expect(@movie.original_title).to eq('RoboCop')
     end
 
     it 'should have a poster' do
-      expect(@movie['poster_path']).to eq('/xxLhczZMiJt1iRdhfkVkuMu87si.jpg')
+      expect(@movie.poster_path).to eq('/xxLhczZMiJt1iRdhfkVkuMu87si.jpg')
     end
 
     it 'should have a popularity rating' do
-      expect(@movie['popularity']).to eq(3.13451193740971)
+      expect(@movie.popularity).to eq(3.13451193740971)
     end
 
     it 'should show whether it is an adult movie' do
-      expect(@movie['adult']).to eq(false)
+      expect(@movie.adult).to eq(false)
     end
 
     it 'should have a release date' do
-      expect(@movie['release_date']).to eq('2014-02-07')
+      expect(@movie.release_date).to eq('2014-02-07')
     end
   end
 end
