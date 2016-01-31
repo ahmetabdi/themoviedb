@@ -11,14 +11,14 @@ module Tmdb
     end
 
     def self.key(api_key)
-      self.config[:api_key] = api_key
+      config[:api_key] = api_key
     end
 
     def self.language(lang)
-      if (lang.nil?)
-        self.config.delete(:language)
+      if lang.nil?
+        config.delete(:language)
       else
-        self.config[:language] = lang
+        config[:language] = lang
       end
     end
 
@@ -33,6 +33,5 @@ module Tmdb
     def self.set_response(hash)
       @@response = hash
     end
-
   end
 end

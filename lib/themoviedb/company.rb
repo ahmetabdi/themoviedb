@@ -1,8 +1,8 @@
 module Tmdb
   class Company < Resource
-    has_resource 'company', :plural => 'companies'
+    has_resource 'company', plural: 'companies'
 
-    #http://docs.themoviedb.apiary.io/#companies
+    # http://docs.themoviedb.apiary.io/#companies
     @@fields = [
       :description,
       :headquarters,
@@ -17,11 +17,10 @@ module Tmdb
       attr_accessor field
     end
 
-    #Get the list of movies associated with a particular company.
-    def self.movies(id, conditions={})
-      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/movies")
+    # Get the list of movies associated with a particular company.
+    def self.movies(id, _conditions = {})
+      search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/movies")
       search.fetch
     end
-
   end
 end

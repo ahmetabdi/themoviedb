@@ -1,10 +1,8 @@
 module Tmdb
   class Job
-    def initialize(attributes={})
+    def initialize(attributes = {})
       attributes.each do |key, value|
-        if self.respond_to?(key.to_sym)
-          self.instance_variable_set("@#{key}", value)
-        end
+        instance_variable_set("@#{key}", value) if respond_to?(key.to_sym)
       end
     end
 
@@ -19,7 +17,7 @@ module Tmdb
     end
 
     def self.list
-      search = Tmdb::Search.new("/job/list")
+      search = Tmdb::Search.new('/job/list')
       search.fetch_response
     end
   end
