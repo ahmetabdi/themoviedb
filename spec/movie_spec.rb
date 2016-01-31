@@ -24,97 +24,97 @@ describe Tmdb::Movie do
 
     it "should return the latest movies" do
       VCR.use_cassette 'movie/return_latest_movie' do
-        @movie.latest.should be_true
+        expect(@movie.latest).to be_truthy
       end
     end
 
     it "should return the upcoming movies" do
       VCR.use_cassette 'movie/return_upcoming_movie' do
-        @movie.upcoming.should be_true
+        expect(@movie.upcoming).to be_truthy
       end
     end
 
     it "should show movies that are now playing" do
       VCR.use_cassette 'movie/now_playing' do
-        @movie.now_playing.should be_true
+        expect(@movie.now_playing).to be_truthy
       end
     end
 
     it "should return popular movies" do
       VCR.use_cassette 'movie/popular' do
-        @movie.popular.should be_true
+        expect(@movie.popular).to be_truthy
       end
     end
 
     it "should return top rated movies" do
       VCR.use_cassette 'movie/top_rated' do
-        @movie.top_rated.should be_true
+        expect(@movie.top_rated).to be_truthy
       end
     end
 
     it "should return alternative titles for an ID" do
       VCR.use_cassette 'movie/alternative_titles_for_id' do
-        @movie.alternative_titles(5).should be_true
+        expect(@movie.alternative_titles(5)).to be_truthy
       end
     end
 
     it "should return cast information for an ID" do
       VCR.use_cassette 'movie/cast_information_for_id' do
-        @movie.casts(5).should be_true
+        expect(@movie.casts(5)).to be_truthy
       end
     end
 
     it "should return crew for an ID" do
       VCR.use_cassette 'movie/crew_for_id' do
-        @movie.crew(5).should be_true
+        expect(@movie.crew(5)).to be_truthy
       end
     end
 
     it "should return keywords for an ID" do
       VCR.use_cassette 'movie/keywords_for_id' do
-        @movie.keywords(5).should be_true
+        expect(@movie.keywords(5)).to be_truthy
       end
     end
 
     it "should return releases for an ID" do
       VCR.use_cassette 'movie/releases_for_id' do
-        @movie.releases(5).should be_true
+        expect(@movie.releases(5)).to be_truthy
       end
     end
 
     it "should return trailers for an ID" do
       VCR.use_cassette 'movie/trailers_for_id' do
-        @movie.trailers(5).should be_true
+        expect(@movie.trailers(5)).to be_truthy
       end
     end
 
     it "should return translations for an ID" do
       VCR.use_cassette 'movie/translations_for_id' do
-        @movie.translations(5).should be_true
+        expect(@movie.translations(5)).to be_truthy
       end
     end
 
     it "should return similar_movies for an ID" do
       VCR.use_cassette 'movie/similar_for_id' do
-        @movie.similar_movies(5).should be_true
+        expect(@movie.similar_movies(5)).to be_truthy
       end
     end
 
     it "should return the list the movie belongs to" do
       VCR.use_cassette 'movie/movie_belongs_for_id' do
-        @movie.lists(5).should be_true
+        expect(@movie.lists(5)).to be_truthy
       end
     end
 
     it "should return the changes made" do
       VCR.use_cassette 'movie/changes_made' do
-        @movie.changes(5).should be_true
+        expect(@movie.changes(5)).to be_truthy
       end
     end
 
     it "should return credits for an ID" do
       VCR.use_cassette 'movie/credits_for_id' do
-        @movie.credits(5).should be_true
+        expect(@movie.credits(5)).to be_truthy
       end
     end
   end
@@ -128,87 +128,87 @@ describe Tmdb::Movie do
     end
 
     it "should return a id" do
-      @movie['id'].should == 22855
+      expect(@movie['id']).to eq 22855
     end
 
     it "should return a adult" do
-      @movie['adult'].should == false
+      expect(@movie['adult']).to eq false
     end
 
     it "should return a backdrop_path" do
-      @movie['backdrop_path'].should == "/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg"
+      expect(@movie['backdrop_path']).to eq "/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg"
     end
 
     it "should return a belongs_to_collection" do
-      @movie['belongs_to_collection']['name'].should == "DC Universe Animated Original Movies"
+      expect(@movie['belongs_to_collection']['name']).to eq "DC Universe Animated Original Movies"
     end
 
     it "should return a budget" do
-      @movie['budget'].should == 0
+      expect(@movie['budget']).to eq 0
     end
 
     it "should return genres" do
-      @movie['genres'].should_not == []
+      expect(@movie['genres']).not_to eq []
     end
 
     it "should return homepage" do
-      @movie['homepage'].should == "http://www.warnervideo.com/supermanbatmandvd/"
+      expect(@movie['homepage']).to eq "http://www.warnervideo.com/supermanbatmandvd/"
     end
 
     it "should return a imdb_id" do
-      @movie['imdb_id'].should == "tt1398941"
+      expect(@movie['imdb_id']).to eq "tt1398941"
     end
 
     it "should return a original_title" do
-      @movie['original_title'].should == "Superman/Batman: Public Enemies"
+      expect(@movie['original_title']).to eq "Superman/Batman: Public Enemies"
     end
 
     it "should return a overview" do
-      @movie['overview'].should == "United States President Lex Luthor uses the oncoming trajectory of a Kryptonite meteor to frame Superman and declare a $1 billion bounty on the heads of the Man of Steel and his ‘partner in crime’, Batman. Heroes and villains alike launch a relentless pursuit of Superman and Batman, who must unite—and recruit help—to try and stave off the action-packed onslaught, stop the meteor Luthors plot."
+      expect(@movie['overview']).to eq "United States President Lex Luthor uses the oncoming trajectory of a Kryptonite meteor to frame Superman and declare a $1 billion bounty on the heads of the Man of Steel and his ‘partner in crime’, Batman. Heroes and villains alike launch a relentless pursuit of Superman and Batman, who must unite—and recruit help—to try and stave off the action-packed onslaught, stop the meteor Luthors plot."
     end
 
     it "should return popularity" do
-      @movie['popularity'].should == 1.15974723131612
+      expect(@movie['popularity']).to eq 1.15974723131612
     end
 
     it "should return poster_path" do
-      @movie['poster_path'].should == "/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg"
+      expect(@movie['poster_path']).to eq "/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg"
     end
 
     it "should return production_companies" do
-      @movie['production_companies'].should_not == []
+      expect(@movie['production_companies']).not_to eq []
     end
 
     it "should return production_countries" do
-      @movie['production_countries'].should_not == []
+      expect(@movie['production_countries']).not_to eq []
     end
 
     it "should return release_date" do
-      @movie['release_date'].should == "2009-09-29"
+      expect(@movie['release_date']).to eq "2009-09-29"
     end
 
     it "should return revenue" do
-      @movie['revenue'].should == 0
+      expect(@movie['revenue']).to eq 0
     end
 
     it "should return a runtime" do
-      @movie['runtime'].should == 67
+      expect(@movie['runtime']).to eq 67
     end
 
     it "should return spoken_languages" do
-      @movie['spoken_languages'].first['name'].should == "English"
+      expect(@movie['spoken_languages'].first['name']).to eq "English"
     end
 
     it "should return status" do
-      @movie['status'].should == "Released"
+      expect(@movie['status']).to eq "Released"
     end
 
     it "should return vote_average" do
-      @movie['vote_average'].should == 7.4
+      expect(@movie['vote_average']).to eq 7.4
     end
 
     it "should return vote_count" do
-      @movie['vote_count'].should == 23
+      expect(@movie['vote_count']).to eq 23
     end
   end
 
@@ -222,56 +222,56 @@ describe Tmdb::Movie do
     end
 
     it 'should return alternative_titles' do
-      @movie['alternative_titles']['titles'].size.should == 4
-      @movie['alternative_titles']['titles'].first['title'].should == 'Superman und Batman Public Enemies'
+      expect(@movie['alternative_titles']['titles'].size).to eq 4
+      expect(@movie['alternative_titles']['titles'].first['title']).to eq 'Superman und Batman Public Enemies'
     end
 
     it 'should return credits' do
-      @movie['credits']['cast'].size.should == 20
-      @movie['credits']['cast'].first['id'].should == 34947
-      @movie['credits']['crew'].size.should == 3
-      @movie['credits']['crew'].first['id'].should == 90367
+      expect(@movie['credits']['cast'].size).to eq 20
+      expect(@movie['credits']['cast'].first['id']).to eq 34947
+      expect(@movie['credits']['crew'].size).to eq 3
+      expect(@movie['credits']['crew'].first['id']).to eq 90367
     end
 
     it 'should return images' do
-      @movie['images']['backdrops'].size.should == 6
-      @movie['images']['backdrops'].first['file_path'].should == '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
-      @movie['images']['posters'].size.should == 9
-      @movie['images']['posters'].first['file_path'].should == '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
+      expect(@movie['images']['backdrops'].size).to eq 6
+      expect(@movie['images']['backdrops'].first['file_path']).to eq '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
+      expect(@movie['images']['posters'].size).to eq 9
+      expect(@movie['images']['posters'].first['file_path']).to eq '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
     end
 
     it 'should return keywords' do
-      @movie['keywords']['keywords'].size.should == 2
-      @movie['keywords']['keywords'].first['id'].should == 9715
+      expect(@movie['keywords']['keywords'].size).to eq 2
+      expect(@movie['keywords']['keywords'].first['id']).to eq 9715
     end
 
     it 'should return releases' do
-      @movie['releases']['countries'].size.should == 1
-      @movie['releases']['countries'].first['release_date'].should == '2009-09-29'
+      expect(@movie['releases']['countries'].size).to eq 1
+      expect(@movie['releases']['countries'].first['release_date']).to eq '2009-09-29'
     end
 
     it 'should return trailers' do
-      @movie['trailers']['quicktime'].should == []
-      @movie['trailers']['youtube'].size.should == 1
-      @movie['trailers']['youtube'].first['name'].should == 'Official Preview Trailer'
+      expect(@movie['trailers']['quicktime']).to eq []
+      expect(@movie['trailers']['youtube'].size).to eq 1
+      expect(@movie['trailers']['youtube'].first['name']).to eq 'Official Preview Trailer'
     end
 
     it 'should return translations' do
-      @movie['translations']['translations'].size.should == 13
-      @movie['translations']['translations'].first['name'].should == 'English'
+      expect(@movie['translations']['translations'].size).to eq 13
+      expect(@movie['translations']['translations'].first['name']).to eq 'English'
     end
 
     it 'should return reviews' do
-      @movie['reviews']['results'].should == []
+      expect(@movie['reviews']['results']).to eq []
     end
 
     it 'should return lists' do
-      @movie['lists']['results'].size.should == 4
-      @movie['lists']['results'].first['id'].should == '51d6b52219c295172912ff1e'
+      expect(@movie['lists']['results'].size).to eq 4
+      expect(@movie['lists']['results'].first['id']).to eq '51d6b52219c295172912ff1e'
     end
 
     it 'should return changes' do
-      @movie['changes']['changes'].should == []
+      expect(@movie['changes']['changes']).to eq []
     end
   end
 
@@ -288,7 +288,7 @@ describe Tmdb::Movie do
     end
 
     it "should return posters" do
-      @movie['posters'].should be_true
+      expect(@movie['posters']).to be_truthy
     end
 
   end
@@ -304,11 +304,11 @@ describe Tmdb::Movie do
     end
 
     it "should return the german name" do
-      @movie['title'].should == "Stirb Langsam"
+      expect(@movie['title']).to eq "Stirb Langsam"
     end
 
     it "should return the german description" do
-      @movie['overview'].should == "Eigentlich möchte der New Yorker Polizist John McClane dieses Weihnachten nur seine Noch-Ehefrau Holly, welche in Los Angeles in einer großen, erfolgreichen Firma Karriere gemacht hat, besuchen und das Fest mit den beiden gemeinsamen Kinder verbringen. Als die Feierlichkeiten im Nakatomi Plaza beginnen sollen, stürmt eine Gruppe von Terroristen das Hochhaus und nur John McClane schafft es ihnen zu entwischen. Lediglich bewaffnet mit ein paar Zigaretten und einem Walkie-Talkie, wodurch er den Funk der Geiselnehmer mithören kann, und mit Waffen, welche die Terroristen gelegentlich so rumliegen lassen, muss John nun nicht nur sein eigenes Leben retten, sondern möglichst auch das aller anderen Beteiligten. Und so beschließt er, die äußerst brutale Truppe auszumerzen und sich einen Terroristen nach dem anderen vorzuknöpfen. Während draußen dann schon die Polizei und das FBI stümperhaft versucht, das Gebäude zu stürmen, kämpft McClane ohne Schuhe gegen die 12 Aggressoren..."
+      expect(@movie['overview']).to eq "Eigentlich möchte der New Yorker Polizist John McClane dieses Weihnachten nur seine Noch-Ehefrau Holly, welche in Los Angeles in einer großen, erfolgreichen Firma Karriere gemacht hat, besuchen und das Fest mit den beiden gemeinsamen Kinder verbringen. Als die Feierlichkeiten im Nakatomi Plaza beginnen sollen, stürmt eine Gruppe von Terroristen das Hochhaus und nur John McClane schafft es ihnen zu entwischen. Lediglich bewaffnet mit ein paar Zigaretten und einem Walkie-Talkie, wodurch er den Funk der Geiselnehmer mithören kann, und mit Waffen, welche die Terroristen gelegentlich so rumliegen lassen, muss John nun nicht nur sein eigenes Leben retten, sondern möglichst auch das aller anderen Beteiligten. Und so beschließt er, die äußerst brutale Truppe auszumerzen und sich einen Terroristen nach dem anderen vorzuknöpfen. Während draußen dann schon die Polizei und das FBI stümperhaft versucht, das Gebäude zu stürmen, kämpft McClane ohne Schuhe gegen die 12 Aggressoren..."
     end
 
   end

@@ -44,11 +44,11 @@ describe Tmdb::TV do
     end
 
     it "should return backdrops for chuck" do
-      @tv['backdrops'].length.should >= 1
+      expect(@tv['backdrops'].length).to be >= 1
     end
 
     it "should return posters for chuck" do
-      @tv['posters'].length.should >= 1
+      expect(@tv['posters'].length).to be >= 1
     end
   end
 
@@ -61,96 +61,96 @@ describe Tmdb::TV do
     end
 
     it "should return a id" do
-      @tv['id'].should == 1396
+      expect(@tv['id']).to eq 1396
     end
 
     it "should return a backdrop" do
-      @tv['backdrop_path'].should == "/8STVFl9kvWtFAydXUFHIUvT47AA.jpg"
+      expect(@tv['backdrop_path']).to eq "/8STVFl9kvWtFAydXUFHIUvT47AA.jpg"
     end
 
     it "should return a created date" do
-      @tv['created_by'].first['name'].should == "Vince Gilligan"
+      expect(@tv['created_by'].first['name']).to eq "Vince Gilligan"
     end
 
     it "should return a run time" do
-      @tv['episode_run_time'].should == [45, 47]
+      expect(@tv['episode_run_time']).to eq [45, 47]
     end
 
     it "should return genres" do
-      @tv['genres'].should_not == []
+      expect(@tv['genres']).not_to eq []
     end
 
     it "should return a first air date" do
-      @tv['first_air_date'].should == "2008-01-20"
+      expect(@tv['first_air_date']).to eq "2008-01-20"
     end
 
     it "should return a homepage" do
-      @tv['homepage'].should == "http://www.amctv.com/shows/breaking-bad"
+      expect(@tv['homepage']).to eq "http://www.amctv.com/shows/breaking-bad"
     end
 
     it "should return a production state" do
-      @tv['in_production'].should be_false
+      expect(@tv['in_production']).to be_falsey
     end
 
     it "should return languages" do
-      @tv['languages'].should == ["en", "de", "ro", "es", "fa"]
+      expect(@tv['languages']).to eq ["en", "de", "ro", "es", "fa"]
     end
 
     it "should return a last air date" do
-      @tv['last_air_date'].should == "2013-09-29"
+      expect(@tv['last_air_date']).to eq "2013-09-29"
     end
 
     it "should return a name" do
-      @tv['name'].should == "Breaking Bad"
+      expect(@tv['name']).to eq "Breaking Bad"
     end
 
     it "should return a network" do
-      @tv['networks'].first['id'].should == 174
+      expect(@tv['networks'].first['id']).to eq 174
       @tv['networks'].first['name'] == "AMC"
     end
 
     it "should return the number of episodes" do
-      @tv['number_of_episodes'].should == 62
+      expect(@tv['number_of_episodes']).to eq 62
     end
 
     it "should return the number of seasons" do
-      @tv['number_of_seasons'].should == 5
+      expect(@tv['number_of_seasons']).to eq 5
     end
 
     it "should return the original name" do
-      @tv['original_name'].should == "Breaking Bad"
+      expect(@tv['original_name']).to eq "Breaking Bad"
     end
 
     it "should return the origin country" do
-      @tv['origin_country'].should == ["US"]
+      expect(@tv['origin_country']).to eq ["US"]
     end
 
     it "should return a overview" do
-      @tv['overview'].should == "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan. Set and produced in Albuquerque, New Mexico, Breaking Bad is the story of Walter White, a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer at the beginning of the series. He turns to a life of crime, producing and selling methamphetamine, in order to secure his family's financial future before he dies, teaming with his former student, Jesse Pinkman. Heavily serialized, the series is known for positioning its characters in seemingly inextricable corners and has been labeled a contemporary western by its creator."
+      expect(@tv['overview']).to eq "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan. Set and produced in Albuquerque, New Mexico, Breaking Bad is the story of Walter White, a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer at the beginning of the series. He turns to a life of crime, producing and selling methamphetamine, in order to secure his family's financial future before he dies, teaming with his former student, Jesse Pinkman. Heavily serialized, the series is known for positioning its characters in seemingly inextricable corners and has been labeled a contemporary western by its creator."
     end
 
     it "should return a popularity rating" do
-      @tv['popularity'].should == 6.60821276854239
+      expect(@tv['popularity']).to eq 6.60821276854239
     end
 
     it "should return a poster" do
-      @tv['poster_path'].should == "/iRDNn9EHKuBhGa77UBteazvsZa1.jpg"
+      expect(@tv['poster_path']).to eq "/iRDNn9EHKuBhGa77UBteazvsZa1.jpg"
     end
 
     it "should return seasons" do
-      @tv['seasons'].should_not == []
+      expect(@tv['seasons']).not_to eq []
     end
 
     it "should return a status" do
-      @tv['status'].should == "Ended"
+      expect(@tv['status']).to eq "Ended"
     end
 
     it "should return a vote average" do
-      @tv['vote_average'].should == 8.86764705882353
+      expect(@tv['vote_average']).to eq 8.86764705882353
     end
 
     it "should return a vote count" do
-      @tv['vote_count'].should == 34
+      expect(@tv['vote_count']).to eq 34
     end
 
   end
@@ -165,14 +165,14 @@ describe Tmdb::TV do
     end
 
     it 'should return credits' do
-      @tv['credits']['cast'].size.should == 7
-      @tv['credits']['cast'].first['id'].should == 17419
-      @tv['credits']['crew'].size.should == 4
-      @tv['credits']['crew'].first['id'].should == 5162
+      expect(@tv['credits']['cast'].size).to eq 7
+      expect(@tv['credits']['cast'].first['id']).to eq 17419
+      expect(@tv['credits']['crew'].size).to eq 4
+      expect(@tv['credits']['crew'].first['id']).to eq 5162
     end
 
     it 'should return external_ids' do
-      @tv['external_ids']['imdb_id'].should == 'tt0903747'
+      expect(@tv['external_ids']['imdb_id']).to eq 'tt0903747'
     end
   end
 
@@ -185,43 +185,43 @@ describe Tmdb::TV do
     end
 
     it "should return an array" do
-      @tv.class.should == Array
+      expect(@tv.class).to eq Array
     end
 
     it "each show should return an id" do
-      @tv.first['id'].should == 57243
+      expect(@tv.first['id']).to eq 57243
     end
 
     it "each show should return an name" do
-      @tv.first['name'].should == "Doctor Who"
+      expect(@tv.first['name']).to eq "Doctor Who"
     end
 
     it "each show should return an original name" do
-      @tv.first['original_name'].should == "Doctor Who"
+      expect(@tv.first['original_name']).to eq "Doctor Who"
     end
 
     it "each show should return an popularity" do
-      @tv.first['popularity'].should == 16.5167252220739
+      expect(@tv.first['popularity']).to eq 16.5167252220739
     end
 
     it "each show should return an poster_path" do
-      @tv.first['poster_path'].should == "/4a94ptIdYz0JwSzo0dCNuPCcfM8.jpg"
+      expect(@tv.first['poster_path']).to eq "/4a94ptIdYz0JwSzo0dCNuPCcfM8.jpg"
     end
 
     it "each show should return an vote_average" do
-      @tv.first['vote_average'].should == 7.875
+      expect(@tv.first['vote_average']).to eq 7.875
     end
 
     it "each show should return an vote_count" do
-      @tv.first['vote_count'].should == 4
+      expect(@tv.first['vote_count']).to eq 4
     end
 
     it "each show should return an backdrop" do
-      @tv.first['backdrop_path'].should == nil
+      expect(@tv.first['backdrop_path']).to eq nil
     end
 
     it "each show should return an first air date" do
-      @tv.first['first_air_date'].should == "2005-03-26"
+      expect(@tv.first['first_air_date']).to eq "2005-03-26"
     end
 
   end
@@ -235,43 +235,43 @@ describe Tmdb::TV do
     end
 
     it "should return an array" do
-      @tv.class.should == Array
+      expect(@tv.class).to eq Array
     end
 
     it "each show should return an id" do
-      @tv.first['id'].should == 1104
+      expect(@tv.first['id']).to eq 1104
     end
 
     it "each show should return an name" do
-      @tv.first['name'].should == "Mad Men"
+      expect(@tv.first['name']).to eq "Mad Men"
     end
 
     it "each show should return an original name" do
-      @tv.first['original_name'].should == "Mad Men"
+      expect(@tv.first['original_name']).to eq "Mad Men"
     end
 
     it "each show should return an popularity" do
-      @tv.first['popularity'].should == 2.15615937122719
+      expect(@tv.first['popularity']).to eq 2.15615937122719
     end
 
     it "each show should return an poster_path" do
-      @tv.first['poster_path'].should == "/xA2nHrx2oHGPnL4ehBwPxD0ABvb.jpg"
+      expect(@tv.first['poster_path']).to eq "/xA2nHrx2oHGPnL4ehBwPxD0ABvb.jpg"
     end
 
     it "each show should return an vote_average" do
-      @tv.first['vote_average'].should == 9.66666666666667
+      expect(@tv.first['vote_average']).to eq 9.66666666666667
     end
 
     it "each show should return an vote_count" do
-      @tv.first['vote_count'].should == 3
+      expect(@tv.first['vote_count']).to eq 3
     end
 
     it "each show should return an backdrop" do
-      @tv.first['backdrop_path'].should == "/yGW0NX3I8GXPlWPdoWWyaH0AsCk.jpg"
+      expect(@tv.first['backdrop_path']).to eq "/yGW0NX3I8GXPlWPdoWWyaH0AsCk.jpg"
     end
 
     it "each show should return an first air date" do
-      @tv.first['first_air_date'].should == "2007-07-19"
+      expect(@tv.first['first_air_date']).to eq "2007-07-19"
     end
 
   end
@@ -287,31 +287,31 @@ describe Tmdb::TV do
       end
 
       it "should return a aspect ratio" do
-        @backdrop['aspect_ratio'].should == 1.78
+        expect(@backdrop['aspect_ratio']).to eq 1.78
       end
 
       it "should return a file path" do
-        @backdrop['file_path'].should == "/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg"
+        expect(@backdrop['file_path']).to eq "/dRaV8HGx7Z9xmw77qSs8prp5OuI.jpg"
       end
 
       it "should return a height" do
-        @backdrop['height'].should == 720
+        expect(@backdrop['height']).to eq 720
       end
 
       it "should return a iso code" do
-        @backdrop['iso_639_1'].should == nil
+        expect(@backdrop['iso_639_1']).to eq nil
       end
 
       it "should return a vote average" do
-        @backdrop['vote_average'].should == 0.0
+        expect(@backdrop['vote_average']).to eq 0.0
       end
 
       it "should return a vote count" do
-        @backdrop['vote_count'].should == 0.0
+        expect(@backdrop['vote_count']).to eq 0.0
       end
 
       it "should return a width" do
-        @backdrop['width'].should == 1280
+        expect(@backdrop['width']).to eq 1280
       end
 
     end
@@ -325,31 +325,31 @@ describe Tmdb::TV do
       end
 
       it "should return a aspect ratio" do
-        @poster['aspect_ratio'].should == 1.0
+        expect(@poster['aspect_ratio']).to eq 1.0
       end
 
       it "should return a file path" do
-        @poster['file_path'].should == "/lVbofIPlw3kYa8FQgHT7GtWMI2Q.jpg"
+        expect(@poster['file_path']).to eq "/lVbofIPlw3kYa8FQgHT7GtWMI2Q.jpg"
       end
 
       it "should return a height" do
-        @poster['height'].should == 1000
+        expect(@poster['height']).to eq 1000
       end
 
       it "should return a iso code" do
-        @poster['iso_639_1'].should == "nl"
+        expect(@poster['iso_639_1']).to eq "nl"
       end
 
       it "should return a vote average" do
-        @poster['vote_average'].should == 5.3125
+        expect(@poster['vote_average']).to eq 5.3125
       end
 
       it "should return a vote count" do
-        @poster['vote_count'].should == 1
+        expect(@poster['vote_count']).to eq 1
       end
 
       it "should return a width" do
-        @poster['width'].should == 1000
+        expect(@poster['width']).to eq 1000
       end
 
     end
@@ -365,27 +365,27 @@ describe Tmdb::TV do
     end
 
     it "should return a id" do
-      @cast['id'].should == 17419
+      expect(@cast['id']).to eq 17419
     end
 
     it "should return a name" do
-      @cast['name'].should == "Bryan Cranston"
+      expect(@cast['name']).to eq "Bryan Cranston"
     end
 
     it "should return a order" do
-      @cast['order'].should == 0
+      expect(@cast['order']).to eq 0
     end
 
     it "should return a profile image" do
-      @cast['profile_path'].should == "/qXWgFCk4OJqmLRUBEj7cbp8dnkx.jpg"
+      expect(@cast['profile_path']).to eq "/qXWgFCk4OJqmLRUBEj7cbp8dnkx.jpg"
     end
 
     it "should return a character name" do
-      @cast['character'].should == "Walter White"
+      expect(@cast['character']).to eq "Walter White"
     end
 
     it "should return a credit id" do
-      @cast['credit_id'].should == "52542282760ee313280017f9"
+      expect(@cast['credit_id']).to eq "52542282760ee313280017f9"
     end
 
   end
@@ -399,23 +399,23 @@ describe Tmdb::TV do
     end
 
     it "should return a id" do
-      @crew['id'].should == 29779
+      expect(@crew['id']).to eq 29779
     end
 
     it "should return a department" do
-      @crew['department'].should == "Production"
+      expect(@crew['department']).to eq "Production"
     end
 
     it "should return a job" do
-      @crew['job'].should == "Executive Producer"
+      expect(@crew['job']).to eq "Executive Producer"
     end
 
     it "should return a name" do
-      @crew['name'].should == "Michelle MacLaren"
+      expect(@crew['name']).to eq "Michelle MacLaren"
     end
 
     it "should return a profile image" do
-      @crew['profile_path'].should == nil
+      expect(@crew['profile_path']).to eq nil
     end
 
   end
@@ -429,27 +429,27 @@ describe Tmdb::TV do
     end
 
     it "should return a id" do
-      @external['id'].should == 1396
+      expect(@external['id']).to eq 1396
     end
 
     it "should return a imdb id" do
-      @external['imdb_id'].should == "tt0903747"
+      expect(@external['imdb_id']).to eq "tt0903747"
     end
 
     it "should return a tvdb id" do
-      @external['tvdb_id'].should == 81189
+      expect(@external['tvdb_id']).to eq 81189
     end
 
     it "should return a tvrage id" do
-      @external['tvrage_id'].should == 18164
+      expect(@external['tvrage_id']).to eq 18164
     end
 
     it "should return a freebase id" do
-      @external['freebase_id'].should == "/en/breaking_bad"
+      expect(@external['freebase_id']).to eq "/en/breaking_bad"
     end
 
     it "should return a freebase mid" do
-      @external['freebase_mid'].should == "/m/03d34x8"
+      expect(@external['freebase_mid']).to eq "/m/03d34x8"
     end
 
 
