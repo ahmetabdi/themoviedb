@@ -10,36 +10,11 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Ahmet Abdi']
   s.email       = ['ahmetabdi@gmail.com']
-  s.homepage    = 'http://rubygems.org/gems/themoviedb'
+  s.homepage    = 'https://rubygems.org/gems/themoviedb'
   s.summary     = 'A Ruby wrapper for the The Movie Database API.'
-  s.description = 'Provides a simple, easy to use interface for the Movie Database API.'
-  s.rubyforge_project = 'themoviedb'
-  s.files = [
-    'themoviedb.gemspec',
-    'lib/themoviedb.rb',
-    'lib/themoviedb/api.rb',
-    'lib/themoviedb/collection.rb',
-    'lib/themoviedb/company.rb',
-    'lib/themoviedb/configuration.rb',
-    'lib/themoviedb/genre.rb',
-    'lib/themoviedb/job.rb',
-    'lib/themoviedb/movie.rb',
-    'lib/themoviedb/person.rb',
-    'lib/themoviedb/resource.rb',
-    'lib/themoviedb/search.rb',
-    'lib/themoviedb/season.rb',
-    'lib/themoviedb/episode.rb',
-    'lib/themoviedb/tv.rb',
-    'lib/themoviedb/find.rb',
-    'lib/themoviedb/version.rb'
-  ]
-  s.test_files = [
-    'spec/movie_spec.rb',
-    'spec/tv_spec.rb',
-    'spec/company_spec.rb',
-    'spec/person_spec.rb',
-    'spec/find_spec.rb'
-  ]
+  s.description = 'Provides a simple, easy to use interface for The Movie Database API.'
+  s.files = Dir['README.md', 'themoviedb.gemspec', 'lib/**/*']
+  s.test_files = Dir['spec/**/*']
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'httparty'
