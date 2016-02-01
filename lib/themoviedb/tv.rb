@@ -38,20 +38,20 @@ module Tmdb
     # Get the list of popular TV shows. This list refreshes every day.
     def self.popular
       search = Tmdb::Search.new('/tv/popular')
-      search.fetch
+      search.fetch.collect { |result| new(result) }
     end
 
     # Get the list of top rated TV shows. By default, this list will only include TV shows that have 2 or more votes. This list refreshes every day.
     def self.top_rated
       search = Tmdb::Search.new('/tv/top_rated')
-      search.fetch
+      search.fetch.collect { |result| new(result) }
     end
 
     # Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates
     def self.discover(conditions = {})
       search = Tmdb::Search.new('/discover/tv')
       search.filter(conditions)
-      search.fetch
+      search.fetch.collect { |result| new(result) }
     end
 
     # Get the cast information about a TV series.

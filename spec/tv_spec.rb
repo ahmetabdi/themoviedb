@@ -185,39 +185,39 @@ describe Tmdb::TV do
     end
 
     it 'each show should return an id' do
-      expect(@tv.first['id']).to eq 57_243
+      expect(@tv.first.id).to eq 57_243
     end
 
     it 'each show should return an name' do
-      expect(@tv.first['name']).to eq 'Doctor Who'
+      expect(@tv.first.name).to eq 'Doctor Who'
     end
 
     it 'each show should return an original name' do
-      expect(@tv.first['original_name']).to eq 'Doctor Who'
+      expect(@tv.first.original_name).to eq 'Doctor Who'
     end
 
     it 'each show should return an popularity' do
-      expect(@tv.first['popularity']).to eq 16.5167252220739
+      expect(@tv.first.popularity).to eq 16.5167252220739
     end
 
     it 'each show should return an poster_path' do
-      expect(@tv.first['poster_path']).to eq '/4a94ptIdYz0JwSzo0dCNuPCcfM8.jpg'
+      expect(@tv.first.poster_path).to eq '/4a94ptIdYz0JwSzo0dCNuPCcfM8.jpg'
     end
 
     it 'each show should return an vote_average' do
-      expect(@tv.first['vote_average']).to eq 7.875
+      expect(@tv.first.vote_average).to eq 7.875
     end
 
     it 'each show should return an vote_count' do
-      expect(@tv.first['vote_count']).to eq 4
+      expect(@tv.first.vote_count).to eq 4
     end
 
     it 'each show should return an backdrop' do
-      expect(@tv.first['backdrop_path']).to eq nil
+      expect(@tv.first.backdrop_path).to eq nil
     end
 
     it 'each show should return an first air date' do
-      expect(@tv.first['first_air_date']).to eq '2005-03-26'
+      expect(@tv.first.first_air_date).to eq '2005-03-26'
     end
   end
 
@@ -233,39 +233,39 @@ describe Tmdb::TV do
     end
 
     it 'each show should return an id' do
-      expect(@tv.first['id']).to eq 1104
+      expect(@tv.first.id).to eq 1104
     end
 
     it 'each show should return an name' do
-      expect(@tv.first['name']).to eq 'Mad Men'
+      expect(@tv.first.name).to eq 'Mad Men'
     end
 
     it 'each show should return an original name' do
-      expect(@tv.first['original_name']).to eq 'Mad Men'
+      expect(@tv.first.original_name).to eq 'Mad Men'
     end
 
     it 'each show should return an popularity' do
-      expect(@tv.first['popularity']).to eq 2.15615937122719
+      expect(@tv.first.popularity).to eq 2.15615937122719
     end
 
     it 'each show should return an poster_path' do
-      expect(@tv.first['poster_path']).to eq '/xA2nHrx2oHGPnL4ehBwPxD0ABvb.jpg'
+      expect(@tv.first.poster_path).to eq '/xA2nHrx2oHGPnL4ehBwPxD0ABvb.jpg'
     end
 
     it 'each show should return an vote_average' do
-      expect(@tv.first['vote_average']).to eq 9.66666666666667
+      expect(@tv.first.vote_average).to eq 9.66666666666667
     end
 
     it 'each show should return an vote_count' do
-      expect(@tv.first['vote_count']).to eq 3
+      expect(@tv.first.vote_count).to eq 3
     end
 
     it 'each show should return an backdrop' do
-      expect(@tv.first['backdrop_path']).to eq '/yGW0NX3I8GXPlWPdoWWyaH0AsCk.jpg'
+      expect(@tv.first.backdrop_path).to eq '/yGW0NX3I8GXPlWPdoWWyaH0AsCk.jpg'
     end
 
     it 'each show should return an first air date' do
-      expect(@tv.first['first_air_date']).to eq '2007-07-19'
+      expect(@tv.first.first_air_date).to eq '2007-07-19'
     end
   end
 
