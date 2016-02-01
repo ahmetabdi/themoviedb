@@ -11,6 +11,7 @@ module Tmdb
       :deathday,
       :homepage,
       :id,
+      :known_for,
       :name,
       :place_of_birth,
       :profile_path,
@@ -28,13 +29,17 @@ module Tmdb
     # Get the list of popular people on The Movie Database. This list refreshes every day.
     def self.popular
       search = Tmdb::Search.new("/#{endpoints[:singular]}/popular")
-      search.fetch
+      search.fetch.collect do |result|
+        next unless result['known_for']
+        result['known_for'] = result['known_for'].collect { |movie| Tmdb::Movie.new(movie) }
+        new(result)
+      end
     end
 
     # Get the latest person id.
     def self.latest
       search = Tmdb::Search.new("/#{endpoints[:singular]}/latest")
-      search.fetch_response
+      person = new(search.fetch_response)
     end
 
     # Get the combined credits for a specific person id.
