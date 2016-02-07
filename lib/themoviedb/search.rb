@@ -16,7 +16,7 @@ module Tmdb
       self
     end
 
-    def primary_realease_year(year)
+    def primary_release_year(year)
       @params[:primary_release_year] = year.to_s
       self
     end

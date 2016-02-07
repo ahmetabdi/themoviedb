@@ -8,7 +8,8 @@
 require_relative '../lib/themoviedb.rb'
 require 'vcr'
 
-Tmdb::Api.key('8a221fc31fcdf12a8af827465574ffc9')
+$VALID_API_KEY = '8a221fc31fcdf12a8af827465574ffc9'
+Tmdb::Api.key($VALID_API_KEY)
 
 VCR.configure do |c|
   # the directory where your cassettes will be saved
