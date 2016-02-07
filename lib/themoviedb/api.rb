@@ -1,4 +1,5 @@
 module Tmdb
+  class InvalidApiKeyError < StandardError ;  end
   class Api
     include HTTParty
     base_uri 'api.themoviedb.org/3/'
@@ -32,6 +33,8 @@ module Tmdb
 
     def self.set_response(hash)
       @@response = hash
+      # Detect 401 Unauthorized error, which indicates invalid API key
+      raise Tmdb::InvalidApiKeyError if hash['code'].to_i == 401
     end
   end
 end
