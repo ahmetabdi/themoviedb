@@ -4,7 +4,7 @@
 
 A Ruby wrapper for the [The Movie Database API](http://docs.themoviedb.apiary.io/).
 
-Ruby >= 1.9.3
+`Ruby >= 1.9.3`
 
 Provides a simple, easy to use interface for the Movie Database API.
 
@@ -442,7 +442,7 @@ Tmdb::Job.list
 
 themoviedb - A ruby wrapper for the movie database API
 
-Copyright (C) 2014  Ahmet Abdi
+Copyright (C) 2016  Ahmet Abdi
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
