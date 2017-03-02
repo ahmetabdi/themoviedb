@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.themoviedb.org/3/keyword/818?api_key=8a221fc31fcdf12a8af827465574ffc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=28800
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 02 Mar 2017 10:00:26 GMT
+      Etag:
+      - '"b936ef391d4c4df37185dfa8b58523c2"'
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '781'
+      X-Memc-Expires:
+      - '28019'
+      X-Memc-Key:
+      - 3f27be7884efa986cf8d000e43358b3f
+      X-Ratelimit-Limit:
+      - '40'
+      X-Ratelimit-Remaining:
+      - '25'
+      X-Ratelimit-Reset:
+      - '1488448833'
+      Content-Length:
+      - '34'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":818,"name":"based on novel"}'
+    http_version: 
+  recorded_at: Thu, 02 Mar 2017 10:00:23 GMT
+recorded_with: VCR 3.0.0
