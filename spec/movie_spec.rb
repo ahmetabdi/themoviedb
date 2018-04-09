@@ -5,7 +5,7 @@ require 'vcr'
 
 describe Tmdb::Movie do
   @fields = [:id, :adult, :backdrop_path, :belongs_to_collection,
-             :budget, :genres, :homepage, :imdb_id, :original_title,
+             :budget, :genres, :homepage, :imdb_id, :original_language, :original_title,
              :overview, :popularity, :poster_path, :production_companies,
              :production_countries, :release_date, :revenue, :runtime,
              :spoken_languages, :status, :tagline, :title, :vote_average,
@@ -134,11 +134,11 @@ describe Tmdb::Movie do
     end
 
     it 'should return a backdrop_path' do
-      expect(@movie['backdrop_path']).to eq '/mXuqM7ksHW1AJ30AInwJvJTAwut.jpg'
+      expect(@movie['backdrop_path']).to eq '/aMyEMGuW2NV3A0whuEM7VKp6M73.jpg'
     end
 
     it 'should return a belongs_to_collection' do
-      expect(@movie['belongs_to_collection']['name']).to eq 'DC Universe Animated Original Movies'
+      expect(@movie['belongs_to_collection']['name']).to eq 'Superman / Batman (Animated) Collection'
     end
 
     it 'should return a budget' do
@@ -150,11 +150,15 @@ describe Tmdb::Movie do
     end
 
     it 'should return homepage' do
-      expect(@movie['homepage']).to eq 'http://www.warnervideo.com/supermanbatmandvd/'
+      expect(@movie['homepage']).to eq 'https://www.warnerbros.com/supermanbatman-public-enemies'
     end
 
     it 'should return a imdb_id' do
       expect(@movie['imdb_id']).to eq 'tt1398941'
+    end
+
+    it 'should return an original_language' do
+      expect(@movie['original_language']).to eq 'en'
     end
 
     it 'should return a original_title' do
@@ -166,11 +170,11 @@ describe Tmdb::Movie do
     end
 
     it 'should return popularity' do
-      expect(@movie['popularity']).to eq 1.15974723131612
+      expect(@movie['popularity']).to eq 10.200109
     end
 
     it 'should return poster_path' do
-      expect(@movie['poster_path']).to eq '/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg'
+      expect(@movie['poster_path']).to eq '/bJBZxzFHfTAOtBg8fOCCaBmh4hF.jpg'
     end
 
     it 'should return production_companies' do
@@ -202,11 +206,11 @@ describe Tmdb::Movie do
     end
 
     it 'should return vote_average' do
-      expect(@movie['vote_average']).to eq 7.4
+      expect(@movie['vote_average']).to eq 6.8
     end
 
     it 'should return vote_count' do
-      expect(@movie['vote_count']).to eq 23
+      expect(@movie['vote_count']).to eq 199
     end
   end
 
