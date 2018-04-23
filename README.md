@@ -78,7 +78,7 @@ Tmdb::Genre.find("drama")
 
 ### Usage
 
-resources => person, movie, tv, collection, company
+resources => person, movie, tv, collection, company, multi
 
 ```ruby
 @search = Tmdb::Search.new

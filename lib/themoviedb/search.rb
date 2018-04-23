@@ -37,6 +37,8 @@ module Tmdb
                     '/search/company'
                   when 'keyword'
                     '/search/keyword'
+		  when 'multi'
+		    '/search/multi'
                   when 'find'
                     '/find'
       end
