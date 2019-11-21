@@ -198,6 +198,11 @@ Get the cast information for a specific movie id.
 ```ruby
 Tmdb::Movie.casts(22855)
 ```
+#### Movie - Crew
+Get the crew information for a specific movie id.
+```ruby
+Tmdb::Movie.crew(22855)
+```
 #### Movie - Keywords
 Get the plot keywords for a specific movie id.
 ```ruby
