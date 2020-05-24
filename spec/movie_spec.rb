@@ -214,6 +214,19 @@ describe Tmdb::Movie do
     end
   end
 
+  describe 'For a movie search' do
+    before(:each) do
+      VCR.use_cassette 'movie/search' do
+        @movies = Tmdb::Movie.search("House", year: 1977)
+      end
+    end
+
+    it 'should return movies from the year specified' do
+      # House (1977) doesn't appear in the first page unless year is specified
+      expect(@movies).to include(an_object_having_attributes(id: 25623))
+    end
+  end
+
   describe 'For a movie detail with appended response' do
     let(:append_fields) do
       %w( alternative_titles credits images keywords releases
