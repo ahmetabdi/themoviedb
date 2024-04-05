@@ -157,5 +157,10 @@ module Tmdb
       search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/credits")
       search.fetch_response
     end
+
+    def self.videos(id, _conditions = {})
+      search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/videos")
+      search.fetch_response
+    end
   end
 end
