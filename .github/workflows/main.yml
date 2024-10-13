@@ -3,7 +3,7 @@ name: Ruby
 on:
   push:
     branches:
-      - main
+      - master
 
   pull_request:
 
@@ -14,14 +14,14 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - '3.3.5'
+          - "3.3.5"
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
-    - name: Run the default task
-      run: bundle exec rake
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run the default task
+        run: bundle exec rake
