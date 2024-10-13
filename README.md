@@ -1,6 +1,6 @@
-## Information
+# themoviedb
 
-### themoviedb [![Code Climate](https://codeclimate.com/github/ahmetabdi/themoviedb/badges/gpa.svg)](https://codeclimate.com/github/ahmetabdi/themoviedb) [![Gem Version](https://badge.fury.io/rb/themoviedb.png)](http://badge.fury.io/rb/themoviedb)
+[![Code Climate](https://codeclimate.com/github/ahmetabdi/themoviedb/badges/gpa.svg)](https://codeclimate.com/github/ahmetabdi/themoviedb) [![Gem Version](https://badge.fury.io/rb/themoviedb.png)](http://badge.fury.io/rb/themoviedb)
 
 A Ruby wrapper for the [The Movie Database API](http://docs.themoviedb.apiary.io/).
 
