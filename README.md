@@ -6,21 +6,15 @@ A Ruby wrapper for the [The Movie Database API](http://docs.themoviedb.apiary.io
 
 `Ruby >= 3.1`
 
-Provides a simple, easy to use interface for the Movie Database API.
+Provides a simple, easy to use interface for The Movie Database API.
 
-Get your API key [here](https://www.themoviedb.org/account).
+Get your API key [here](https://www.themoviedb.org/settings/api).
 
 ## Getting started
 
 ```bash
 $ gem install themoviedb
 ```
-
-Example usage of the 'themovedb' gem
-
-http://themoviedb.herokuapp.com/
-
-https://github.com/ahmetabdi/themoviedb-example
 
 ## Configuration
 
