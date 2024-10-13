@@ -1,6 +1,6 @@
 module Tmdb
   class Keyword < Resource
-    has_resource 'keyword', plural: 'keywords'
+    has_resource "keyword", plural: "keywords"
 
     # http://docs.themoviedb.apiary.io/#keywords
     @@fields = [

@@ -1,6 +1,6 @@
 module Tmdb
   class Movie < Resource
-    has_resource 'movie', plural: 'movies'
+    has_resource "movie", plural: "movies"
 
     # http://docs.themoviedb.apiary.io/#movies
     @@fields = [
@@ -46,37 +46,37 @@ module Tmdb
 
     # Get the latest movie id. singular
     def self.latest
-      search = Tmdb::Search.new('/movie/latest')
+      search = Tmdb::Search.new("/movie/latest")
       new(search.fetch_response)
     end
 
     # Get the list of upcoming movies. This list refreshes every day. The maximum number of items this list will include is 100.
     def self.upcoming
-      search = Tmdb::Search.new('/movie/upcoming')
+      search = Tmdb::Search.new("/movie/upcoming")
       search.fetch.collect { |result| new(result) }
     end
 
     # Get the list of movies playing in theatres. This list refreshes every day. The maximum number of items this list will include is 100.
     def self.now_playing
-      search = Tmdb::Search.new('/movie/now_playing')
+      search = Tmdb::Search.new("/movie/now_playing")
       search.fetch.collect { |result| new(result) }
     end
 
     # Get the list of popular movies on The Movie Database. This list refreshes every day.
     def self.popular
-      search = Tmdb::Search.new('/movie/popular')
+      search = Tmdb::Search.new("/movie/popular")
       search.fetch.collect { |result| new(result) }
     end
 
     # Get the list of top rated movies. By default, this list will only include movies that have 10 or more votes. This list refreshes every day.
     def self.top_rated
-      search = Tmdb::Search.new('/movie/top_rated')
+      search = Tmdb::Search.new("/movie/top_rated")
       search.fetch.collect { |result| new(result) }
     end
 
     # Discover movies by different types of data like average rating, number of votes, genres and certifications.
     def self.discover(conditions = {})
-      search = Tmdb::Search.new('/discover/movie')
+      search = Tmdb::Search.new("/discover/movie")
       search.filter(conditions)
       search.fetch.collect { |result| new(result) }
     end
@@ -90,13 +90,13 @@ module Tmdb
     # Get the cast information for a specific movie id.
     def self.casts(id, _conditions = {})
       search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/casts")
-      search.fetch_response['cast']
+      search.fetch_response["cast"]
     end
 
     # Get the cast information for a specific movie id.
     def self.crew(id, _conditions = {})
       search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/casts")
-      search.fetch_response['crew']
+      search.fetch_response["crew"]
     end
 
     # Get the images (posters and backdrops) for a specific movie id.

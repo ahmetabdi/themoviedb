@@ -91,7 +91,7 @@ describe Tmdb::TV do
     end
 
     it 'should return languages' do
-      expect(@tv['languages']).to eq %w(en de ro es fa)
+      expect(@tv['languages']).to eq %w[en de ro es fa]
     end
 
     it 'should return a last air date' do
@@ -153,7 +153,7 @@ describe Tmdb::TV do
   end
 
   describe 'For a TV detail with appended response' do
-    let(:append_fields) { %w( credits external_ids ).join(',') }
+    let(:append_fields) { %w[ credits external_ids ].join(',') }
 
     before(:each) do
       VCR.use_cassette 'tv/detail_with_appeded_response' do

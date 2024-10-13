@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 require 'rspec'
 require 'spec_helper'
 require 'vcr'

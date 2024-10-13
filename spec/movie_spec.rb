@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 require 'rspec'
 require 'spec_helper'
 require 'vcr'
@@ -216,8 +217,8 @@ describe Tmdb::Movie do
 
   describe 'For a movie detail with appended response' do
     let(:append_fields) do
-      %w( alternative_titles credits images keywords releases
-          trailers translations reviews lists changes ).join(',')
+      %w[ alternative_titles credits images keywords releases
+          trailers translations reviews lists changes ].join(',')
     end
     before(:each) do
       VCR.use_cassette 'movie/detail_with_appended_response' do

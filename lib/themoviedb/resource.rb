@@ -8,7 +8,7 @@ module Tmdb
         singular: singular.nil? ? name.downcase.to_s : singular,
         plural: opts[:plural].nil? ? "#{name.downcase}s" : opts[:plural]
       }
-      @@endpoint_id[name.downcase] = opts[:id].nil? ? '' : "#{opts[:id]}-"
+      @@endpoint_id[name.downcase] = opts[:id].nil? ? "" : "#{opts[:id]}-"
     end
 
     def self.endpoints

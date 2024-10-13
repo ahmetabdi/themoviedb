@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 require 'rspec'
 require 'spec_helper'
 require 'vcr'
@@ -92,7 +93,7 @@ describe Tmdb::Person do
   end
 
   describe 'For a person detail with appended response' do
-    let(:append_fields) { %w( movie_credits tv_credits combined_credits images changes ).join(',') }
+    let(:append_fields) { %w[ movie_credits tv_credits combined_credits images changes ].join(',') }
 
     before(:each) do
       VCR.use_cassette 'person/detail_with_appended_response' do
