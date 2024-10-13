@@ -1,5 +1,4 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'themoviedb/version'
@@ -18,9 +17,4 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'httparty'
-
-  s.add_development_dependency 'vcr'
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'webmock'
 end
