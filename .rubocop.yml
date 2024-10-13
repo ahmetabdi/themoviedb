@@ -11,3 +11,14 @@ Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: true
   EnforcedStyle: no_space
   EnforcedStyleForEmptyBrackets: no_space
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+  Include:
+    - "app/**/*"
+    - "bin/**/*"
+    - "config/**/*"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "Gemfile"

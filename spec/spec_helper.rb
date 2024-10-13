@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require 'themoviedb'
-require 'vcr'
+require "themoviedb"
+require "vcr"
 
-$VALID_API_KEY = '8a221fc31fcdf12a8af827465574ffc9'
+$VALID_API_KEY = "8a221fc31fcdf12a8af827465574ffc9"
 Tmdb::Api.key($VALID_API_KEY)
 
 VCR.configure do |c|
   # the directory where your cassettes will be saved
-  c.cassette_library_dir = 'spec/vcr'
+  c.cassette_library_dir = "spec/vcr"
   # your HTTP request service. You can also use fakeweb, webmock, and more
   c.hook_into :webmock
 end
