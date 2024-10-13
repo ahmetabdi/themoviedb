@@ -2,7 +2,7 @@ require 'rspec'
 require 'spec_helper'
 require 'vcr'
 
-describe Tmdb::TV do
+RSpec.describe Tmdb::TV do
   @fields = [
     :backdrop_path,
     :created_by,

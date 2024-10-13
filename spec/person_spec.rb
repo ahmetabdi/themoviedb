@@ -4,7 +4,7 @@ require 'rspec'
 require 'spec_helper'
 require 'vcr'
 
-describe Tmdb::Person do
+RSpec.describe Tmdb::Person do
   @fields = [:id, :name, :place_of_birth, :also_known_as,
              :adult, :biography, :birthday, :deathday, :homepage,
              :profile_path, :movie_credits, :tv_credits, :combined_credits,

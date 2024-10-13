@@ -2,7 +2,7 @@ require 'rspec'
 require 'spec_helper'
 require 'vcr'
 
-describe Tmdb::Find do
+RSpec.describe Tmdb::Find do
   describe 'For a search' do
     before(:each) do
       @find = Tmdb::Find

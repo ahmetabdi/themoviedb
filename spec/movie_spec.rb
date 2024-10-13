@@ -4,7 +4,7 @@ require 'rspec'
 require 'spec_helper'
 require 'vcr'
 
-describe Tmdb::Movie do
+RSpec.describe Tmdb::Movie do
   @fields = [:id, :adult, :backdrop_path, :belongs_to_collection,
              :budget, :genres, :homepage, :imdb_id, :original_language, :original_title,
              :overview, :popularity, :poster_path, :production_companies,

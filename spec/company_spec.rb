@@ -2,7 +2,7 @@ require 'rspec'
 require 'spec_helper'
 require 'vcr'
 
-describe Tmdb::Company do
+RSpec.describe Tmdb::Company do
   @fields = [
     :description,
     :headquarters,

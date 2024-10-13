@@ -4,7 +4,7 @@ require 'rspec'
 require 'spec_helper'
 require 'vcr'
 
-describe Tmdb::Keyword do
+RSpec.describe Tmdb::Keyword do
   @fields = [:id, :name]
 
   @fields.each do |field|

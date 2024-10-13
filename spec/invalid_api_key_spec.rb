@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
 
-describe 'invalid API key' do
+RSpec.describe 'invalid API key' do
   after(:all) { Tmdb::Api.key($VALID_API_KEY) }
   it 'raises error for nil key' do
     Tmdb::Api.key(nil)
