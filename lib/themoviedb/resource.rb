@@ -19,6 +19,14 @@ module Tmdb
       @@endpoint_id[name.downcase]
     end
 
+    def self.filters
+      @@filters ||= {}
+    end
+
+    def self.search_filters(options)
+      filters.merge! options
+    end
+
     # Get the basic resource information for a specific id.
     def self.detail(id, conditions = {})
       search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}")
@@ -37,7 +45,7 @@ module Tmdb
     def self.search(query)
       search = Tmdb::Search.new
       search.resource(endpoints[:singular].to_s)
-      search.query(query)
+      search.query(query).filter(filters)
       search.fetch.collect do |result|
         new(result)
       end

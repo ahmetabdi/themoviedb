@@ -37,6 +37,14 @@ Tmdb::Api.language("de")
 The default language is english.
 The API supports translations just be aware that it does not fall back to English in the event that a field hasn't been translated.
 
+
+You can add miscellaneous query params filters with this:
+
+```ruby
+Tmdb::Person.search_filters(include_adult: true, page: 1, region: 'USA')
+Tmdb::Movie.search_filters(include_adult: true, page: 1, region: 'USA', year: 1980, primary_release_year: 1980)
+```
+
 ## Resources
 
 Current available resources:
