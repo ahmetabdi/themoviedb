@@ -1,8 +1,4 @@
-# encoding: utf-8
-
-require "rspec"
 require "spec_helper"
-require "vcr"
 
 RSpec.describe Tmdb::Person do
   @fields = [:id, :name, :place_of_birth, :also_known_as,

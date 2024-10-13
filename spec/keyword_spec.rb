@@ -1,8 +1,4 @@
-# encoding: utf-8
-
-require "rspec"
 require "spec_helper"
-require "vcr"
 
 RSpec.describe Tmdb::Keyword do
   @fields = [:id, :name]

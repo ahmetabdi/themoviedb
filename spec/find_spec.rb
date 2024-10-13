@@ -1,6 +1,4 @@
-require "rspec"
 require "spec_helper"
-require "vcr"
 
 RSpec.describe Tmdb::Find do
   describe "For a search" do
