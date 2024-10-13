@@ -5,6 +5,7 @@ module Tmdb
     # http://docs.themoviedb.apiary.io/#movies
     @@fields = [
       :adult,
+      :external_ids,
       :backdrop_path,
       :belongs_to_collection,
       :budget,
@@ -97,6 +98,12 @@ module Tmdb
     def self.crew(id, _conditions = {})
       search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/casts")
       search.fetch_response["crew"]
+    end
+
+    # Get the external ids for a specific movie id
+    def self.external_ids(id, _conditions = {})
+      search = Tmdb::Search.new("/#{endpoints[:singular]}/#{endpoint_id + id.to_s}/external_ids")
+      search.fetch_response
     end
 
     # Get the images (posters and backdrops) for a specific movie id.
