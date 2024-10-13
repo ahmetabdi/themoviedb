@@ -115,12 +115,11 @@ PLATFORMS
 
 DEPENDENCIES
   rake (~> 13.0)
-  rspec
-  rubocop (~> 1.21)
-  rubocop-rails-omakase
+  rspec (~> 3.13)
+  rubocop-rails-omakase (~> 1.0)
   themoviedb!
-  vcr
-  webmock
+  vcr (~> 6.3)
+  webmock (~> 3.24)
 
 BUNDLED WITH
    2.5.20
