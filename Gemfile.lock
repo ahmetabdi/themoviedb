@@ -114,7 +114,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest (~> 5.16)
   rake (~> 13.0)
   rspec
   rubocop (~> 1.21)
