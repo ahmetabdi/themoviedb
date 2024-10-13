@@ -17,6 +17,7 @@ RSpec.describe Tmdb::TV do
     :number_of_episodes,
     :number_of_seasons,
     :original_name,
+    :original_language,
     :origin_country,
     :overview,
     :popularity,
