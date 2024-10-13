@@ -1,6 +1,6 @@
 module Tmdb
   class Company < Resource
-    has_resource 'company', plural: 'companies'
+    has_resource "company", plural: "companies"
 
     # http://docs.themoviedb.apiary.io/#companies
     @@fields = [

@@ -1,6 +1,6 @@
 module Tmdb
   class Collection < Resource
-    has_resource 'collection', plural: 'collections'
+    has_resource "collection", plural: "collections"
 
     # http://docs.themoviedb.apiary.io/#collections
     @@fields = [

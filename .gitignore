@@ -1,7 +1,5 @@
-# Gem
 /.bundle/
 /.yardoc
-/Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
@@ -9,9 +7,8 @@
 /spec/reports/
 /tmp/
 
-# Windows
-Thumbs.db
-Desktop.ini
-
-# OS X
+# macOS
 .DS_Store
+
+# rspec failure tracking
+.rspec_status

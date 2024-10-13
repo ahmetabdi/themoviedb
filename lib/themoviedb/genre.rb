@@ -20,7 +20,7 @@ module Tmdb
     end
 
     def self.search(query)
-      detail(list['genres'].detect { |g| g['name'] == query }['id'])
+      detail(list["genres"].detect { |g| g["name"] == query }["id"])
     end
 
     class << self
@@ -28,17 +28,17 @@ module Tmdb
     end
 
     def self.list
-      search = Tmdb::Search.new('/genre/list')
+      search = Tmdb::Search.new("/genre/list")
       search.fetch_response
     end
 
     def self.detail(id, conditions = {})
       url = "/genre/#{id}/movies"
       unless conditions.empty?
-        url << '?'
+        url << "?"
         conditions.each_with_index do |(key, value), index|
           url << "#{key}=#{value}"
-          url << '&' if index != conditions.length - 1
+          url << "&" if index != conditions.length - 1
         end
       end
       search = Tmdb::Search.new(url)
@@ -46,7 +46,7 @@ module Tmdb
     end
 
     def name
-      @name ||= self.class.list['genres'].detect { |g| g['id'] == @id }['name']
+      @name ||= self.class.list["genres"].detect { |g| g["id"] == @id }["name"]
     end
 
     def get_page(page_number, conditions = {})

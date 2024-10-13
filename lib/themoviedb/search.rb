@@ -2,7 +2,7 @@ module Tmdb
   class Search
     def initialize(resource = nil)
       @params = {}
-      @resource = resource.nil? ? '/search/movie' : resource
+      @resource = resource.nil? ? "/search/movie" : resource
       self
     end
 
@@ -23,24 +23,24 @@ module Tmdb
 
     def resource(resource)
       @resource = case resource
-                  when 'movie'
-                    '/search/movie'
-                  when 'collection'
-                    '/search/collection'
-                  when 'tv'
-                    '/search/tv'
-                  when 'person'
-                    '/search/person'
-                  when 'list'
-                    '/search/list'
-                  when 'company'
-                    '/search/company'
-                  when 'keyword'
-                    '/search/keyword'
-		  when 'multi'
-		    '/search/multi'
-                  when 'find'
-                    '/find'
+      when "movie"
+                    "/search/movie"
+      when "collection"
+                    "/search/collection"
+      when "tv"
+                    "/search/tv"
+      when "person"
+                    "/search/person"
+      when "list"
+                    "/search/list"
+      when "company"
+                    "/search/company"
+      when "keyword"
+                    "/search/keyword"
+      when "multi"
+        "/search/multi"
+      when "find"
+                    "/find"
       end
       self
     end
@@ -59,7 +59,7 @@ module Tmdb
 
     # Sends back main data
     def fetch
-      fetch_response['results']
+      fetch_response["results"]
     end
 
     # Send back whole response
@@ -71,10 +71,10 @@ module Tmdb
       end
       response = Api.get(@resource, query: options)
 
-      original_etag = response.headers.fetch('etag', '')
+      original_etag = response.headers.fetch("etag", "")
       etag = original_etag.delete('"')
 
-      Api.set_response('code' => response.code, 'etag' => etag)
+      Api.set_response("code" => response.code, "etag" => etag)
       response.to_hash
     end
   end

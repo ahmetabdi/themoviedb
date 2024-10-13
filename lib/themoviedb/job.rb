@@ -17,7 +17,7 @@ module Tmdb
     end
 
     def self.list
-      search = Tmdb::Search.new('/job/list')
+      search = Tmdb::Search.new("/job/list")
       search.fetch_response
     end
   end

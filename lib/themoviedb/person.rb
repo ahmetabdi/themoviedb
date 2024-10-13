@@ -1,6 +1,6 @@
 module Tmdb
   class Person < Resource
-    has_resource 'person', plural: 'people'
+    has_resource "person", plural: "people"
 
     # http://docs.themoviedb.apiary.io/#people
     @@fields = [
@@ -30,8 +30,8 @@ module Tmdb
     def self.popular
       search = Tmdb::Search.new("/#{endpoints[:singular]}/popular")
       search.fetch.collect do |result|
-        next unless result['known_for']
-        result['known_for'] = result['known_for'].collect { |movie| Tmdb::Movie.new(movie) }
+        next unless result["known_for"]
+        result["known_for"] = result["known_for"].collect { |movie| Tmdb::Movie.new(movie) }
         new(result)
       end
     end
